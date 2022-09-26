@@ -1,7 +1,7 @@
 using Xfoil, Printf
 include("plots_default.jl")
 
-function alterThicknessCamber()
+function alterThicknessCamber(request)
     alteredCambers = ["naca4412.dat", "naca6412.dat", "naca8412.dat"]
     alteredThicknesses = ["naca2410.dat", "naca2420.dat", "naca2430.dat"]
     n_c = length(alteredCambers)
@@ -13,17 +13,27 @@ function alterThicknessCamber()
         cld[i] = getCoefficients(alteredCambers[i], "ld")
         lcs[i] = getCoefficients(alteredCambers[i], "lcs")
     end
-    ac1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Camber", titlefontsize=10, label = ["4%" "6%" "8%"])
-    ac2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Camber", titlefontsize=10, label = ["4%" "6%" "8%"])
+    ac1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Camber", titlefontsize=10, label = ["" "" ""])
+    ac2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Camber", titlefontsize=10, label = ["" "" ""])
 
     for i = 1:n_c
         cld[i] = getCoefficients(alteredThicknesses[i], "ld")
         lcs[i] = getCoefficients(alteredThicknesses[i], "lcs")
     end
-    at1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Thickness", titlefontsize=10, label = ["10%" "20%" "30%"])
-    at2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Thickness", titlefontsize=10, label = ["10%" "20%" "30%"])
+    at1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Thickness", titlefontsize=10, label = ["" "" ""])
+    at2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Thickness", titlefontsize=10, label = ["" "" ""])
 
-    plot(ac1, ac2, at1, at2)
+    st = plot(alpha .* NaN, cld[1:3] .* NaN, label=["10%" "20%" "30%"], showaxis=false)
+    sc = plot(alpha .* NaN, cld[1:3] .* NaN, label=["4%" "6%" "8%"], showaxis=false)
+
+    if (request==="thickness")
+        plot(at1, at2, st)
+    end
+
+    if (request==="camber")
+        plot(ac1, ac2, sc)
+    end
+
 end
 
 function getCoefficients(altered, request)
@@ -180,8 +190,8 @@ function airfoilComparison()
     plot(alpha_exp, cd_exp, xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_d", label="")
     cd = plot!(alpha, cd_x, label="")
 
-    plot(alpha_exp .* NaN, cl_exp .* NaN, label=["experimental" "Xfoil"], showaxis=false)
-    s = plot!(alpha .* NaN, cl_x .* NaN)
+    plot(alpha_exp .* NaN, cl_exp .* NaN, label="experimental", showaxis=false)
+    s = plot!(alpha .* NaN, cl_x .* NaN, label="Xfoil")
 
     plot(cl, cd, s, layout=(3,1))
 end
