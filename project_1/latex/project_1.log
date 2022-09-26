@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  24 SEP 2022 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  26 SEP 2022 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,28 +353,63 @@ Article:
 [1
 
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-(./project_1.aux) ) 
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../graphics/aoa-coefficients.pdf, id=9, 289.08pt x 216.81pt>
+File: ../graphics/aoa-coefficients.pdf Graphic file (type pdf)
+<use ../graphics/aoa-coefficients.pdf>
+Package pdftex.def Info: ../graphics/aoa-coefficients.pdf  used on input line 4
+0.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/airfoil-compare.pdf, id=10, 289.08pt x 216.81pt>
+File: ../graphics/airfoil-compare.pdf Graphic file (type pdf)
+<use ../graphics/airfoil-compare.pdf>
+Package pdftex.def Info: ../graphics/airfoil-compare.pdf  used on input line 52
+.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [2 <../graphics/aoa-coefficients.pdf>]
+<../graphics/altered-reynolds.pdf, id=52, 289.08pt x 216.81pt>
+File: ../graphics/altered-reynolds.pdf Graphic file (type pdf)
+<use ../graphics/altered-reynolds.pdf>
+Package pdftex.def Info: ../graphics/altered-reynolds.pdf  used on input line 6
+4.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/altered-thickness.pdf, id=53, 289.08pt x 216.81pt>
+File: ../graphics/altered-thickness.pdf Graphic file (type pdf)
+<use ../graphics/altered-thickness.pdf>
+Package pdftex.def Info: ../graphics/altered-thickness.pdf  used on input line 
+76.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [3 <../graphics/airfoil-compare.pdf>] [4 <../graphics/altered-reynolds.pdf> <.
+./graphics/altered-thickness.pdf>]
+<../graphics/altered-camber.pdf, id=169, 289.08pt x 216.81pt>
+File: ../graphics/altered-camber.pdf Graphic file (type pdf)
+<use ../graphics/altered-camber.pdf>
+Package pdftex.def Info: ../graphics/altered-camber.pdf  used on input line 87.
+
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [5 <../graphics/altered-camber.pdf>] [6] (./project_1.aux) ) 
 Here is how much of TeX's memory you used:
- 8252 strings out of 475075
- 188321 string characters out of 5783002
- 518520 words of memory out of 5000000
- 29581 multiletter control sequences out of 15000+600000
- 475572 words of font info for 52 fonts, out of 8000000 for 9000
+ 8297 strings out of 475075
+ 189807 string characters out of 5783002
+ 516560 words of memory out of 5000000
+ 29618 multiletter control sequences out of 15000+600000
+ 476223 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,77p,727b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmssi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb>
-Output written on project_1.pdf (3 pages, 95015 bytes).
+ 71i,9n,77p,753b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pf
+b><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><c:/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on project_1.pdf (6 pages, 179716 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 257 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
