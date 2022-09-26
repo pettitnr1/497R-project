@@ -150,7 +150,7 @@ default(;
     #     foreground_color_title,
     #     framestyle = :zerolines,
     #     left_margin,
-    legend=false, # include legend true/false
+    # legend=false, # include legend true/false
     #     legendfontcolor,
     #     legendfontfamily,
     #     legendfonthalign,
