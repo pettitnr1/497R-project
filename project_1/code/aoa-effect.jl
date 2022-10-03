@@ -6,7 +6,7 @@ function alterThicknessCamber(request)
     alteredThicknesses = ["naca2410.dat", "naca2420.dat", "naca2430.dat"]
     n_c = length(alteredCambers)
     n_t = length(alteredThicknesses)
-    alpha = -10:1:10
+    alpha = -20:1:20
     cld = [Vector{Float64}(undef, n_c) for _ in 1:length(alpha)]
     lcs = [Vector{Float64}(undef, n_c) for _ in 1:length(alpha)]
     for i = 1:n_c
@@ -53,7 +53,7 @@ function getCoefficients(altered, request)
     Xfoil.pane()
 
     # set operating conditions
-    alpha = -10:1:10
+    alpha = -20:1:20
     mach = 0.0
     re = 1e6
     # initialize outputs
@@ -84,7 +84,7 @@ end
 function alterReynolds()
     re = [100000, 500000, 1000000, 2000000, 3000000]
     n_r = length(re)
-    alpha = -10:1:10
+    alpha = -20:1:20
     cl = [Vector{Float64}(undef, 5) for _ in 1:length(alpha)]
     cd = [Vector{Float64}(undef, 5) for _ in 1:length(alpha)]
     cm = [Vector{Float64}(undef, 5) for _ in 1:length(alpha)]
@@ -119,7 +119,7 @@ function autoSweep(re = 1e5, mode="plot")
     Xfoil.pane()
 
     # set operating conditions
-    alpha = -10:1:10
+    alpha = -20:1:20
     mach = 0.0
 
     # initialize outputs
@@ -149,6 +149,11 @@ function autoSweep(re = 1e5, mode="plot")
             index = index + 1
         end
     end
+
+    c_l = validCoefficients[:, 1]
+    c_d = validCoefficients[:, 2]
+    c_m = validCoefficients[:, 3]
+    converged = validCoefficients[:, 4]
 
     if (mode === "coefficients")
         return validCoefficients
