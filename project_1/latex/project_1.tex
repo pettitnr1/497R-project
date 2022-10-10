@@ -42,7 +42,7 @@
 		\label{fig:aoa-coefficients}
 	\end{figure}
 	
-	The coefficients of lift (\(c_\ell\)) and drag (\(c_d\)) both increase as angle of attack (\(\alpha\)) increases, because as the angle increases, the area of the airfoil going against the fluid increases, and the pressure acting on the bottom of the airfoil also increases. This also increases coefficient of moment (\(c_m\)). It is also important to note that figure \ref{fig:aoa-coefficients} establishes that lift is negative when \(\alpha\) is less than zero, which makes sense, and that the zero-lift angle of attack is somewhere between 0 and 0.5 degrees. Stall is also something to be aware of, but the figure doesn't indicate this as stalling would take place with angles that are greater than 10 degrees.
+	The coefficients of lift (\(c_\ell\)) and drag (\(c_d\)) both increase as angle of attack (\(\alpha\)) increases, because as the angle increases, the pressure differential between the top and bottom of the airfoil becomes larger. This also increases coefficient of moment (\(c_m\)). It is also important to note that figure \ref{fig:aoa-coefficients} establishes that lift is negative when \(\alpha\) is less than zero, which makes sense, and that the zero-lift angle of attack is somewhere between 0 and 0.5 degrees.It appears that stall takes place at an angle of attack of about 10 degrees. This can be cleary seen on the lift and drag plots.
 	
 	\subsection{Airfoil Polar Comparison}
 	The results gained from Xfoil were plotted against experimental data from a study done on the NACA 2412 airfoil (see figure \ref{fig:airfoil-comparison}).
@@ -54,7 +54,7 @@
 		\label{fig:airfoil-comparison}
 	\end{figure}
 
-	The data collected from Xfoil followed the experimental data's curve, therefore, it is an accurate way to model airfoil polar.
+	It is interesting to see that the experimental lift curve looks very similar to the one obtained from Xfoil, expect shifted up. Also, the drag curves between experimental and Xfoil are very different. The reason for this is unknown, although it might be an error in Xfoil calculations.
 	
 	\subsection{Effect of Reynold's Number}
 	The Reynold's number is an indicator of how viscous the fluid that an airfoil is traveling through is. A high Reynold's number is an indicator that fluid flow will be turbulent, where as a low Reynold's number is an indicator of laminar flow. In figure \ref{fig:altered-reynolds}, the relationships between Reynold's number and the coefficients are shown.

@@ -184,10 +184,10 @@ function airfoilComparison()
 
 
     coefficients = autoSweep(1e5, "coefficients")
-    alpha = 0:1:10
+    alpha = 0:1:15
     n_a = length(alpha)
-    cl_x = coefficients[11:21, 1]
-    cd_x = coefficients[11:21, 2]
+    cl_x = coefficients[11:25, 1]
+    cd_x = coefficients[11:25, 2]
 
     plot(alpha_exp, cl_exp, xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", label="")
     cl = plot!(alpha, cl_x, label="")
@@ -198,5 +198,6 @@ function airfoilComparison()
     plot(alpha_exp .* NaN, cl_exp .* NaN, label="experimental", showaxis=false)
     s = plot!(alpha .* NaN, cl_x .* NaN, label="Xfoil")
 
-    plot(cl, cd, s, layout=(3,1))
+    plot(cl, cd, s, layout=(2,2))
+    savefig("airfoil-compare.pdf")
 end
