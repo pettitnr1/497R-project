@@ -36,8 +36,8 @@ function wingEfficiency()
 end
 
 function stabilityDerivatives()
-    v_ratios = range(0.00467, 0.0156, 20)
-    h_ratios = range(0.04375, 0.1458, 20)
+    v_ratios = range(0.001, 0.0156, 30) # range(0.00467, 0.0156, 20)
+    h_ratios = range(0.001, 0.1458, 30) # range(0.04375, 0.1458, 20)
     v_r = length(v_ratios)
     h_r = length(h_ratios)
     v_derivatives = zeros(v_r, 2)
@@ -53,12 +53,13 @@ function stabilityDerivatives()
         index = index + 1
     end
 
-    lb = plot(v_ratios, v_derivatives[:, 1], xlabel="V-tail Volume Ratios", ylabel=L"C_{\ell{b}}", label="")
-    nb = plot(v_ratios, v_derivatives[:, 2], xlabel="V-tail Volume Ratios", ylabel=L"C_{nb}", label="")
-    # la = plot(h_ratios, h_derivatives[:, 1], xlabel="H-tail Volume Ratios", ylabel=L"C_{\ell{a}}", label="")
-    # ma = plot(h_ratios, h_derivatives[:, 2], xlabel="H-tail Volume Ratios", ylabel=L"C_{ma}", label="")
+    # lb = plot(v_ratios, v_derivatives[:, 1], xlabel="V-tail Volume Ratios", ylabel=L"C_{\ell{b}}", label="")
+    # nb = plot(v_ratios, v_derivatives[:, 2], xlabel="V-tail Volume Ratios", ylabel=L"C_{nb}", label="", ylims=(-0.45, 0.1))
 
-    plot(lb, nb, layout=(2,1))
+    la = plot(h_ratios, h_derivatives[:, 1], xlabel="H-tail Volume Ratios", ylabel=L"C_{La}", label="", xlims=(0.04375, 0.1458), ylims=(4.806,4.81))
+    ma = plot(h_ratios, h_derivatives[:, 2], xlabel="H-tail Volume Ratios", ylabel=L"C_{ma}", label="")
+
+    plot(la, ma, layout=(2,1))
 end
 
 function vortexLattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
@@ -209,7 +210,7 @@ function vortexLattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
     coefficients = [CL, CD]
 
     v_derivatives = [Clb, Cnb]
-    h_derivatives = [Cla, Cma]
+    h_derivatives = [CLa, Cma]
 
     if request === "coefficients"
         return coefficients
