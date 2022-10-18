@@ -20,7 +20,7 @@
 	
 	\section{Introduction}
 	
-	This report covers research done on airframes using the VortexLattice.jl library, specifically how aspect ratio anf efficiency are related, how tail volume ratios affect stability derivatives, and how angle of attack affects the lift coefficient. A wiki with unfamiliar terms and their corresponding equations and figures can be found at the end of this report.
+	This report covers research done on airframes using the VortexLattice.jl library, specifically how aspect ratio and efficiency are related, how tail volume ratios affect stability derivatives, and how angle of attack affects the lift coefficient. A wiki with unfamiliar terms and their corresponding equations and figures can be found at the end of this report.
 	
 	\section{Methods}
 	The results of this research came from evaluating airframes using VortexLattice.jl, as well as writing new functions to help in evaluating the airframes. There were 4 functions that were  used:
@@ -71,7 +71,7 @@
 	
 	\subsection{Angle of attack vs lift coefficient}
 	
-	In previous research about airfoils, I found that as angle of attack increases, the lift coefficient also increases, up to a certain point. At that point, the lift coefficient sharply drops, and this is where stall takes place. In that previous research, Xfoil.jl was used to calculate the lift coefficient for varying angles of attack. A relationship between angle of attack and lift was also tried to be found here, but instead of using Xfoil.jl, VortexLattice.jl was used. A plot was produced using this way showing the relationship between angle of attack and lift (see figure \ref{fig:aoa-lift}). \\
+	In previous research about airfoils, I found that as angle of attack increases, the lift coefficient also increases, up to a certain point. At that point, the lift coefficient sharply drops, and this is where stall takes place. In that previous research, Xfoil.jl was used to calculate the lift coefficient for varying angles of attack. A relationship between angle of attack and lift was also tried to be found here, but instead of using Xfoil.jl, VortexLattice.jl was used. A plot was produced showing the relationship between angle of attack and lift (see figure \ref{fig:aoa-lift}). \\
 	
 	\begin{figure}[H]
 		\centering
@@ -80,7 +80,7 @@
 		\label{fig:aoa-lift}
 	\end{figure}
 
-	In comparison to the plot created using Xfoil.jl, figure \ref{fig:aoa-lift} looks very similar between angles of attack of -10 and 10. However, past those angles of attack is where it differs. In the Xfoil plot, it shows very clearly where stall would take place, but in this VortexLattice plot, the plot continues linearly and never drops off, indicating stall. This is why the Vortex Lattice method is not always a great choice for investigating airframes. It is only accurate when the angle of attack and sideslip angle are small, because it uses small angle approximation in its calculations. This is why in figure \ref{fig:aoa-lift} it looks very linear and doesn't indicate where stall would take place, where as the Xfoil plot does.
+	In comparison to the plot created using Xfoil.jl, figure \ref{fig:aoa-lift} looks very similar between angles of attack of -10 and 10. However, past those angles of attack is where it differs. In the Xfoil plot, it shows very clearly where stall would take place, but in this VortexLattice plot, the plot continues linearly and never drops off, never indicating stall. This is why the Vortex Lattice method is not always a great choice for investigating airframes. It is only accurate when the angle of attack and sideslip angle are small, because it uses small angle approximation in its calculations. This is why in figure \ref{fig:aoa-lift} it looks very linear and doesn't indicate where stall would take place, where as the Xfoil plot does.
  	
 	\section*{Appendix}
 	
