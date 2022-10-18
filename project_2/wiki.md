@@ -7,3 +7,6 @@
 - _Induced Drag/Vortex Drag_: major consequence of this downwash, is that energy is left behind in the wake. Or in other words, the wing produces drag
 - _Vortex Filament_: an arbitrary vortex line segment
 - _Vortex Lattice Method_: an extension of thin airfoil theory into three dimensions
+- _Inviscid Span Efficiency_:  the inviscid span efficiency could be considered a measure of how close the lift distribution is to elliptic. All planar distributions will have efficiency less than or equal to 1. A nonplanar lift distribution (e.g., adding winglets) can increase the inviscid span efficiency above 1
+- _Tail Volume Ratio_: relates the shape of the tail to the wing
+- _Stability Derivatives_: measures of how particular forces and moments on an aircraft change as other parameters related to stability change
