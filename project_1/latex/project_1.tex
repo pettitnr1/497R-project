@@ -33,7 +33,7 @@
 	\section{Results and Discussion}
 	
 	\subsection{Airfoil Angle  of Attack}
-	One of the most stressed parts of this research was seeing how different airfoil angles of attack affected the lift, drag, and moment on the airfoil. In order to see those relationships, only the coefficients of drag, lift, and moment needed to evaluated, rather than the moment and the forces of lift and drag. This is because in calculating lift, drag, and moment, the only parts that differ are the coefficients. Figure \ref{fig:aoa-coefficients} shows the relationships between lift, drag, and moment and \(\alpha\) for a NACA 2412 airfoil.
+	One of the most stressed parts of this research was seeing how different airfoil angles of attack affected the lift, drag, and moment on the airfoil. In order to see those relationships, only the coefficients of drag, lift, and moment needed to evaluated, rather than the moment and the forces of lift and drag. This is because the coefficients are non-dimensional numbers. Figure \ref{fig:aoa-coefficients} shows the relationships between lift, drag, and moment and \(\alpha\) for a NACA 2412 airfoil.
 	
 	\begin{figure}
 		\centering
@@ -42,7 +42,7 @@
 		\label{fig:aoa-coefficients}
 	\end{figure}
 	
-	The coefficients of lift (\(c_\ell\)) and drag (\(c_d\)) both increase as angle of attack (\(\alpha\)) increases, because as the angle increases, the pressure differential between the top and bottom of the airfoil becomes larger. This also increases coefficient of moment (\(c_m\)). It is also important to note that figure \ref{fig:aoa-coefficients} establishes that lift is negative when \(\alpha\) is less than zero, which makes sense, and that the zero-lift angle of attack is somewhere between 0 and 0.5 degrees.It appears that stall takes place at an angle of attack of about 10 degrees. This can be cleary seen on the lift and drag plots.
+	The coefficients of lift (\(c_\ell\)) and drag (\(c_d\)) both increase as angle of attack (\(\alpha\)) increases, because as the angle increases, the pressure differential between the top and bottom of the airfoil becomes larger. This also increases coefficient of moment (\(c_m\)). It is also important to note that figure \ref{fig:aoa-coefficients} establishes that lift is negative when \(\alpha\) is less than zero, which makes sense, and that the zero-lift angle of attack is somewhere between 0 and 0.5 degrees.It appears that stall takes place at an angle of attack of about 10 degrees. This can be clearly seen on the lift and drag plots.
 	
 	\subsection{Airfoil Polar Comparison}
 	The results gained from Xfoil were plotted against experimental data from a study done on the NACA 2412 airfoil (see figure \ref{fig:airfoil-comparison}).
@@ -66,8 +66,8 @@
 		\label{fig:altered-reynolds}
 	\end{figure}
 	
-	As the Reynold's number increases, the lift curves become more steep. However, it is the opposite with drag and moment. As the Reynold's number increases, the curves of drag and moment become more leveled out. These results make logical sense, because whether with turbulent or laminar flow, lift generally is not affected significantly across varying angles of attack. On the other hand, higher Reynold's numbers and therefore more turbulent flow decreases the drag and moment at more extreme angles of attack (see figure \ref{fig:altered-reynolds}).
-	
+	As the Reynold's number increases, the lift curves become more steep. However, it is the opposite with drag and moment. As the Reynold's number increases, the curves of drag and moment become more leveled out; higher Reynold's numbers and therefore more turbulent flow decreases the drag and moment at more extreme angles of attack (see figure \ref{fig:altered-reynolds}). It is also important to note that for greater Reynold's numbers, the stall angle becomes greater.
+		
 	\subsection{Effect of Airfoil Thickness and Camber}
 	The thickness of an airfoil is the greatest distance between the upper and the lower surfaces of an airfoil. In figure \ref{fig:altered-thickness}, the relationship between airfoil thickness and the coefficients of lift, drag, and moment can be seen.
 	
@@ -78,7 +78,7 @@
 		\label{fig:altered-thickness}
 	\end{figure}
 	
-	As the thickness of the airfoil increases, the ratio of lift to drag curve becomes more shallow. This is because increasing thickness leads to lift and drag becoming closer and closer to each other. It is interesting to see though that no matter the thickness, the zero lift angle of attack remains the same (see figure \ref{fig:altered-thickness}).
+	As the thickness of the airfoil increases, the ratio of lift to drag curve becomes more shallow. This is because increasing thickness leads to greater induced drag and doesn't affect the lift as much. This causes the curves to become more shallow. It is interesting to see though that no matter the thickness, the zero lift angle of attack remains the same (see figure \ref{fig:altered-thickness}).
 	
 	The camber of an airfoil is the asymmetry between the two acting surfaces of an airfoil. An airfoil with zero camber is symmetric. In figure \ref{fig:altered-camber}, the effect of different cambers can be seen.
 	
@@ -90,7 +90,6 @@
 	\end{figure}
 	
 	As the camber of the airfoil increases, the lift to drag ratio becomes higher and the whole curve is shifted upwards. This also happened with the coefficient of lift. This also means that the zero lift angle of attack became greater with increasing camber. 
-	
 	
 	\section*{Appendix}
 	
