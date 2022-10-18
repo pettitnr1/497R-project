@@ -3,20 +3,30 @@ using LinearAlgebra
 
 include("plots_default.jl")
 
+# function that computes lift coefficients for airframes with varying angles of
+#        attack. Plots the lift coefficient against the aspect ratios
 function aoaEffect()
+    # initialize angles of attack used
     angles = -20:1:20
     n_a = length(angles)
     lift = zeros(n_a)
     index = 1
+
+    # retrieve lift coefficient for every angle of attack
     for a in angles
         cl = vortexLattice("coefficients", 7.5, 1, a)
         lift[index] = cl[1]
         index = index + 1
     end
+
+    # plot lift coefficient against angle of attack
     plot(angles, lift, xlabel="Angle of Attack(degrees)", ylabel=L"C_\ell", label="")
 end
 
+# function that computes the inviscid span efficiency for airframes with varying
+#        aspect ratios. Plots the efficiency against the aspect ratios
 function wingEfficiency()
+    # initialize aspect ratios used
     ratios = 3:1:15
     n_r = length(ratios)
     coefficients = zeros(n_r, 2)
@@ -24,45 +34,68 @@ function wingEfficiency()
     e = Vector{Float64}(undef, n_r)
     index = 1
     for ar in ratios
+        # retrieve lift and drag coefficients for every aspect ratio
         coefficients[index, :] .= vortexLattice("coefficients", ar)
         cl = coefficients[index, 1]
         cd = coefficients[index, 2]
+
+        # compute inviscid span efficiency for every aspect ratio
         efficiency = (cl^2) / (pi * ar * cd)
         e[index] = efficiency
         index = index + 1
     end
 
+    # plot efficiency against aspect ratio
     plot(ratios, e, xlabel="Aspect Ratio", ylabel="Efficiency", label="")
 end
 
+# function that computes the stability derivatives for airframes with varying
+#        vertical and horizontal tail volume ratios. Plots those derivatives
+#        against the tail volume ratios
 function stabilityDerivatives()
-    v_ratios = range(0.001, 0.0156, 30) # range(0.00467, 0.0156, 20)
-    h_ratios = range(0.001, 0.1458, 30) # range(0.04375, 0.1458, 20)
+    # initialize vertical and horizontal tail volume ratios used
+    v_ratios = range(0.001, 0.0156, 30)
+    h_ratios = range(0.001, 0.1458, 30)
     v_r = length(v_ratios)
     h_r = length(h_ratios)
     v_derivatives = zeros(v_r, 2)
     h_derivatives = zeros(h_r, 2)
     index = 1
+
+    # retrieve stability derivatives for every vertical tail volume ratio
     for r in v_ratios
         v_derivatives[index, :] .= vortexLattice("vderivatives", 7.5, r)
         index = index + 1
     end
+
     index = 1
+
+    # retrieve stability derivatives for every horizontal tail volume ratio
     for r in h_ratios
         h_derivatives[index, :] .= vortexLattice("hderivatives", 7.5, r)
         index = index + 1
     end
 
-    # lb = plot(v_ratios, v_derivatives[:, 1], xlabel="V-tail Volume Ratios", ylabel=L"C_{\ell{b}}", label="")
-    # nb = plot(v_ratios, v_derivatives[:, 2], xlabel="V-tail Volume Ratios", ylabel=L"C_{nb}", label="", ylims=(-0.45, 0.1))
+    # plot stability derivatives affected by vertical tail volume ratios
+    lb = plot(v_ratios, v_derivatives[:, 1], xlabel="V-tail Volume Ratios", ylabel=L"C_{\ell{b}}", label="")
+    nb = plot(v_ratios, v_derivatives[:, 2], xlabel="V-tail Volume Ratios", ylabel=L"C_{nb}", label="", ylims=(-0.45, 0.1))
 
+    # plot stability derivatives affected by horizontal tail volume ratios
     la = plot(h_ratios, h_derivatives[:, 1], xlabel="H-tail Volume Ratios", ylabel=L"C_{La}", label="", xlims=(0.04375, 0.1458), ylims=(4.806,4.81))
     ma = plot(h_ratios, h_derivatives[:, 2], xlabel="H-tail Volume Ratios", ylabel=L"C_{ma}", label="")
 
-    plot(la, ma, layout=(2,1))
+    plot(lb, nb, la, ma, layout=(4,1))
 end
 
+# main function that performs all the necessary vortex lattice computations
+#  - `request` determines what will be returned by the function, as well as what
+#        calculations need to be done
+#  - `ar` is the aspect ratio of the airframe being evaluated, defaults to 7.5
+#  - `v` is the tail volume ratio of the ariframe being evaluated, defaults to 1
+#  - `aoa` is the angle of attack of the airframe being evaluated, defaults to
+#        1.0*pi/180
 function vortexLattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
+    # initialize coefficients array
     coefficients = zeros(1, 2)
 
     # wing
@@ -74,8 +107,10 @@ function vortexLattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
     phi = [0.0, 0.0]
     fc = fill((xc) -> 0, 2) # camberline function for each section
     if (request === "vderivatives" || request === "hderivatives")
+        # account for geometric symmetry here because flow is not symmetric
         mirror = true
     else
+        # symmetry is accounted for later
         mirror = false
     end
 
@@ -157,12 +192,16 @@ function vortexLattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
         # generate surface panels for horizontal tail
         hgrid, htail = wing_to_surface_panels(xle_h, yle_h, zle_h, chord_h, theta_h, phi_h, ns_h, nc_h;
             mirror=mirror_h, fc=fc_h, spacing_s=spacing_s_h, spacing_c=spacing_c_h)
+
+        # translate tail for horizontal tail volume ratio
         VortexLattice.translate!(hgrid, [l_h, 0.0, 0.0])
         VortexLattice.translate!(htail, [l_h, 0.0, 0.0])
 
         # generate surface panels for vertical tail
         vgrid, vtail = wing_to_surface_panels(xle_v, yle_v, zle_v, chord_v, theta_v, phi_v, ns_v, nc_v;
             mirror=mirror_v, fc=fc_v, spacing_s=spacing_s_v, spacing_c=spacing_c_v)
+
+        # translate tail for vertical tail volume ratio
         VortexLattice.translate!(vgrid, [l_v, 0.0, 0.0])
         VortexLattice.translate!(vtail, [l_v, 0.0, 0.0])
 
@@ -170,14 +209,16 @@ function vortexLattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
         surfaces = [wing, htail, vtail]
         surface_id = [1, 2, 3]
     else
+        # create vector containing all surfaces
         surfaces = [wing]
         surface_id = [1]
     end
 
-    # we can use symmetry since the geometry and flow conditions are symmetric about the X-Z axis
     if (request === "vderivatives" || request === "hderivatives")
+        # symmetry cannot be used because flow conditions are not symmetric
         symmetric = false
     else
+        # we can use symmetry since the geometry and flow conditions are symmetric about the X-Z axis
         symmetric = true
     end
 
@@ -213,15 +254,17 @@ function vortexLattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
     h_derivatives = [CLa, Cma]
 
     if request === "coefficients"
+        # return for aoaEffect() and wingEfficiency()
         return coefficients
     end
     if request === "vderivatives"
+        # return for stabilityDerivatives()
         return v_derivatives
     end
     if request === "hderivatives"
+        # return for stabilityDerivatives()
         return h_derivatives
     end
-
 end
 
 # function to construct a normal vector the way AVL does
