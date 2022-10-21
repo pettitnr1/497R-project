@@ -36,9 +36,21 @@
 	
 	\subsection{Aspect Ratio vs. Efficiency}
 	
-	In order to see the relationship between aspect ratio and the efficiency, the wingEfficiency() function was used. When it was run, it calculated the inviscid span efficiency (see equation \ref{eqn:efficiency}) for airframes with aspect ratios (see equation \ref{eqn:aspect-ratio}) ranging from 3 to 15. it produced a plot of this shown in figure \ref{fig:efficiency}. \\
+	In order to see the relationship between aspect ratio and the efficiency, the wingEfficiency() function was used. When it was run, it calculated the inviscid span efficiency (see equation \ref{eqn:efficiency}) for airframes with aspect ratios (see equation \ref{eqn:aspect-ratio}) ranging from 3 to 15.
 	
-	\begin{figure}
+	\begin{equation}
+		e_{inv} = \frac{C_L^2}{\pi{ARC_D}}
+		\label{eqn:efficiency}
+	\end{equation}
+
+	\begin{equation}
+		AR = \frac{b}{c} = \frac{b^2}{S_{ref}}
+		\label{eqn:aspect-ratio}
+	\end{equation}
+	
+	After the program calculated the efficiency, it produced a plot shown in figure \ref{fig:efficiency}. \\
+	
+	\begin{figure}[H]
 		\centering
 		\includegraphics{../graphics/efficiency.pdf}
 		\caption{\emph{This diagram shows the relationship between aspect ratio and inviscid span efficiency.}}
@@ -51,23 +63,33 @@
 	
 	Another characteristic of these airframes that was observed was their stability derivatives. Stability derivatives were calculated for airframes with different tail volume ratios, both vertical and horizontal. The definitions of those ratios are equations \ref{eqn:vtail-ratio} and \ref{eqn:htail-ratio}. The stability derivatives that are affected by a change in vertical tail volume ratio are \(C_{\ell{b}}\) and \(C_{nb}\). An airframe is stable if \(C_{\ell{b}}\) is less than 0 and \(C_{nb}\) is greater than 0. \\
 	
-	\begin{figure}
+	\begin{equation}
+		V_v = \frac{l_vS_v}{Sb}
+		\label{eqn:vtail-ratio}
+	\end{equation}
+	
+	\begin{equation}
+		V_h = \frac{l_tS_t}{SC_{ma}}
+		\label{eqn:htail-ratio}
+	\end{equation}
+
+	In figure \ref{fig:vtail-stability} , we can see that the airframe is stable for vertical tail volume ratios greater than 0.003, but it becomes unstable when the ratio is less than 0.003, at around 0.002. The stability derivatives that are affected by a change in horizontal tail volume ratio are \(C_{La}\) and \(C_{ma}\). An airframe is stable if \(C_{La}\) is greater than 0 and \(C_{ma}\) is less than 0. Figure \ref{fig:htail-stability} shows that the airframe is stable for horizontal tail volume ratios greater than 0.05, but becomes unstable when the ratio is less than 0.05, at around 0.025. \\
+	
+	\begin{figure}[H]
 		\centering
-		\includegraphics{../graphics/vtail-stability.pdf}
+		\includegraphics[scale=0.73]{../graphics/vtail-stability.pdf}
 		\caption{\emph{This diagram shows the relationship between vertical tail volume ratio, \(C_{\ell{b}}\), and \(C_{nb}\).}}
 		\label{fig:vtail-stability}
 	\end{figure}
 
-	In figure \ref{fig:vtail-stability} , we can see that the airframe is stable for vertical tail volume ratios greater than 0.003, but it becomes unstable when the ratio is less than 0.003, at around 0.002. The stability derivatives that are affected by a change in horizontal tail volume ratio are \(C_{La}\) and \(C_{ma}\). An airframe is stable if \(C_{La}\) is greater than 0 and \(C_{ma}\) is less than 0. Figure \ref{fig:htail-stability} shows that the airframe is stable for horizontal tail volume ratios greater than 0.05, but becomes unstable when the ratio is less than 0.05, at around 0.025. \\
-	
-	These ratios are arbitrary and will be different among models, but they are still extremely important. \\
-
-	\begin{figure}
+	\begin{figure}[H]
 		\centering
-		\includegraphics{../graphics/htail-stability.pdf}
+		\includegraphics[scale=0.73]{../graphics/htail-stability.pdf}
 		\caption{\emph{This diagram shows the relationship between horizontal tail volume ratio, \(C_{La}\), and \(C_{ma}\).}}
 		\label{fig:htail-stability}
 	\end{figure}
+	
+	These ratios are arbitrary and will be different among models, but they are still extremely important. \\
 	
 	\subsection{Angle of attack vs lift coefficient}
 	
@@ -94,11 +116,11 @@
 			\label{fig:sweep}
 		\end{figure}
 		
-		\item Aspect Ratio: aspect ratio of a wing is the ratio of its span to its mean chord. It is equal to the square of the wingspan divided by the wing area. Thus, a long, narrow wing has a high aspect ratio, whereas a short, wide wing has a low aspect ratio (see equation \ref{eqn:aspect-ratio})
+		\item Aspect Ratio: aspect ratio of a wing is the ratio of its span to its mean chord. It is equal to the square of the wingspan divided by the wing area. Thus, a long, narrow wing has a high aspect ratio, whereas a short, wide wing has a low aspect ratio (see equation \ref{eqn:aspect-ratio-wiki})
 		
 		\begin{equation}
 			AR = \frac{b}{c} = \frac{b^2}{S_{ref}}
-			\label{eqn:aspect-ratio}
+			\label{eqn:aspect-ratio-wiki}
 		\end{equation}
 	
 		\item Wake Vortex/Tip Vortex: a lifting wing has higher pressure on the bottom surface as compared to the top, and so fluid will circulate around the tips (see figure \ref{fig:downwash-wakevortex})
@@ -112,11 +134,11 @@
 		\end{figure}
 	
 		\item Induced Drag/Vortex Drag: major consequence of this downwash, is that energy is left behind in the wake. Or in other words, the wing produces drag
-		\item Inviscid Span Efficiency:  the inviscid span efficiency could be considered a measure of how close the lift distribution is to elliptic. All planar distributions will have \(e_{inv} <= 1\). A nonplanar lift distribution (e.g., adding winglets) can increase the inviscid span efficiency above 1 (see equation \ref{eqn:efficiency})
+		\item Inviscid Span Efficiency:  the inviscid span efficiency could be considered a measure of how close the lift distribution is to elliptic. All planar distributions will have \(e_{inv} <= 1\). A nonplanar lift distribution (e.g., adding winglets) can increase the inviscid span efficiency above 1 (see equation \ref{eqn:efficiency-wiki})
 		
 		\begin{equation}
 			e_{inv} = \frac{C_L^2}{\pi{ARC_D}}
-			\label{eqn:efficiency}
+			\label{eqn:efficiency-wiki}
 		\end{equation}
 	
 		\item Vortex Filament: an arbitrary vortex line segment
@@ -126,14 +148,14 @@
 		
 		\begin{equation}
 			V_v = \frac{l_vS_v}{Sb}
-			\label{eqn:vtail-ratio}
+			\label{eqn:vtail-ratio-wiki}
 		\end{equation}
 	
 		\subitem Horizontal Tail Volume Ratio:
 		
 		\begin{equation}
 			V_h = \frac{l_tS_t}{SC_{ma}}
-			\label{eqn:htail-ratio}
+			\label{eqn:htail-ratio-wiki}
 		\end{equation}
 	
 		\item Stability Derivatives: measures of how particular forces and moments on an aircraft change as other parameters related to stability change

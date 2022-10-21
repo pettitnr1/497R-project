@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  17 OCT 2022 20:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  21 OCT 2022 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -358,99 +358,97 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Article: 
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-<../graphics/efficiency.pdf, id=1, 289.08pt x 216.81pt>
-File: ../graphics/efficiency.pdf Graphic file (type pdf)
-<use ../graphics/efficiency.pdf>
-Package pdftex.def Info: ../graphics/efficiency.pdf  used on input line 43.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
 [1
 
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-<../graphics/vtail-stability.pdf, id=10, 289.08pt x 216.81pt>
-File: ../graphics/vtail-stability.pdf Graphic file (type pdf)
-<use ../graphics/vtail-stability.pdf>
-Package pdftex.def Info: ../graphics/vtail-stability.pdf  used on input line 56
-.
+<../graphics/efficiency.pdf, id=12, 289.08pt x 216.81pt>
+File: ../graphics/efficiency.pdf Graphic file (type pdf)
+<use ../graphics/efficiency.pdf>
+Package pdftex.def Info: ../graphics/efficiency.pdf  used on input line 55.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 [2 <../graphics/efficiency.pdf>]
-<../graphics/htail-stability.pdf, id=46, 289.08pt x 216.81pt>
-File: ../graphics/htail-stability.pdf Graphic file (type pdf)
-<use ../graphics/htail-stability.pdf>
-Package pdftex.def Info: ../graphics/htail-stability.pdf  used on input line 67
-.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<../graphics/aoa-lift.pdf, id=47, 289.08pt x 216.81pt>
+<../graphics/vtail-stability.pdf, id=46, 289.08pt x 216.81pt>
+File: ../graphics/vtail-stability.pdf Graphic file (type pdf)
+<use ../graphics/vtail-stability.pdf>
+Package pdftex.def Info: ../graphics/vtail-stability.pdf  used on input line 80
+.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+<../graphics/htail-stability.pdf, id=47, 289.08pt x 216.81pt>
+File: ../graphics/htail-stability.pdf Graphic file (type pdf)
+<use ../graphics/htail-stability.pdf>
+Package pdftex.def Info: ../graphics/htail-stability.pdf  used on input line 87
+.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+[3 <../graphics/vtail-stability.pdf> <../graphics/htail-stability.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+<../graphics/aoa-lift.pdf, id=126, 289.08pt x 216.81pt>
 File: ../graphics/aoa-lift.pdf Graphic file (type pdf)
 <use ../graphics/aoa-lift.pdf>
-Package pdftex.def Info: ../graphics/aoa-lift.pdf  used on input line 78.
+Package pdftex.def Info: ../graphics/aoa-lift.pdf  used on input line 100.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-[3 <../graphics/vtail-stability.pdf>] [4 <../graphics/htail-stability.pdf> <../
-graphics/aoa-lift.pdf>]
-<../graphics/sweep.jpg, id=163, 602.25pt x 353.82187pt>
+<../graphics/sweep.jpg, id=127, 602.25pt x 353.82187pt>
 File: ../graphics/sweep.jpg Graphic file (type jpg)
 <use ../graphics/sweep.jpg>
-Package pdftex.def Info: ../graphics/sweep.jpg  used on input line 92.
+Package pdftex.def Info: ../graphics/sweep.jpg  used on input line 114.
 (pdftex.def)             Requested size: 240.89572pt x 141.52623pt.
-<../graphics/downwash-wakevortex.png, id=164, 478.78876pt x 383.4325pt>
+[4 <../graphics/aoa-lift.pdf>]
+<../graphics/downwash-wakevortex.png, id=165, 478.78876pt x 383.4325pt>
 File: ../graphics/downwash-wakevortex.png Graphic file (type png)
 <use ../graphics/downwash-wakevortex.png>
 Package pdftex.def Info: ../graphics/downwash-wakevortex.png  used on input lin
-e 109.
+e 131.
 (pdftex.def)             Requested size: 191.5121pt x 153.37029pt.
- [5 <../graphics/sweep.jpg>] [6 <../graphics/downwash-wakevortex.png>] [7] (./p
-roject_2.aux) ) 
+ [5 <../graphics/sweep.jpg>] [6 <../graphics/downwash-wakevortex.png>] (./proje
+ct_2.aux) ) 
 Here is how much of TeX's memory you used:
- 8386 strings out of 475075
- 191141 string characters out of 5783002
- 517976 words of memory out of 5000000
- 29700 multiletter control sequences out of 15000+600000
+ 8390 strings out of 475075
+ 191229 string characters out of 5783002
+ 519008 words of memory out of 5000000
+ 29704 multiletter control sequences out of 15000+600000
  476223 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,77p,781b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/20
-22/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-si12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on project_2.pdf (7 pages, 237763 bytes).
+ 71i,9n,77p,781b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12
+.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on project_2.pdf (6 pages, 238247 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 220 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
