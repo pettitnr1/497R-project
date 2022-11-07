@@ -103,7 +103,7 @@ function optimize_airframe()
     # print out all pertinent information for ideal airframe
     println("b = ", ideal_b, " m")
     println("c = ", ideal_c[1], " m")
-    println("taper = ", ideal_taper[1], " m")
+    println("taper = ", ideal_taper[1])
     println("CL = ", ideal_CL[1])
     println("V = ", ideal_V[1], " m/s")
     println("Lift = ", L, " N")
@@ -282,4 +282,26 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
     elseif request === "coefficients"
         return [CL, CD]
     end
+end
+
+function calculate_velocity(t)
+    c = 0.41111
+    l = 2.0
+    CL = vortex_lattice([1.5, c], 1.0, 1.0, l, "lift", t)
+    Sref = 1.5*c
+    V = sqrt(4.905 / (0.5*CL*1.225*Sref))
+end
+
+function get_stability(t)
+    l = 2.0
+    c = 0.41111
+    stability_derivatives = vortex_lattice([1.5, c], 1.0, 1.0, l, "stability", t)
+    CLa = stability_derivatives[1][1]
+    Cma = stability_derivatives[1][2]
+    Clb = stability_derivatives[2][1]
+    Cnb = stability_derivatives[2][2]
+    println("CLa = ", CLa)
+    println("Cma = ", Cma)
+    println("Clb = ", Clb)
+    println("Cnb = ", Cnb)
 end

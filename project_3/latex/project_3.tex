@@ -1,1 +1,65 @@
+\documentclass{journal}
+\usepackage{graphicx}	% package for using graphics
+\usepackage{float}	% package for positioning figures
 
+\title{Airframe Aerodynamic Design}
+
+\author{Nathan Pettit}
+
+
+\begin{document}
+	
+	\maketitle	
+	
+	\section{Introduction}
+	
+	This report covers the work done in learning how to optimize an airframe with specific parameters, using techniques and knowledge learned previously. The goal was to design an airframe that can lift 0.5 kilograms, has a wingspan no greater than 1.5 meters, and is stable. Some other constraints that I added myself was that the length from wing to tail had to be less than or equal to 2.0 meters.
+	
+	\section{Methods}
+	The results of this research came from evaluating potential airframe solutions using VortexLattice.jl, as well as writing new functions to help in optimizing the airframe design. There were 4 functions that were  used:
+	
+	\begin{enumerate}
+		\item optimize\_airframe() - this was the main function that optimized the airframe so that it met the specified requirements and was the most efficient; it employed the use of all the other functions in order to find the optimized airframe
+		\item wing\_efficiency() - this calculated the inviscid span efficiency of a given airframe
+		\item vortex\_lattice() - this was the function that performed all the necessary VortexLattice calculations for the other functions 
+	\end{enumerate}
+
+	In order to optimize the airframe, the process, discussed in the introduction to "Engineering Design Optimization" by Joaquim R.R.A. Martins and Andrew Ning, was followed. The objective function  that was minimized was the equation used to calculate the velocity needed to produce the necessary lift to carry 0.5 kilograms (see equation \ref{eqn:needed-velocity}).
+	
+	\begin{equation}
+		V = \sqrt{\frac{4.905}{(0.5)(C_L)(1.225)(S_{ref})}}
+		\label{eqn:needed-velocity}
+	\end{equation}
+	
+	The design variables that were altered in order to minimize that function was the mean aerodynamic chord length of the wing and the length from wing to tail on the airframe. The inviscid span efficiency was also evaluated using different wing tapers, in order the maximize efficiency.
+		
+	\section{Results and Discussion}
+	
+	After running the optimize\_airframe() function, it found that the most optimized airframe was one that had the following characteristics:
+	
+	\begin{itemize}
+		\item span length = 1.5 meters
+		\item mean aerodynamic chord length = 0.4111 meters
+		\item length from wing to tail = 2.0 meters
+		\item taper = 1.0
+		\item lift coefficient = 0.06619075753338803
+		\item velocity needed to produce necessary lift = 14.006916728142778 m/s
+	\end{itemize}
+
+	The aforementioned necessary lift was 4.905 Newtons. This number was found by multiplying 0.5 kilograms by 9.81 \(m/s^2\), which is the acceleration due to gravity. It is also important to note that the optimize\_airframe() function accounts for stability and makes sure that the airframe is the most stable, and so this airframe is the most stable one under the given constraints. In order to show that this airframe has been optimized, other airframes have been evaluated in order to show correctness.\\
+	
+	\subsection{Altered Mean Chord Length}
+
+	When evaluating an airframe that has a mean chord length that is less than 0.411 m (I used 0.2 m for comparison), it was found that the velocity needed to generate the necessary lift was 16.942465583585317 m/s, which is greater than than the velocity needed for the optimized airframe. This shows that airframes with smaller mean chord lengths are not more optimized, as they need a greater velocity to lift the 0.5 kilograms.\\
+	
+	When evaluating an airframe that has a mean chord length that is greater than 0.411 m (I used 0.6 m for comparison), it was found that the velocity needed to generate the necessary lift was 12.950924026610165 m/s. It may seem that since the velocity needed is less than that of the optimized airframe, an airframe with a greater mean chord length is more optimal. Upon further inspection, this airframe is also stable. However, the yaw stability derivative(\(C_{nb}\)), is greater for the previously found optimized airframe, which means that it is more stable. This shows that as the mean chord length becomes greater, the airframe becomes less stable.
+	
+	\subsection{Altered Length from Wing to Tail}
+	
+	When evaluating an airframe that has a length from wing to tail that is less than 2.0 m (I used 1.0 m), it was found that the velocity needed to generate the necessary lift doesn't change. However, the airframe is less stable as the yaw stability derivative(\(C_{nb}\)) is less than the yaw stability derivative for the optimized airframe. Therefore, as the length from wing to tail is decreased, the airframe becomes less stable.
+	
+	\subsection{Altered Wing Taper}
+	
+	When evaluating an airframe that has wing taper that is less 1.0 (I used 0.5), it was found that the velocity needed to calculate the necessary lift was 14.968713705560383 m/s. While this is very close to the velocity needed for the optimized airframe, it is still larger; therefore, it is not as optimal. This shows that as the wing taper is decreased, the velocity needed to lift 0.5 kilograms increases, making it sub-optimal.
+	
+\end{document}
