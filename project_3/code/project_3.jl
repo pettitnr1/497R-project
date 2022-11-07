@@ -283,25 +283,3 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
         return [CL, CD]
     end
 end
-
-function calculate_velocity(t)
-    c = 0.41111
-    l = 2.0
-    CL = vortex_lattice([1.5, c], 1.0, 1.0, l, "lift", t)
-    Sref = 1.5*c
-    V = sqrt(4.905 / (0.5*CL*1.225*Sref))
-end
-
-function get_stability(t)
-    l = 2.0
-    c = 0.41111
-    stability_derivatives = vortex_lattice([1.5, c], 1.0, 1.0, l, "stability", t)
-    CLa = stability_derivatives[1][1]
-    Cma = stability_derivatives[1][2]
-    Clb = stability_derivatives[2][1]
-    Cnb = stability_derivatives[2][2]
-    println("CLa = ", CLa)
-    println("Cma = ", Cma)
-    println("Clb = ", Clb)
-    println("Cnb = ", Cnb)
-end
