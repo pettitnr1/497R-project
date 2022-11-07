@@ -8,6 +8,12 @@ include("plots_default.jl")
 
 computes lift coefficients for airframes with varying angles of attack. Plots
 the lift coefficient against the aspect ratios
+
+# Arguments
+No arguments
+
+# Returns
+No returns, but it does plot the lift coefficient against the angle of attack
 """
 function aoa_effect()
     angles = -20:1:20   # angles of attack used range from -20 to 20 degrees
@@ -16,7 +22,8 @@ function aoa_effect()
     index = 1   # initialize index used for iteration through lift array
 
     for a in angles
-        cl = vortex_lattice("coefficients", 7.5, 1, a)   # retrieve coeffcients of lift and drag for given angle of attack
+        # retrieve coeffcients of lift and drag for given angle of attack
+        cl = vortex_lattice("coefficients", 7.5, 1, a)
         lift[index] = cl[1]   # insert lift coefficient into lift array
         index = index + 1   # set index to be one greater for next iteration
     end
@@ -30,6 +37,12 @@ end
 
 computes the inviscid span efficiency for airframes with varying aspect ratios.
 Plots the efficiency against the aspect ratios
+
+# Arguments
+No arguments
+
+# Returns
+No returns, but it does plot the efficiency against the aspect ratios
 """
 function wing_efficiency()
     ratios = 3:1:15   # initialize aspect ratios to range from 3 to 15
@@ -40,7 +53,8 @@ function wing_efficiency()
     index = 1   # initialize index used for iteration through coefficients array
 
     for ar in ratios
-        coefficients[index, :] .= vortex_lattice("coefficients", ar)   # retrieve lift and drag coefficients for given aspect ratio
+        # retrieve lift and drag coefficients for given aspect ratio
+        coefficients[index, :] .= vortex_lattice("coefficients", ar)
         cl = coefficients[index, 1]   # get coefficient of lift from previous request
         cd = coefficients[index, 2]   # get coefficient of drag from previous request
 
@@ -59,6 +73,12 @@ end
 computes the stability derivatives for airframes with varying
 vertical and horizontal tail volume ratios. Plots those derivatives against the
 tail volume ratios
+
+# Arguments
+No arguments
+
+# Returns
+No returns, but it does plot the stability derivatives against their corresponding tail volume ratios
 """
 function stability_derivatives()
     v_ratios = range(0.001, 0.0156, 30)   # vertical tail volume ratios range from 0.001 to 0.0156
@@ -70,14 +90,16 @@ function stability_derivatives()
     index = 1   # initialize index used for iteration through v_derivatives and h_derivatives arrays
 
     for r in v_ratios
-        v_derivatives[index, :] .= vortex_lattice("vderivatives", 7.5, r)    # retrieve stability derivatives for given vertical tail volume ratio
+        # retrieve stability derivatives for given vertical tail volume ratio
+        v_derivatives[index, :] .= vortex_lattice("vderivatives", 7.5, r)
         index = index + 1   # set index to be one greater for next iteration
     end
 
     index = 1   # reset index to equal 1 for next for loop
 
     for r in h_ratios
-        h_derivatives[index, :] .= vortex_lattice("hderivatives", 7.5, r)    # retrieve stability derivatives for given horizontal tail volume ratio
+        # retrieve stability derivatives for given horizontal tail volume ratio
+        h_derivatives[index, :] .= vortex_lattice("hderivatives", 7.5, r)
         index = index + 1   # set index to be one greater for next iteration
     end
 
@@ -106,6 +128,11 @@ performs all the necessary vortex lattice computations
 - `v`: is the tail volume ratio of the ariframe being evaluated, defaults to 1
 - `aoa`: is the angle of attack of the airframe being evaluated, defaults to
     1.0*pi/180
+
+# Returns
+- `coefficients`: an array with the lift and drag coefficient of the given airframe
+- `v_derivatives`: the stability derivatives associated with the vertical tail
+- `h_derivatives`: the stability derivatives associated with the horizontal tail
 """
 function vortex_lattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
     # initialize coefficients array
@@ -177,15 +204,15 @@ function vortex_lattice(request, ar=7.5, v=1, aoa=1.0*pi/180)
 
     if (request === "vderivatives")
         # vertical tail volume ratio variables
-        S_v = zle_v[2]*chord_v[1]
-        l_v = (v*Sref*bref)/S_v
+        S_v = zle_v[2]*chord_v[1]   # calculate area of vertical tail
+        l_v = (v*Sref*bref)/S_v   # calculate length from wing to tail
         l_h = l_v
     end
 
     if (request === "hderivatives")
         # horizontal tail volume ratio variables
-        S_h = yle_h[2]*chord_h[1]
-        l_h = (v*Sref*(chord[1]+chord[2])/2)/S_h
+        S_h = yle_h[2]*chord_h[1]   # calculate area of horizontal tail
+        l_h = (v*Sref*(chord[1]+chord[2])/2)/S_h    # calculate length from wing to tail
         l_v = l_h
     end
 
@@ -289,6 +316,9 @@ constructs a normal vector the way AVL does
 - `ds`: line representing the leading edge
 - `theta`: the incidence angle, taken as a rotation (+ by RH rule) about the
     surface's spanwise axis projected onto the Y-Z plane.
+
+# Returns
+- `ncp / norm(ncp)`: the normal vector used by AVL
 """
 function avl_normal_vector(ds, theta)
 

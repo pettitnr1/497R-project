@@ -19,17 +19,17 @@
 	The results of this research came from evaluating airframes using VortexLattice.jl, as well as writing new functions to help in evaluating the airframes. There were 4 functions that were  used:
 	
 	\begin{enumerate}
-		\item aoaEffect() - this evaluated airframes and calculated their coefficient of lift for varying angles of attack 
-		\item wingEfficiency() - this calculated the efficiency of airframes with varying aspect ratios; it did this by calculating the lift and drag coefficients for every aspect ratio
-		\item stabilityDerivatives() - this calculated the stability derivatives for airframes with different horizontal and vertical tail ratios
-		\item vortexLattice() - this was the main function that performed all the necessary VortexLattice calculations for the other functions 
+		\item aoa\_effect() - this evaluated airframes and calculated their coefficient of lift for varying angles of attack 
+		\item wing\_efficiency() - this calculated the efficiency of airframes with varying aspect ratios; it did this by calculating the lift and drag coefficients for every aspect ratio
+		\item stability\_derivatives() - this calculated the stability derivatives for airframes with different horizontal and vertical tail ratios
+		\item vortex\_lattice() - this was the main function that performed all the necessary VortexLattice calculations for the other functions 
 	\end{enumerate}
 	
 	\section{Results and Discussion}
 	
 	\subsection{Aspect Ratio vs. Efficiency}
 	
-	In order to see the relationship between aspect ratio and the efficiency, the wingEfficiency() function was used. When it was run, it calculated the inviscid span efficiency (see equation \ref{eqn:efficiency}) for airframes with aspect ratios (see equation \ref{eqn:aspect-ratio}) ranging from 3 to 15.
+	In order to see the relationship between aspect ratio and the efficiency, the wing\_efficiency() function was used. When it was run, it calculated the inviscid span efficiency (see equation \ref{eqn:efficiency}) for airframes with aspect ratios (see equation \ref{eqn:aspect-ratio}) ranging from 3 to 15.
 	
 	\begin{equation}
 		e_{inv} = \frac{C_L^2}{\pi{ARC_D}}
