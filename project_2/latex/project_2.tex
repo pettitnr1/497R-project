@@ -1,13 +1,6 @@
 \documentclass{journal}
-%\documentclass[journal]{new-aiaa} for journal papers
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage[version=4]{mhchem}
-\usepackage{siunitx}
-\usepackage{longtable,tabularx}
-\usepackage{float}
-\setlength\LTleft{0pt} 
+\usepackage{graphicx}	% package for using graphics
+\usepackage{float}	% package for positioning figures
 
 \title{AIRFRAME ANALYSIS}
 
@@ -61,7 +54,7 @@
 	
 	\subsection{Tail Volume Ratios vs Stability Derivatives}
 	
-	Another characteristic of these airframes that was observed was their stability derivatives. Stability derivatives were calculated for airframes with different tail volume ratios, both vertical and horizontal. The definitions of those ratios are equations \ref{eqn:vtail-ratio} and \ref{eqn:htail-ratio}. The stability derivatives that are affected by a change in vertical tail volume ratio are \(C_{\ell{b}}\) and \(C_{nb}\). An airframe is stable if \(C_{\ell{b}}\) is less than 0 and \(C_{nb}\) is greater than 0. \\
+	Another characteristic of these airframes that was observed was their stability derivatives. Stability derivatives were calculated for airframes with different tail volume ratios, both vertical and horizontal. The definitions of those ratios are equations \ref{eqn:vtail-ratio} and \ref{eqn:htail-ratio}. The stability derivatives that are affected by a change in vertical tail volume ratio are \(C_{\ell{b}}\) and \(C_{nb}\). \(C_{\ell{b}}\) is the stability derivative associated with roll stability. \(C_{nb}\) is the stability derivative associated with yaw stability. An airframe is stable if \(C_{\ell{b}}\) is less than 0 and \(C_{nb}\) is greater than 0. \\
 	
 	\begin{equation}
 		V_v = \frac{l_vS_v}{Sb}
