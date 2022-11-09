@@ -95,7 +95,7 @@
 		\label{fig:aoa-lift}
 	\end{figure}
 
-	In comparison to the plot created using Xfoil.jl, figure \ref{fig:aoa-lift} looks very similar between angles of attack of -10 and 10. However, past those angles of attack is where it differs. In the Xfoil plot, it shows very clearly where stall would take place, but in this VortexLattice plot, the plot continues linearly and never drops off, never indicating stall. This is why the Vortex Lattice method is not always a great choice for investigating airframes. It is only accurate when the angle of attack and sideslip angle are small, because it uses small angle approximation in its calculations. This is why in figure \ref{fig:aoa-lift} it looks very linear and doesn't indicate where stall would take place, where as the Xfoil plot does.
+	In comparison to the plot created using Xfoil.jl, figure \ref{fig:aoa-lift} looks very similar between angles of attack of -10 and 10. However, past those angles of attack is where it differs. In the Xfoil plot, it shows very clearly where stall would take place, but in this VortexLattice plot, the plot continues linearly and never drops off, never indicating stall. This is why the Vortex Lattice method is not always a great choice for investigating airframes. It is only accurate when the angle of attack is small, because it assumes that the flow is inviscid at all angles of attack. This is why in figure \ref{fig:aoa-lift} it looks very linear and doesn't indicate where stall would take place, where as the Xfoil plot does.
  	
 	\section*{Appendix}
 	
