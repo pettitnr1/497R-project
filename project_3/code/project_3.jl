@@ -24,6 +24,7 @@ function optimize_airframe()
     # initialize variables for use within for loops
     ideal_b = 1.5  # max span is 1.5 m
     ideal_c = [0.1]   # ideal chord length (m)
+    ideal_AR = 2.0
     CL = [0.0]   # lift coefficient
     ideal_CL = [vortex_lattice([ideal_b, ideal_c[1]], 1.0, 1.0, 1.0, "lift")]  # calculate ideal lift coefficient using ideal span and chord length
     e = 0.0   # inviscid span efficiency
@@ -65,12 +66,12 @@ function optimize_airframe()
             Cnb[1] = stability_derivatives[2][2]
 
             # airframe is ideal if it is most stable and velocity needed for necessary lift is low
-            if (V[1] < ideal_V[1] && CLa[1] > 0 && Cma[1] < 0 && Clb[1] < 0 && Cnb[1] > ideal_Cnb[1])
+            if (V[1] < ideal_V[1] && CLa[1] > 0 && Cma[1] < 0 && Clb[1] < 0 && Cnb[1] > 0 && (ideal_b / c) > ideal_AR)
                 ideal_c[1] = c
                 ideal_CL[1] = CL[1]
                 ideal_length[1] = length
                 ideal_V[1] = V[1]
-                ideal_Cnb[1] = Cnb[1]
+                # ideal_Cnb[1] = Cnb[1]
             end
         end
     end
@@ -100,14 +101,7 @@ function optimize_airframe()
         println("NOT STABLE")
     end
 
-    # print out all pertinent information for ideal airframe
-    println("b = ", ideal_b, " m")
-    println("c = ", ideal_c[1], " m")
-    println("taper = ", ideal_taper[1])
-    println("CL = ", ideal_CL[1])
-    println("V = ", ideal_V[1], " m/s")
-    println("Lift = ", L, " N")
-    println("Length = ", ideal_length[1], " m")
+    return [ideal_b, ideal_c[1], ideal_taper[1], ideal_CL[1], ideal_V[1], L, ideal_length[1]]
 end
 
 """
@@ -132,6 +126,40 @@ function wing_efficiency(b, c, taper)
     ar = b/c
     efficiency = (cl^2) / (pi * ar * cd)   # compute inviscid span efficiency for given aspect ratio, using coeffcients of lift and drag
     return efficiency
+end
+
+"""
+    aoa_coefficients()
+
+finds the lift and drag coefficients for varying angles of attack for given airframe
+
+# Arguments
+- `b`: span length (m)
+- `c`: mean chord length (m)
+- `v`: freestream velocity (m/s)
+- `length`: length from wing to tail (m)
+- `taper`: wing taper ratio
+
+# Returns
+- `[cl, cd]`: lift and drag doefficients for given airframe for angles of attack from -10 to 10 degrees
+
+"""
+function aoa_coefficients(b, c, v, length, taper)
+    aoa = -10:1:10  # angles of attack
+
+    # initialize arrays for holding data for each design
+    cl = zeros(21)
+    cd = zeros(21)
+
+    i = 1
+    # find lift and drag coefficients for given angle of attack for different designs
+    for angle in aoa
+        cl[i] = vortex_lattice([b, c], angle, v, length, "coefficients", taper)[1]
+        cd[i] = vortex_lattice([b, c], angle, v, length, "coefficients", taper)[2]
+        i = i + 1
+    end
+
+    return [cl, cd]
 end
 
 """
@@ -196,7 +224,7 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
 
     # discretization parameters
     ns = 12 # number of spanwise panels
-    nc = 6 # number of chordwise panels
+    nc = 1 # number of chordwise panels
     spacing_s = Uniform()
     spacing_c = Uniform()
 
@@ -218,7 +246,7 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
     Omega = [0.0; 0.0; 0.0]
     fs = Freestream(Vinf, alpha, beta, Omega)
 
-    # construct surface SOMETHING IS WRONG WITH THIS
+    # construct surface
     grid, wing = wing_to_surface_panels(xle, yle, zle, chord, theta, phi, ns, nc;
         mirror=mirror, fc = fc, spacing_s=spacing_s, spacing_c=spacing_c)
 
@@ -253,6 +281,20 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
 
     # perform far-field analysis
     CDiff = far_field_drag(system)
+
+    # get lift distribution
+    properties = get_surface_properties(system)[1] # gets spanwise PanelProperties array
+    gamma = (p -> p.gamma).(properties) # extracts the gamma field from each of the structs in the properties array
+    vx = (p->p.velocity[1]).(properties)
+    root_to_tip = range(chord[1], chord[2], ns+1) # add extra station to account for wing tip edge.
+
+    # since you have a symmetric wing, you need to mirror this to get both sides
+    panel_edge_chords = [reverse(root_to_tip); root_to_tip[2:end]] # don't repeat the root edge
+
+    # get average of panel edge chords (these are the ones you want)
+    control_point_chords = (panel_edge_chords[2:end] .+ panel_edge_chords[1:end-1])/2.0
+
+    cl_dist = 2.0.*(gamma./(vx.*control_point_chords))
 
     # retrieve stability derivatives
     dCFs, dCMs = stability_derivatives(system)
