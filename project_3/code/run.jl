@@ -2,7 +2,6 @@ include("project_3.jl")
 include("plots_default.jl")
 
 optimized_airframe = optimize_airframe()
-println(optimized_airframe)
 b = optimized_airframe[1]
 c = optimized_airframe[2]
 taper = optimized_airframe[3]

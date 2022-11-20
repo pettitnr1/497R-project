@@ -1,5 +1,6 @@
 using VortexLattice
 using LinearAlgebra
+using Statistics
 using Optim
 
 include("plots_default.jl")
@@ -19,7 +20,7 @@ function optimize_airframe()
 
     chords = range(0.1, 1.5, 10)   # chord lengths ranging from 0.1 m to 1.5 m
     lengths = range(0, 2, 10)   # lengths from wing to tail ranging from 0 m to 2 m
-    tapers = range(0.1, 1.0, 5)   # taper coefficients ranging from 0.1 to 1
+    tapers = range(0.1, 1.0, 10)   # taper coefficients ranging from 0.1 to 1
 
     # initialize variables for use within for loops
     ideal_b = 1.5  # max span is 1.5 m
@@ -27,8 +28,8 @@ function optimize_airframe()
     ideal_AR = 2.0
     CL = [0.0]   # lift coefficient
     ideal_CL = [vortex_lattice([ideal_b, ideal_c[1]], 1.0, 1.0, 1.0, "lift")]  # calculate ideal lift coefficient using ideal span and chord length
-    e = 0.0   # inviscid span efficiency
-    max_e = 0.0   # max efficiency
+    cl_dists = []
+    mean_c = 0.0
     ideal_taper = [1.0]   # ideal taper coefficient
     Sref = [ideal_b*ideal_c[1]]   # calculate reference area using ideal span and chord length (m^2)
     L = 4.905  # what lift needs to be to lift 0.5 kg
@@ -76,15 +77,11 @@ function optimize_airframe()
         end
     end
 
+    min_sum = 1000
     for taper in tapers
-        mean_c = ideal_c[1]*(1+taper)/2   # calculate mean chord length for given taper
-
-        # retrieve efficiency for airframe with given taper
-        e = wing_efficiency(ideal_b, mean_c, taper)
-
-        # taper is ideal if efficiency is closest to, but less than 1
-        if (e > max_e && e < 1)
-            max_e = e
+        mean_c = ideal_c[1]*(1+taper)/2
+        cl_dists = vortex_lattice([ideal_b, mean_c], 1.0, ideal_V[1], ideal_length[1], "cldist", taper)
+        if (sum(broadcast(abs, (cl_dists[1] .- cl_dists[2]))) < min_sum)
             ideal_taper[1] = taper
         end
     end
@@ -120,7 +117,7 @@ computes efficiency of wing
 function wing_efficiency(b, c, taper)
 
     coefficients = zeros(2)   # construct array to hold lift and drag coefficients for every aspect ratio
-    coefficients = vortex_lattice([b, c], 1.0, 1.0, 1.0, "coefficients", taper)
+    coefficients = vortex_lattice([b, c], 1.0, 1.0, 1.0, "cldist", taper)
     cl = coefficients[1]   # get coefficient of lift from previous request
     cd = coefficients[2]   # get coefficient of drag from previous request
     ar = b/c
@@ -279,6 +276,9 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
     # retrieve near-field forces
     CF, CM = body_forces(system; frame=Wind())
 
+    CD, CY, CL = CF
+    Cl, Cm, Cn = CM
+
     # perform far-field analysis
     CDiff = far_field_drag(system)
 
@@ -287,6 +287,7 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
     gamma = (p -> p.gamma).(properties) # extracts the gamma field from each of the structs in the properties array
     vx = (p->p.velocity[1]).(properties)
     root_to_tip = range(chord[1], chord[2], ns+1) # add extra station to account for wing tip edge.
+    span_range = range(-b/2, b/2, ns*2+1)
 
     # since you have a symmetric wing, you need to mirror this to get both sides
     panel_edge_chords = [reverse(root_to_tip); root_to_tip[2:end]] # don't repeat the root edge
@@ -294,13 +295,17 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
     # get average of panel edge chords (these are the ones you want)
     control_point_chords = (panel_edge_chords[2:end] .+ panel_edge_chords[1:end-1])/2.0
 
-    cl_dist = 2.0.*(gamma./(vx.*control_point_chords))
+    span_control_points = (span_range[2:end] .+ span_range[1:end-1])/2.0
+
+    cl_dist = 2.0.*(vec(gamma)./(vec(vx).*control_point_chords))
+
+    root_CL = cl_dist[ns]
+    ideal_cl_dist = root_CL/(b/2)* sqrt.((b/2)^2 .- (span_control_points.^2))
+    plot(span_control_points, cl_dist)
+    cl_dist_plot = plot!(span_control_points, ideal_cl_dist)
 
     # retrieve stability derivatives
     dCFs, dCMs = stability_derivatives(system)
-
-    CD, CY, CL = CF
-    Cl, Cm, Cn = CM
 
     # stability derivatives
     CDa, CYa, CLa = dCFs.alpha
@@ -323,5 +328,7 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
         return [long_stability, lat_stability]
     elseif request === "coefficients"
         return [CL, CD]
+    elseif request === "cldist"
+        return [cl_dist, ideal_cl_dist]
     end
 end
