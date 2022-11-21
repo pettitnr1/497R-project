@@ -21,8 +21,7 @@
 	
 	\begin{enumerate}
 		\item optimize\_airframe() - this was the main function that optimized the airframe so that it met the specified requirements and was the most efficient; it employed the use of all the other functions in order to find the optimized airframe
-		\item wing\_efficiency() - this calculated the inviscid span efficiency of a given airframe
-		\item compare\_designs() - this plotted the important characteristics of the ideal airframe against other designs for comparison.
+		\item aoa\_coefficients() - this calculated the lift and drag coefficients for a given airframe design for a range of angles of attack.
 		\item vortex\_lattice() - this was the function that performed all the necessary VortexLattice calculations for the other functions 
 	\end{enumerate}
 
@@ -39,41 +38,79 @@
 		\item \(S_{ref}\) - the reference area, in this case the wing area
 	\end{itemize}
 	
-	The design variables that were altered in order to minimize that function was the mean aerodynamic chord length of the wing and the length from wing to tail on the airframe. The reason I chose these design variables was because I knew that the airframe that would generate the most lift would have the max wingspan possible (so in this case 1.5 m), and so altering the chord length would help me find the wing that needed the least speed to takeoff. I also chose the length from wing to tail as a design variable because I knew altering it would change how stable the airframe was. However, as I worked with these design variables, it was discovered that the greater the length from wing to tail, the more stable the airframe. For this reason, I put an upper limit on that length to be 2.0 m, so that the found airframe would be realistic. The way that I found the optimal airframe was I changed those design variables together, so that it found the airframe that took off at the least velocity, but was the most stable. This means that there are other configurations of the airframe where the takeoff velocity is less, but they aren't more ideal because they are less stable. The inviscid span efficiency was also evaluated using different wing tapers, in order the maximize efficiency.
+	The design variables that were altered in order to minimize that function was the mean aerodynamic chord length of the wing and the length from wing to tail on the airframe. The reason I chose these design variables was because I knew that the airframe that would generate the most lift would have the max wingspan possible (so in this case 1.5 m), and so altering the chord length would help me find the wing that needed the least speed to takeoff. I also chose the length from wing to tail as a design variable because I knew altering it would change how stable the airframe was. However, as I worked with these design variables, it was discovered that the greater the length from wing to tail, the more stable the airframe. For this reason, I put an upper limit on that length to be 2.0 m, so that the found airframe would be realistic. I also put a constraint on the aspect ratio of the wing, which was that it had to be greater than 2.0. The way that I found the optimal airframe was I changed those design variables together, so that it found the airframe that took off at the least velocity, but was the most stable. The efficiency of the airframe with different wing taper ratios was also evaluated by plotting the lift coefficient distribution against the optimal distribution, which was a ellipse. The ideal taper ratio was the one that produced a lift coefficient distribution closest to that elliptical distribution. This was done so that the final airframe design not only optimized my objective function, but was also the most efficient design.
 		
 	\section{Results and Discussion}
 	
-	After running the optimize\_airframe() function, it found that the most optimized airframe was one that had the following characteristics:
+	After running the optimize\_airframe() function, it found that the most optimized airframe was one that had the following characteristics (figure \ref{fig:ideal_design} shows what the design looks like):
 	
 	\begin{itemize}
 		\item span length = 1.5 meters
-		\item mean aerodynamic chord length = 0.4111 meters
+		\item mean aerodynamic chord length = 0.7222 meters
 		\item length from wing to tail = 2.0 meters
 		\item taper = 1.0
-		\item lift coefficient = 0.06619075753338803
-		\item velocity needed to produce necessary lift = 14.006916728142778 m/s
+		\item lift coefficient = 0.04616576328871639
+		\item velocity needed to produce necessary lift = 12.653929077220258 m/s
 	\end{itemize}
+
+	\begin{figure}[H]
+		\includegraphics{../graphics/ideal_design.pdf}
+		\caption{\emph{This figure shows the design of the optimized airframe.}}
+		\label{fig:ideal_design}
+	\end{figure}
 
 	The aforementioned necessary lift was 4.905 Newtons. This number was found by multiplying 0.5 kilograms by 9.81 \(m/s^2\), which is the acceleration due to gravity. It is also important to note that the optimize\_airframe() function accounts for stability and makes sure that the airframe is the most stable, and so this airframe is the most stable one under the given constraints. In order to show that this airframe has been optimized, other airframes have been evaluated in order to show correctness.\\
 	
 	\subsection{Altered Mean Chord Length}
 
-	When evaluating an airframe that has a mean chord length that is less than 0.411 m (I used 0.2 m for comparison), it was found that the velocity needed to generate the necessary lift was 16.942465583585317 m/s, which is greater than than the velocity needed for the optimized airframe. This shows that airframes with smaller mean chord lengths are not more optimized, as they need a greater velocity to lift the 0.5 kilograms.\\
-	
-	When evaluating an airframe that has a mean chord length that is greater than 0.411 m (I used 0.6 m for comparison), it was found that the velocity needed to generate the necessary lift was 12.950924026610165 m/s. It may seem that since the velocity needed is less than that of the optimized airframe, an airframe with a greater mean chord length is more optimal. Upon further inspection, this airframe is also stable. However, the yaw stability derivative(\(C_{nb}\)), is greater for the previously found optimized airframe, which means that it is more stable. This shows that as the mean chord length becomes greater, the airframe becomes less stable.\\
-	
-	A plot showing the lift coefficient vs. angle of attack for these 3 designs is given (see figure \ref{fig:chords}).
+	When evaluating an airframe that has a mean chord length that is less than 0.7222 m (I used 0.6 m for comparison), it was found that the velocity needed to generate the necessary lift was 13.049496968197154 m/s, which is greater than than the velocity needed for the optimized airframe. This shows that airframes with smaller mean chord lengths are not more optimized, as they need a greater velocity to lift the 0.5 kilograms.\\
 	
 	\begin{figure}[H]
-		\includegraphics{../graphics/chord_lengths.pdf}
-		\caption{\emph{This figure shows the lift coefficients for varying angles of attack for the 3 designs evaluated using different mean chord lengths}}
-		\label{fig:chords}
+		\includegraphics{../graphics/chord_design.pdf}
+		\caption{\emph{This figure shows the design of an airframe with a chord length of 0.6 m.}}
+		\label{fig:chord_design}
+	\end{figure}
+	
+	An airframe with a greater chord length was not evaluated for comparison, because of the constraint I put on the aspect ratio. 0.7222 m was the largest possible chord length that kept the aspect ratio of the wing greater than 2.0.\\
+	
+	Plots showing the lift coefficient vs. angle of attack and drag coefficient vs. angle of attack for these 2 designs are given (see figures \ref{fig:chord_cl} and \ref{fig:chord_cd}).
+	
+	\begin{figure}[H]
+		\includegraphics{../graphics/chord_cl.pdf}
+		\caption{\emph{This figure shows the lift coefficients for varying angles of attack for the 2 designs evaluated using different mean chord lengths.}}
+		\label{fig:chord_cl}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics{../graphics/chord_cd.pdf}
+		\caption{\emph{This figure shows the drag coefficients for varying angles of attack for the 2 designs evaluated using different mean chord lengths.}}
+		\label{fig:chord_cd}
 	\end{figure}
 	
 	\subsection{Altered Length from Wing to Tail}
 	
-	When evaluating an airframe that has a length from wing to tail that is less than 2.0 m (I used 1.0 m), it was found that the velocity needed to generate the necessary lift doesn't change. However, the airframe is less stable as the yaw stability derivative(\(C_{nb}\)) is less than the yaw stability derivative for the optimized airframe. Therefore, as the length from wing to tail is decreased, the airframe becomes less stable.
+	When evaluating an airframe that has a length from wing to tail that is less than 2.0 m (I used 1.0 m), it was found that the velocity needed to generate the necessary lift doesn't change. However, the airframe is less stable as the yaw stability derivative(\(C_{nb}\)) is less than the yaw stability derivative for the optimized airframe. Therefore, as the length from wing to tail is decreased, the airframe becomes less stable.\\
 	
+	Figures showing the lift and drag coefficients vs. angle of attack for the 2 designs are given (see figures \ref{fig:wingtail_cl} and \ref{fig:wingtail_cd}). 
+	
+	\begin{figure}[H]
+		\includegraphics{../graphics/wingtail_cl.pdf}
+		\caption{\emph{This figure shows the lift coefficient vs. angle of attack for the 2 designs evaluated.}}
+		\label{fig:wingtail_cl}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics{../graphics/wingtail_cd.pdf}
+		\caption{\emph{This figure shows the drag coefficient vs. angle of attack for the 2 designs evaluated.}}
+		\label{fig:wingtail_cd}
+	\end{figure}
+	
+	Figure \ref{fig:length_design} shows the design of an airframe with a length from wing to tail of 1.0 m.
+	
+	\begin{figure}[H]
+		\includegraphics{../graphics/length_design.pdf}
+		\caption{\emph{This figure shows design of an airframe with a length from wing to tail of 1.0 m.}}
+		\label{fig:length_design}
+	\end{figure}
+
 	\subsection{Altered Wing Taper}
 	The wing taper ratio of an airframe is found using equation \ref{eqn:taper-ratio}.
 	
@@ -82,14 +119,38 @@
 		\label{eqn:taper-ratio}
 	\end{equation}
 	
-	When evaluating an airframe that has wing taper ratio that is less 1.0 (I used 0.5), it was found that the velocity needed to calculate the necessary lift was 14.968713705560383 m/s. While this is very close to the velocity needed for the optimized airframe, it is still larger; therefore, it is not as optimal. This shows that as the wing taper ratio is decreased, the velocity needed to lift 0.5 kilograms increases, making it sub-optimal.\\
-	
-	A plot showing the lift coefficient vs. angle of attack for these 2 designs is given (see figure \ref{fig:taper}).
+	When evaluating an airframe that has a wing taper ratio that is less than 1.0 (I used 0.5), it was found that the velocity needed to calculate the necessary lift was 13.215339717762241 m/s. While this is close to the velocity needed for the optimized airframe, it is still larger; therefore, it is not as optimal. This shows that as the wing taper ratio is decreased, the velocity needed to lift 0.5 kilograms increases, making it sub-optimal. You can also see that an airframe with a wing taper ratio of 1.0 has a lift coefficient distribution that is closer to the optimal elliptical distribution than the airframe with a wing taper ratio of 0.5 (see figures \ref{fig:cl_dist} and \ref{fig:cl_dist_compare}).\\
 	
 	\begin{figure}[H]
-		\includegraphics{../graphics/taper.pdf}
+		\includegraphics{../graphics/cl_dist.pdf}
+		\caption{\emph{This figure shows the lift coefficient distribution for a taper ratio of 1.0 vs. the optimal elliptical distribution.}}
+		\label{fig:cl_dist}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics{../graphics/cl_dist_compare.pdf}
+		\caption{\emph{This figure shows the lift coefficient distribution for a taper ratio of 0.5 vs. the optimal elliptical distribution.}}
+		\label{fig:cl_dist_compare}
+	\end{figure}
+	
+	Plots showing the lift coefficients and drag coefficients vs. angle of attack for these 2 designs are given (see figures \ref{fig:taper_cl} and \ref{fig:taper_cd}).
+	
+	\begin{figure}[H]
+		\includegraphics{../graphics/taper_cl.pdf}
 		\caption{\emph{This figure shows the lift coefficients for varying angles of attack for the 2 designs evaluated using different wing tip tapers}}
-		\label{fig:taper}
+		\label{fig:taper_cl}
+	\end{figure}
+	\begin{figure}[H]
+		\includegraphics{../graphics/taper_cd.pdf}
+		\caption{\emph{This figure shows the drag coefficients for varying angles of attack for the 2 designs evaluated using different wing tip tapers}}
+		\label{fig:taper_cd}
+	\end{figure}
+
+	The design of an airframe with a wing taper ratio of 0.5 is shown in figure \ref{fig:taper_design}.
+	
+	\begin{figure}[H]
+		\includegraphics{../graphics/taper_design.pdf}
+		\caption{\emph{This figure shows the design of an airframe with a wing taper ratio of 0.5.}}
+		\label{fig:taper_design}
 	\end{figure}
 	\newpage
 	

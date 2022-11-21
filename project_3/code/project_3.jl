@@ -14,7 +14,7 @@ optimizes an airframe with a span of 1.5 m so that it can lift 0.5 kg, is stable
 No arguments
 
 # Returns
-No returns, but it does print out the ideal chord, span, taper, lift coefficient, lift, and length from wing to tail. It also prints the velocity it takes to produce the necessary lift
+- `[ideal_b, ideal_c[1], ideal_taper[1], ideal_CL[1], ideal_V[1], L, ideal_length[1]]`: all of the important charactistics of the optimized airframe
 """
 function optimize_airframe()
 
@@ -41,7 +41,6 @@ function optimize_airframe()
     Cma = [0.0]
     Clb = [0.0]
     Cnb = [0.0]
-    ideal_Cnb = [0.0]
     stability_derivatives = [[]]
 
     ideal_length = [0.0]   # ideal length from wing to tail (m)
@@ -72,15 +71,19 @@ function optimize_airframe()
                 ideal_CL[1] = CL[1]
                 ideal_length[1] = length
                 ideal_V[1] = V[1]
-                # ideal_Cnb[1] = Cnb[1]
             end
         end
     end
 
     min_sum = 1000
+
+    # find taper ratio that makes airframe most efficient
     for taper in tapers
         mean_c = ideal_c[1]*(1+taper)/2
+        # retrieve lift coefficient distributions
         cl_dists = vortex_lattice([ideal_b, mean_c], 1.0, ideal_V[1], ideal_length[1], "cldist", taper)
+
+        # compare ideal elliptical lift coefficient distribution to distribution for given taper
         if (sum(broadcast(abs, (cl_dists[1] .- cl_dists[2]))) < min_sum)
             ideal_taper[1] = taper
         end
@@ -101,28 +104,12 @@ function optimize_airframe()
     return [ideal_b, ideal_c[1], ideal_taper[1], ideal_CL[1], ideal_V[1], L, ideal_length[1]]
 end
 
-"""
-    wing_efficiency(b, c, taper)
-
-computes efficiency of wing
-
-# Arguments
-- `b`: wing span (m)
-- `c`: mean chord length (m)
-- `taper`: taper coefficient used to determine tip chord length
-
-# Returns
-- `efficiency`: the efficiency of the given wing
-"""
-function wing_efficiency(b, c, taper)
-
-    coefficients = zeros(2)   # construct array to hold lift and drag coefficients for every aspect ratio
-    coefficients = vortex_lattice([b, c], 1.0, 1.0, 1.0, "cldist", taper)
-    cl = coefficients[1]   # get coefficient of lift from previous request
-    cd = coefficients[2]   # get coefficient of drag from previous request
-    ar = b/c
-    efficiency = (cl^2) / (pi * ar * cd)   # compute inviscid span efficiency for given aspect ratio, using coeffcients of lift and drag
-    return efficiency
+function check(t)
+    CL = vortex_lattice([1.5, 0.7222222], 1.0, 1.0, 2.0, "lift", t)
+    V = sqrt(4.905 / (0.5*CL*1.225*1.5*c))
+    stability_derivatives = vortex_lattice([1.5, 0.7222222], 1.0, 1.0, l, "stability")
+    Cnb = stability_derivatives[2][2]
+    return V
 end
 
 """
@@ -176,6 +163,7 @@ performs all the necessary vortex lattice computations
 - `CL`: the lift coefficient of the airframe, returned when request is "lift",
 - `[long_stability, lat_stability]`: longitudinal and lateral stability derivatives, only includes pertinent derivatives, returned when request is "stability"
 - `[CL, CD]`: lift and drag coefficients of airframe, returned when request is "coefficients"
+- `[cl_dist, ideal_cl_dist]`: CL distribution for given taper ratio and optimal elliptical distribution
 """
 function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, request = "lift", taper=1.0)
     b = airframe[1]   # span length (m)
@@ -301,8 +289,8 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
 
     root_CL = cl_dist[ns]
     ideal_cl_dist = root_CL/(b/2)* sqrt.((b/2)^2 .- (span_control_points.^2))
-    plot(span_control_points, cl_dist)
-    cl_dist_plot = plot!(span_control_points, ideal_cl_dist)
+    plot(span_control_points, cl_dist, xlabel="Span Position(m)", ylabel=L"C_L",label="taper ratio = $taper", title=L"C_L distribution")
+    cl_dist_plot = plot!(span_control_points, ideal_cl_dist, label="optimal distribution", legend=:bottom)
 
     # retrieve stability derivatives
     dCFs, dCMs = stability_derivatives(system)
@@ -329,6 +317,6 @@ function vortex_lattice(airframe=[1.5,0.5], aoa=1.0, v = 1.0, length=1.0, reques
     elseif request === "coefficients"
         return [CL, CD]
     elseif request === "cldist"
-        return [cl_dist, ideal_cl_dist]
+        return [cl_dist, ideal_cl_dist, cl_dist_plot]
     end
 end

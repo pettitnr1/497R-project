@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  15 NOV 2022 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  21 NOV 2022 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -121,78 +121,141 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 Article: 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 31.
+(Font)              <5> on input line 30.
 [1
 
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-
- []
-
-<../graphics/chord_lengths.pdf, id=19, 289.08pt x 216.81pt>
-File: ../graphics/chord_lengths.pdf Graphic file (type pdf)
-<use ../graphics/chord_lengths.pdf>
-Package pdftex.def Info: ../graphics/chord_lengths.pdf  used on input line 68.
+<../graphics/ideal_design.pdf, id=14, 289.08pt x 216.81pt>
+File: ../graphics/ideal_design.pdf Graphic file (type pdf)
+<use ../graphics/ideal_design.pdf>
+Package pdftex.def Info: ../graphics/ideal_design.pdf  used on input line 57.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-[3 <../graphics/chord_lengths.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-<../graphics/taper.pdf, id=66, 289.08pt x 216.81pt>
-File: ../graphics/taper.pdf Graphic file (type pdf)
-<use ../graphics/taper.pdf>
-Package pdftex.def Info: ../graphics/taper.pdf  used on input line 90.
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+<../graphics/chord_design.pdf, id=20, 289.08pt x 216.81pt>
+File: ../graphics/chord_design.pdf Graphic file (type pdf)
+<use ../graphics/chord_design.pdf>
+Package pdftex.def Info: ../graphics/chord_design.pdf  used on input line 69.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-[4 <../graphics/taper.pdf>]
-<../graphics/design_process.jpg, id=108, 117.43875pt x 216.81pt>
+[3 <../graphics/ideal_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+<../graphics/chord_cl.pdf, id=56, 289.08pt x 216.81pt>
+File: ../graphics/chord_cl.pdf Graphic file (type pdf)
+<use ../graphics/chord_cl.pdf>
+Package pdftex.def Info: ../graphics/chord_cl.pdf  used on input line 79.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/chord_cd.pdf, id=57, 289.08pt x 216.81pt>
+File: ../graphics/chord_cd.pdf Graphic file (type pdf)
+<use ../graphics/chord_cd.pdf>
+Package pdftex.def Info: ../graphics/chord_cd.pdf  used on input line 84.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[4 <../graphics/chord_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+[5 <../graphics/chord_cl.pdf> <../graphics/chord_cd.pdf>]
+<../graphics/wingtail_cl.pdf, id=176, 289.08pt x 216.81pt>
+File: ../graphics/wingtail_cl.pdf Graphic file (type pdf)
+<use ../graphics/wingtail_cl.pdf>
+Package pdftex.def Info: ../graphics/wingtail_cl.pdf  used on input line 96.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/wingtail_cd.pdf, id=177, 289.08pt x 216.81pt>
+File: ../graphics/wingtail_cd.pdf Graphic file (type pdf)
+<use ../graphics/wingtail_cd.pdf>
+Package pdftex.def Info: ../graphics/wingtail_cd.pdf  used on input line 101.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [6 <../graphics/wingtail_cl.pdf>]
+<../graphics/length_design.pdf, id=224, 289.08pt x 216.81pt>
+File: ../graphics/length_design.pdf Graphic file (type pdf)
+<use ../graphics/length_design.pdf>
+Package pdftex.def Info: ../graphics/length_design.pdf  used on input line 109.
+
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [7 <../graphics/wingtail_cd.pdf> <../graphics/length_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+<../graphics/cl_dist.pdf, id=303, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist.pdf>
+Package pdftex.def Info: ../graphics/cl_dist.pdf  used on input line 125.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/cl_dist_compare.pdf, id=304, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist_compare.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist_compare.pdf>
+Package pdftex.def Info: ../graphics/cl_dist_compare.pdf  used on input line 13
+0.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[8 <../graphics/cl_dist.pdf>]
+<../graphics/taper_cl.pdf, id=357, 289.08pt x 216.81pt>
+File: ../graphics/taper_cl.pdf Graphic file (type pdf)
+<use ../graphics/taper_cl.pdf>
+Package pdftex.def Info: ../graphics/taper_cl.pdf  used on input line 138.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/taper_cd.pdf, id=358, 289.08pt x 216.81pt>
+File: ../graphics/taper_cd.pdf Graphic file (type pdf)
+<use ../graphics/taper_cd.pdf>
+Package pdftex.def Info: ../graphics/taper_cd.pdf  used on input line 143.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [9 <../graphics/cl_dist_compare.pdf>]
+<../graphics/taper_design.pdf, id=410, 289.08pt x 216.81pt>
+File: ../graphics/taper_design.pdf Graphic file (type pdf)
+<use ../graphics/taper_design.pdf>
+Package pdftex.def Info: ../graphics/taper_design.pdf  used on input line 151.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [10 <../graphics/taper_cl.pdf> <../graphics/taper_cd.pdf>] [11 <../graphics/ta
+per_design.pdf>]
+<../graphics/design_process.jpg, id=526, 117.43875pt x 216.81pt>
 File: ../graphics/design_process.jpg Graphic file (type jpg)
 <use ../graphics/design_process.jpg>
-Package pdftex.def Info: ../graphics/design_process.jpg  used on input line 105
+Package pdftex.def Info: ../graphics/design_process.jpg  used on input line 166
 .
 (pdftex.def)             Requested size: 88.07883pt x 162.60709pt.
-<../graphics/optimization_process.jpg, id=109, 440.24475pt x 373.395pt>
+<../graphics/optimization_process.jpg, id=527, 440.24475pt x 373.395pt>
 File: ../graphics/optimization_process.jpg Graphic file (type jpg)
 <use ../graphics/optimization_process.jpg>
 Package pdftex.def Info: ../graphics/optimization_process.jpg  used on input li
-ne 115.
+ne 176.
 (pdftex.def)             Requested size: 220.12184pt x 186.69704pt.
- [5 <../graphics/design_process.jpg> <../graphics/optimization_process.jpg>] [6
-] (./project_3.aux) ) 
+ [12 <../graphics/design_process.jpg> <../graphics/optimization_process.jpg>] [
+13] (./project_3.aux) ) 
 Here is how much of TeX's memory you used:
- 1683 strings out of 475075
- 27657 string characters out of 5783002
- 373537 words of memory out of 5000000
- 23100 multiletter control sequences out of 15000+600000
+ 1763 strings out of 475075
+ 30130 string characters out of 5783002
+ 373629 words of memory out of 5000000
+ 23170 multiletter control sequences out of 15000+600000
  473892 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,62p,1323b,331s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi1
-2.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on project_3.pdf (6 pages, 231328 bytes).
+ 55i,9n,62p,1594b,331s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+i12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on project_3.pdf (13 pages, 337724 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 586 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
