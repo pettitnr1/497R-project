@@ -1,0 +1,211 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  21 NOV 2022 18:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**project_2.tex
+(./project_2.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-30>
+(c:/texlive/2022/texmf-dist/tex/latex/paper/journal.cls
+Document Class: journal 2008/05/30 1.0l LaTeX document class (wm).
+(c:/texlive/2022/texmf-dist/tex/latex/paper/paper.cls
+Document Class: paper 2008/05/30 1.0l LaTeX document class (wm).
+\hours=\count185
+\minutes=\count186
+(c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\beforetitlespace=\skip47
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\exampleindent=\skip48
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen138
+))
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks17
+\float@box=\box51
+\@float@everytoks=\toks18
+\@floatcapt=\box52
+)
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box53
+)
+(./project_2.aux)
+\openout1 = `project_2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+(c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen141
+\scratchbox=\box54
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen142
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks20
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 12.
+
+Article: 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 34.
+[1
+
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+<../graphics/efficiency.pdf, id=12, 289.08pt x 216.81pt>
+File: ../graphics/efficiency.pdf Graphic file (type pdf)
+<use ../graphics/efficiency.pdf>
+Package pdftex.def Info: ../graphics/efficiency.pdf  used on input line 48.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+[2 <../graphics/efficiency.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+<../graphics/vtail-stability.pdf, id=46, 289.08pt x 216.81pt>
+File: ../graphics/vtail-stability.pdf Graphic file (type pdf)
+<use ../graphics/vtail-stability.pdf>
+Package pdftex.def Info: ../graphics/vtail-stability.pdf  used on input line 73
+.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+<../graphics/htail-stability.pdf, id=47, 289.08pt x 216.81pt>
+File: ../graphics/htail-stability.pdf Graphic file (type pdf)
+<use ../graphics/htail-stability.pdf>
+Package pdftex.def Info: ../graphics/htail-stability.pdf  used on input line 80
+.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+[3 <../graphics/vtail-stability.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+<../graphics/aoa-lift.pdf, id=87, 289.08pt x 216.81pt>
+File: ../graphics/aoa-lift.pdf Graphic file (type pdf)
+<use ../graphics/aoa-lift.pdf>
+Package pdftex.def Info: ../graphics/aoa-lift.pdf  used on input line 93.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[4 <../graphics/htail-stability.pdf>]
+<../graphics/sweep.jpg, id=130, 602.25pt x 353.82187pt>
+File: ../graphics/sweep.jpg Graphic file (type jpg)
+<use ../graphics/sweep.jpg>
+Package pdftex.def Info: ../graphics/sweep.jpg  used on input line 107.
+(pdftex.def)             Requested size: 240.89572pt x 141.52623pt.
+ [5 <../graphics/aoa-lift.pdf>]
+<../graphics/downwash-wakevortex.png, id=169, 478.78876pt x 383.4325pt>
+File: ../graphics/downwash-wakevortex.png Graphic file (type png)
+<use ../graphics/downwash-wakevortex.png>
+Package pdftex.def Info: ../graphics/downwash-wakevortex.png  used on input lin
+e 124.
+(pdftex.def)             Requested size: 191.5121pt x 153.37029pt.
+ [6 <../graphics/sweep.jpg>] [7 <../graphics/downwash-wakevortex.png>] (./proje
+ct_2.aux) ) 
+Here is how much of TeX's memory you used:
+ 1615 strings out of 475075
+ 26548 string characters out of 5783002
+ 371389 words of memory out of 5000000
+ 23034 multiletter control sequences out of 15000+600000
+ 473892 words of font info for 43 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,9n,62p,768b,333s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12
+.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on project_2.pdf (7 pages, 238919 bytes).
+PDF statistics:
+ 225 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
