@@ -1,0 +1,261 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  21 NOV 2022 12:39
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**project_3.tex
+(./project_3.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-30>
+(c:/texlive/2022/texmf-dist/tex/latex/paper/journal.cls
+Document Class: journal 2008/05/30 1.0l LaTeX document class (wm).
+(c:/texlive/2022/texmf-dist/tex/latex/paper/paper.cls
+Document Class: paper 2008/05/30 1.0l LaTeX document class (wm).
+\hours=\count185
+\minutes=\count186
+(c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\beforetitlespace=\skip47
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\exampleindent=\skip48
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen138
+))
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks17
+\float@box=\box51
+\@float@everytoks=\toks18
+\@floatcapt=\box52
+)
+(c:/texlive/2022/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen141
+\WF@size=\dimen142
+\c@WF@wrappedlines=\count196
+\WF@box=\box53
+\WF@everypar=\toks19
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count197
+\l__pdf_internal_box=\box54
+)
+(./project_3.aux)
+\openout1 = `project_3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+(c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count198
+\scratchdimen=\dimen143
+\scratchbox=\box55
+\nofMPsegments=\count199
+\nofMParguments=\count266
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count267
+\MPscratchDim=\dimen144
+\MPnumerator=\count268
+\makeMPintoPDFobject=\count269
+\everyMPtoPDFconversion=\toks21
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+
+Article: 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 30.
+[1
+
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../graphics/ideal_design.pdf, id=14, 289.08pt x 216.81pt>
+File: ../graphics/ideal_design.pdf Graphic file (type pdf)
+<use ../graphics/ideal_design.pdf>
+Package pdftex.def Info: ../graphics/ideal_design.pdf  used on input line 57.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+<../graphics/chord_design.pdf, id=20, 289.08pt x 216.81pt>
+File: ../graphics/chord_design.pdf Graphic file (type pdf)
+<use ../graphics/chord_design.pdf>
+Package pdftex.def Info: ../graphics/chord_design.pdf  used on input line 69.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[3 <../graphics/ideal_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+<../graphics/chord_cl.pdf, id=56, 289.08pt x 216.81pt>
+File: ../graphics/chord_cl.pdf Graphic file (type pdf)
+<use ../graphics/chord_cl.pdf>
+Package pdftex.def Info: ../graphics/chord_cl.pdf  used on input line 79.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/chord_cd.pdf, id=57, 289.08pt x 216.81pt>
+File: ../graphics/chord_cd.pdf Graphic file (type pdf)
+<use ../graphics/chord_cd.pdf>
+Package pdftex.def Info: ../graphics/chord_cd.pdf  used on input line 84.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[4 <../graphics/chord_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+[5 <../graphics/chord_cl.pdf> <../graphics/chord_cd.pdf>]
+<../graphics/wingtail_cl.pdf, id=176, 289.08pt x 216.81pt>
+File: ../graphics/wingtail_cl.pdf Graphic file (type pdf)
+<use ../graphics/wingtail_cl.pdf>
+Package pdftex.def Info: ../graphics/wingtail_cl.pdf  used on input line 96.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/wingtail_cd.pdf, id=177, 289.08pt x 216.81pt>
+File: ../graphics/wingtail_cd.pdf Graphic file (type pdf)
+<use ../graphics/wingtail_cd.pdf>
+Package pdftex.def Info: ../graphics/wingtail_cd.pdf  used on input line 101.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [6 <../graphics/wingtail_cl.pdf>]
+<../graphics/length_design.pdf, id=224, 289.08pt x 216.81pt>
+File: ../graphics/length_design.pdf Graphic file (type pdf)
+<use ../graphics/length_design.pdf>
+Package pdftex.def Info: ../graphics/length_design.pdf  used on input line 109.
+
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [7 <../graphics/wingtail_cd.pdf> <../graphics/length_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+<../graphics/cl_dist.pdf, id=303, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist.pdf>
+Package pdftex.def Info: ../graphics/cl_dist.pdf  used on input line 125.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/cl_dist_compare.pdf, id=304, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist_compare.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist_compare.pdf>
+Package pdftex.def Info: ../graphics/cl_dist_compare.pdf  used on input line 13
+0.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[8 <../graphics/cl_dist.pdf>]
+<../graphics/taper_cl.pdf, id=357, 289.08pt x 216.81pt>
+File: ../graphics/taper_cl.pdf Graphic file (type pdf)
+<use ../graphics/taper_cl.pdf>
+Package pdftex.def Info: ../graphics/taper_cl.pdf  used on input line 138.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/taper_cd.pdf, id=358, 289.08pt x 216.81pt>
+File: ../graphics/taper_cd.pdf Graphic file (type pdf)
+<use ../graphics/taper_cd.pdf>
+Package pdftex.def Info: ../graphics/taper_cd.pdf  used on input line 143.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [9 <../graphics/cl_dist_compare.pdf>]
+<../graphics/taper_design.pdf, id=410, 289.08pt x 216.81pt>
+File: ../graphics/taper_design.pdf Graphic file (type pdf)
+<use ../graphics/taper_design.pdf>
+Package pdftex.def Info: ../graphics/taper_design.pdf  used on input line 151.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [10 <../graphics/taper_cl.pdf> <../graphics/taper_cd.pdf>] [11 <../graphics/ta
+per_design.pdf>]
+<../graphics/design_process.jpg, id=526, 117.43875pt x 216.81pt>
+File: ../graphics/design_process.jpg Graphic file (type jpg)
+<use ../graphics/design_process.jpg>
+Package pdftex.def Info: ../graphics/design_process.jpg  used on input line 166
+.
+(pdftex.def)             Requested size: 88.07883pt x 162.60709pt.
+<../graphics/optimization_process.jpg, id=527, 440.24475pt x 373.395pt>
+File: ../graphics/optimization_process.jpg Graphic file (type jpg)
+<use ../graphics/optimization_process.jpg>
+Package pdftex.def Info: ../graphics/optimization_process.jpg  used on input li
+ne 176.
+(pdftex.def)             Requested size: 220.12184pt x 186.69704pt.
+ [12 <../graphics/design_process.jpg> <../graphics/optimization_process.jpg>] [
+13] (./project_3.aux) ) 
+Here is how much of TeX's memory you used:
+ 1763 strings out of 475075
+ 30130 string characters out of 5783002
+ 373629 words of memory out of 5000000
+ 23170 multiletter control sequences out of 15000+600000
+ 473892 words of font info for 43 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,9n,62p,1594b,331s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+i12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on project_3.pdf (13 pages, 337724 bytes).
+PDF statistics:
+ 586 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+
