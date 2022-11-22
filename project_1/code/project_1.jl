@@ -1,7 +1,18 @@
 using Xfoil, Printf
 include("plots_default.jl")
 
-function alterThicknessCamber(request)
+"""
+    alter_thicknesscamber(request)
+
+computes the lift and drag coefficients across varying angles of attack for airfoils with differing thicknesses and cambers
+
+# Arguments
+- `request`: "thickness" or "camber", determines what plots will be shown
+
+# Returns
+No returns, but it does plot the coefficients of lift and drag for the airfoils compared 
+"""
+function alter_thicknesscamber(request)
     alteredCambers = ["naca4412.dat", "naca6412.dat", "naca8412.dat"]
     alteredThicknesses = ["naca2410.dat", "naca2420.dat", "naca2430.dat"]
     n_c = length(alteredCambers)
@@ -10,15 +21,15 @@ function alterThicknessCamber(request)
     cld = [Vector{Float64}(undef, n_c) for _ in 1:length(alpha)]
     lcs = [Vector{Float64}(undef, n_c) for _ in 1:length(alpha)]
     for i = 1:n_c
-        cld[i] = getCoefficients(alteredCambers[i], "ld")
-        lcs[i] = getCoefficients(alteredCambers[i], "lcs")
+        cld[i] = get_coefficients(alteredCambers[i], "ld")
+        lcs[i] = get_coefficients(alteredCambers[i], "lcs")
     end
     ac1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Camber", titlefontsize=10, label = ["" "" ""])
     ac2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Camber", titlefontsize=10, label = ["" "" ""])
 
     for i = 1:n_c
-        cld[i] = getCoefficients(alteredThicknesses[i], "ld")
-        lcs[i] = getCoefficients(alteredThicknesses[i], "lcs")
+        cld[i] = get_coefficients(alteredThicknesses[i], "ld")
+        lcs[i] = get_coefficients(alteredThicknesses[i], "lcs")
     end
     at1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Thickness", titlefontsize=10, label = ["" "" ""])
     at2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Thickness", titlefontsize=10, label = ["" "" ""])
@@ -36,7 +47,20 @@ function alterThicknessCamber(request)
 
 end
 
-function getCoefficients(altered, request)
+"""
+    get_coefficients(altered, request)
+
+computes the lift and drag coefficients across varying angles of attack for given airfoil
+
+# Arguments
+- `altered`: NACA airfoil coordinate file
+- `request`: "ld" or "lcs", determines what will be returned
+
+# Returns
+- `c_l ./ c_d`: the lift over drag coefficients for given airfoil
+- `c_l`: the lift coefficients for the given airfoil
+"""
+function get_coefficients(altered, request)
     # read airfoil into XFOIL
     open(altered, "r") do f
         x = Float64[]
@@ -81,7 +105,18 @@ function getCoefficients(altered, request)
     end
 end
 
-function alterReynolds()
+"""
+    alter_reynolds()
+
+computes the lift and drag coefficients across varying angles of attack for varying Reynolds numbers
+
+# Arguments
+No Arguments
+
+# Returns
+No returns, but it does plot the lift, drag, and moment coefficients for varying Reynolds numbers
+"""
+function alter_reynolds()
     re = [100000, 500000, 1000000, 2000000, 3000000]
     n_r = length(re)
     alpha = -20:1:20
@@ -89,7 +124,7 @@ function alterReynolds()
     cd = [Vector{Float64}(undef, 5) for _ in 1:length(alpha)]
     cm = [Vector{Float64}(undef, 5) for _ in 1:length(alpha)]
     for i = 1:n_r
-        coefficients = autoSweep(re[i], "coefficients")
+        coefficients = auto_sweep(re[i], "coefficients")
         cl[i] = coefficients[:, 1]
         cd[i] = coefficients[:, 2]
         cm[i] = coefficients[:, 3]
@@ -102,7 +137,20 @@ function alterReynolds()
     plot(l, d, m, s)
 end
 
-function autoSweep(re = 1e5, mode="plot")
+"""
+    auto_sweep(re = 1e5, mode="plot")
+
+computes the lift and drag coefficients across varying angles of attack for a NACA 2412 airfoil
+
+# Arguments
+- `re`: the Reynolds number, defaults to 1e5
+- `mode`: determines what is returned
+
+# Returns
+- `validCoefficients`: the coefficients that also had a converged value of 1
+- no other returns, but it does also plot the lift, drag, and moment coefficients of the airfoil
+"""
+function auto_sweep(re = 1e5, mode="plot")
     # read airfoil into XFOIL
     open("naca2412.dat", "r") do f
         x = Float64[]
@@ -160,7 +208,7 @@ function autoSweep(re = 1e5, mode="plot")
     end
 
     if ( mode === "compare")
-        airfoilComparison()
+        airfoil_comparison()
     end
 
     if (mode === "plot")
@@ -177,7 +225,18 @@ function autoSweep(re = 1e5, mode="plot")
     # end
 end
 
-function airfoilComparison()
+"""
+    airfoil_comparison()
+
+compares the data collected from Xfoil to experimental data
+
+# Arguments
+No Arguments
+
+# Returns
+No returns, but it does plot the Xfoil and experimental data together for comparison
+"""
+function airfoil_comparison()
     alpha_exp = [0, 2.5, 7.5, 10, 12.5, 15]
     cl_exp = [0.228, 0.725, 0.88, 1.131, 1.227, 1.093]
     cd_exp = [0.016, 0.0424, 0.053, 0.069, 0.112, 0.378]
