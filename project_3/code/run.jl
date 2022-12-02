@@ -1,6 +1,7 @@
 include("project_3.jl")
 include("plots_default.jl")
 
+# retrieve optimized airframe design and pull out specific characteristics
 optimized_airframe = optimize_airframe()
 b = optimized_airframe[1]
 c = optimized_airframe[2]
@@ -10,23 +11,27 @@ v = optimized_airframe[5]
 L = optimized_airframe[6]
 l = optimized_airframe[7]
 
+# lift coefficient distribution for ideal taper ratio 
 cl_dist_plot = vortex_lattice([b, c], 1.0, v, l, "cldist", taper)[3]
 savefig(cl_dist_plot, "cl_dist.pdf")
 
+# set values for comparison against ideal airframe
 aoa = -10:1:10
-chord_compare = 0.6
-length_compare = 1.0
-taper_compare = 0.5
+chord_compare = 0.6   # mean chord length comparison
+length_compare = 1.0    # wing to tail length comparison
+taper_compare = 0.5   # taper ratio comparison
 
+# lift coefficient distribution for compared taper ratio
 cl_dist_compare = vortex_lattice([b, c], 1.0, v, l, "cldist", taper_compare)[3]
 savefig(cl_dist_compare, "cl_dist_compare.pdf")
 
+# retrieve lift and drag coefficients for ideal airframe and comparison airframes
 ideal_coeff = aoa_coefficients(b, c, v, l, taper)
 chord_coeff = aoa_coefficients(b, chord_compare, v, l, taper)
 length_coeff = aoa_coefficients(b, c, v, length_compare, taper)
 taper_coeff = aoa_coefficients(b, c, v, l, taper_compare)
 
-# plot lift coefficient against angle of attack for different designs for comparison
+# plot lift coefficient and drag coefficient against angle of attack for different designs for comparison
 plot(aoa, ideal_coeff[1], xlabel="Angle of Attack(degrees)", ylabel=L"C_L", title="Chord Lengths", label="ideal")
 p1 = plot!(aoa, chord_coeff[1], label="0.6 m", legend=:topleft)
 savefig(p1, "chord_cl.pdf")
