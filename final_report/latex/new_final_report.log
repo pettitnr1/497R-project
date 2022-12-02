@@ -1,0 +1,795 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  2 DEC 2022 12:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**new_final_report.tex
+(./new_final_report.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-30>
+(c:/texlive/2022/texmf-dist/tex/latex/paper/journal.cls
+Document Class: journal 2008/05/30 1.0l LaTeX document class (wm).
+(c:/texlive/2022/texmf-dist/tex/latex/paper/paper.cls
+Document Class: paper 2008/05/30 1.0l LaTeX document class (wm).
+\hours=\count185
+\minutes=\count186
+(c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\beforetitlespace=\skip47
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\exampleindent=\skip48
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen138
+))
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks17
+\float@box=\box51
+\@float@everytoks=\toks18
+\@floatcapt=\box52
+)
+(c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count196
+\Gm@cntv=\count197
+\c@Gm@tempcnt=\count198
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks19
+)
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
+
+(c:/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count199
+)
+(c:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(c:/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count266
+
+(c:/texlive/2022/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(c:/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count267
+\c@listtotal=\count268
+\c@listcount=\count269
+\c@liststart=\count270
+\c@liststop=\count271
+\c@citecount=\count272
+\c@citetotal=\count273
+\c@multicitecount=\count274
+\c@multicitetotal=\count275
+\c@instcount=\count276
+\c@maxnames=\count277
+\c@minnames=\count278
+\c@maxitems=\count279
+\c@minitems=\count280
+\c@citecounter=\count281
+\c@maxcitecounter=\count282
+\c@savedcitecounter=\count283
+\c@uniquelist=\count284
+\c@uniquename=\count285
+\c@refsection=\count286
+\c@refsegment=\count287
+\c@maxextratitle=\count288
+\c@maxextratitleyear=\count289
+\c@maxextraname=\count290
+\c@maxextradate=\count291
+\c@maxextraalpha=\count292
+\c@abbrvpenalty=\count293
+\c@highnamepenalty=\count294
+\c@lownamepenalty=\count295
+\c@maxparens=\count296
+\c@parenlevel=\count297
+\blx@tempcnta=\count298
+\blx@tempcntb=\count299
+\blx@tempcntc=\count300
+\c@blx@maxsection=\count301
+\blx@maxsegment@0=\count302
+\blx@notetype=\count303
+\blx@parenlevel@text=\count304
+\blx@parenlevel@foot=\count305
+\blx@sectionciteorder@0=\count306
+\blx@sectionciteorderinternal@0=\count307
+\blx@entrysetcounter=\count308
+\blx@biblioinstance=\count309
+\labelnumberwidth=\skip51
+\labelalphawidth=\skip52
+\biblabelsep=\skip53
+\bibitemsep=\skip54
+\bibnamesep=\skip55
+\bibinitsep=\skip56
+\bibparsep=\skip57
+\bibhang=\skip58
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language87
+\c@mincomprange=\count310
+\c@maxcomprange=\count311
+\c@mincompwidth=\count312
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/07/12 v3.18b biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count313
+\c@savedafterword=\count314
+\c@annotator=\count315
+\c@savedannotator=\count316
+\c@author=\count317
+\c@savedauthor=\count318
+\c@bookauthor=\count319
+\c@savedbookauthor=\count320
+\c@commentator=\count321
+\c@savedcommentator=\count322
+\c@editor=\count323
+\c@savededitor=\count324
+\c@editora=\count325
+\c@savededitora=\count326
+\c@editorb=\count327
+\c@savededitorb=\count328
+\c@editorc=\count329
+\c@savededitorc=\count330
+\c@foreword=\count331
+\c@savedforeword=\count332
+\c@holder=\count333
+\c@savedholder=\count334
+\c@introduction=\count335
+\c@savedintroduction=\count336
+\c@namea=\count337
+\c@savednamea=\count338
+\c@nameb=\count339
+\c@savednameb=\count340
+\c@namec=\count341
+\c@savednamec=\count342
+\c@translator=\count343
+\c@savedtranslator=\count344
+\c@shortauthor=\count345
+\c@savedshortauthor=\count346
+\c@shorteditor=\count347
+\c@savedshorteditor=\count348
+\c@labelname=\count349
+\c@savedlabelname=\count350
+\c@institution=\count351
+\c@savedinstitution=\count352
+\c@lista=\count353
+\c@savedlista=\count354
+\c@listb=\count355
+\c@savedlistb=\count356
+\c@listc=\count357
+\c@savedlistc=\count358
+\c@listd=\count359
+\c@savedlistd=\count360
+\c@liste=\count361
+\c@savedliste=\count362
+\c@listf=\count363
+\c@savedlistf=\count364
+\c@location=\count365
+\c@savedlocation=\count366
+\c@organization=\count367
+\c@savedorganization=\count368
+\c@origlocation=\count369
+\c@savedoriglocation=\count370
+\c@origpublisher=\count371
+\c@savedorigpublisher=\count372
+\c@publisher=\count373
+\c@savedpublisher=\count374
+\c@language=\count375
+\c@savedlanguage=\count376
+\c@origlanguage=\count377
+\c@savedoriglanguage=\count378
+\c@pageref=\count379
+\c@savedpageref=\count380
+\shorthandwidth=\skip59
+\shortjournalwidth=\skip60
+\shortserieswidth=\skip61
+\shorttitlewidth=\skip62
+\shortauthorwidth=\skip63
+\shorteditorwidth=\skip64
+\locallabelnumberwidth=\skip65
+\locallabelalphawidth=\skip66
+\localshorthandwidth=\skip67
+\localshortjournalwidth=\skip68
+\localshortserieswidth=\skip69
+\localshorttitlewidth=\skip70
+\localshortauthorwidth=\skip71
+\localshorteditorwidth=\skip72
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+\c@textcitecount=\count381
+\c@textcitetotal=\count382
+\c@textcitemaxnames=\count383
+\c@biburlbigbreakpenalty=\count384
+\c@biburlbreakpenalty=\count385
+\c@biburlnumpenalty=\count386
+\c@biburlucpenalty=\count387
+\c@biburllcpenalty=\count388
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count389
+)
+Package biblatex Info: Trying to load bibliography style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.bbx' found.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx
+File: alphabetic.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count390
+\c@bbx:relatedtotal=\count391
+))
+Package biblatex Info: Trying to load citation style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.cbx' found.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx
+File: alphabetic.cbx 2022/07/12 v3.18b biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(c:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-08-30 L3 programming layer (loader) 
+
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count392
+\l__pdf_internal_box=\box53
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2022-08-30 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(c:/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-06-22 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
+
+))
+\@quotelevel=\count393
+\@quotereset=\count394
+
+(./new_final_report.aux)
+\openout1 = `new_final_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+
+(c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count395
+\scratchdimen=\dimen149
+\scratchbox=\box54
+\nofMPsegments=\count396
+\nofMParguments=\count397
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count398
+\MPscratchDim=\dimen150
+\MPnumerator=\count399
+\makeMPintoPDFobject=\count400
+\everyMPtoPDFconversion=\toks21
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(108.405pt, 397.485pt, 108.405pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=397.485pt
+* \textheight=650.43001pt
+* \oddsidemargin=36.13501pt
+* \evensidemargin=36.13501pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+(c:/texlive/2022/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `new_final_report.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'new_final_report.bbl' found.
+
+(./new_final_report.bbl)
+Package biblatex Info: Reference section=0 on input line 14.
+Package biblatex Info: Reference segment=0 on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 16.
+
+Article: 
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+LaTeX Warning: Citation 'McDonnell' on page 1 undefined on input line 24.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 27.
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+<../graphics/aoa-coefficients.pdf, id=1, 289.08pt x 216.81pt>
+File: ../graphics/aoa-coefficients.pdf Graphic file (type pdf)
+<use ../graphics/aoa-coefficients.pdf>
+Package pdftex.def Info: ../graphics/aoa-coefficients.pdf  used on input line 3
+1.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[1
+
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+<../graphics/airfoil-compare.pdf, id=12, 289.08pt x 216.81pt>
+File: ../graphics/airfoil-compare.pdf Graphic file (type pdf)
+<use ../graphics/airfoil-compare.pdf>
+Package pdftex.def Info: ../graphics/airfoil-compare.pdf  used on input line 42
+.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[2 <../graphics/aoa-coefficients.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+<../graphics/altered-reynolds.pdf, id=51, 289.08pt x 216.81pt>
+File: ../graphics/altered-reynolds.pdf Graphic file (type pdf)
+<use ../graphics/altered-reynolds.pdf>
+Package pdftex.def Info: ../graphics/altered-reynolds.pdf  used on input line 5
+3.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+[3 <../graphics/airfoil-compare.pdf> <../graphics/altered-reynolds.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+<../graphics/altered-thickness.pdf, id=123, 289.08pt x 216.81pt>
+File: ../graphics/altered-thickness.pdf Graphic file (type pdf)
+<use ../graphics/altered-thickness.pdf>
+Package pdftex.def Info: ../graphics/altered-thickness.pdf  used on input line 
+64.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+<../graphics/altered-camber.pdf, id=124, 289.08pt x 216.81pt>
+File: ../graphics/altered-camber.pdf Graphic file (type pdf)
+<use ../graphics/altered-camber.pdf>
+Package pdftex.def Info: ../graphics/altered-camber.pdf  used on input line 75.
+
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[4 <../graphics/altered-thickness.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+LaTeX Warning: Citation 'McDonnell-Ning' on page 5 undefined on input line 84.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+LaTeX Warning: Citation 'McDonnell-Ning' on page 5 undefined on input line 87.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+[5 <../graphics/altered-camber.pdf>]
+<../graphics/efficiency.pdf, id=208, 289.08pt x 216.81pt>
+File: ../graphics/efficiency.pdf Graphic file (type pdf)
+<use ../graphics/efficiency.pdf>
+Package pdftex.def Info: ../graphics/efficiency.pdf  used on input line 107.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+<../graphics/vtail-stability.pdf, id=209, 289.08pt x 216.81pt>
+File: ../graphics/vtail-stability.pdf Graphic file (type pdf)
+<use ../graphics/vtail-stability.pdf>
+Package pdftex.def Info: ../graphics/vtail-stability.pdf  used on input line 13
+2.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+[6 <../graphics/efficiency.pdf>]
+<../graphics/htail-stability.pdf, id=239, 289.08pt x 216.81pt>
+File: ../graphics/htail-stability.pdf Graphic file (type pdf)
+<use ../graphics/htail-stability.pdf>
+Package pdftex.def Info: ../graphics/htail-stability.pdf  used on input line 13
+9.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+
+
+LaTeX Warning: Citation 'McDonnell' on page 7 undefined on input line 144.
+
+
+LaTeX Warning: Citation 'McDonnell' on page 7 undefined on input line 144.
+
+
+LaTeX Warning: Citation 'McDonnell-Ning' on page 7 undefined on input line 144.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+<../graphics/aoa-lift.pdf, id=240, 289.08pt x 216.81pt>
+File: ../graphics/aoa-lift.pdf Graphic file (type pdf)
+<use ../graphics/aoa-lift.pdf>
+Package pdftex.def Info: ../graphics/aoa-lift.pdf  used on input line 148.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[7 <../graphics/vtail-stability.pdf> <../graphics/htail-stability.pdf>]
+
+LaTeX Warning: Citation 'McDonnell' on page 8 undefined on input line 153.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
+LaTeX Warning: Citation 'McDonnell-Ning' on page 8 undefined on input line 160.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+[8 <../graphics/aoa-lift.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+<../graphics/ideal_attributes.jpg, id=359, 338.4645pt x 76.48575pt>
+File: ../graphics/ideal_attributes.jpg Graphic file (type jpg)
+<use ../graphics/ideal_attributes.jpg>
+Package pdftex.def Info: ../graphics/ideal_attributes.jpg  used on input line 1
+82.
+(pdftex.def)             Requested size: 338.46367pt x 76.48553pt.
+<../graphics/ideal_design.pdf, id=360, 289.08pt x 216.81pt>
+File: ../graphics/ideal_design.pdf Graphic file (type pdf)
+<use ../graphics/ideal_design.pdf>
+Package pdftex.def Info: ../graphics/ideal_design.pdf  used on input line 187.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[9 <../graphics/ideal_attributes.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
+
+<../graphics/chord_design.pdf, id=364, 289.08pt x 216.81pt>
+File: ../graphics/chord_design.pdf Graphic file (type pdf)
+<use ../graphics/chord_design.pdf>
+Package pdftex.def Info: ../graphics/chord_design.pdf  used on input line 197.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[10 <../graphics/ideal_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+<../graphics/chord_coeff.pdf, id=389, 289.08pt x 216.81pt>
+File: ../graphics/chord_coeff.pdf Graphic file (type pdf)
+<use ../graphics/chord_coeff.pdf>
+Package pdftex.def Info: ../graphics/chord_coeff.pdf  used on input line 207.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+[11 <../graphics/chord_design.pdf> <../graphics/chord_coeff.pdf>]
+<../graphics/wingtail_coeff.pdf, id=451, 289.08pt x 216.81pt>
+File: ../graphics/wingtail_coeff.pdf Graphic file (type pdf)
+<use ../graphics/wingtail_coeff.pdf>
+Package pdftex.def Info: ../graphics/wingtail_coeff.pdf  used on input line 217
+.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/length_design.pdf, id=452, 289.08pt x 216.81pt>
+File: ../graphics/length_design.pdf Graphic file (type pdf)
+<use ../graphics/length_design.pdf>
+Package pdftex.def Info: ../graphics/length_design.pdf  used on input line 225.
+
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
+
+ []
+
+[12 <../graphics/wingtail_coeff.pdf> <../graphics/length_design.pdf>]
+<../graphics/cl_dist.pdf, id=515, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist.pdf>
+Package pdftex.def Info: ../graphics/cl_dist.pdf  used on input line 240.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/cl_dist_compare.pdf, id=516, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist_compare.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist_compare.pdf>
+Package pdftex.def Info: ../graphics/cl_dist_compare.pdf  used on input line 24
+5.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [13 <../graphics/cl_dist.pdf> <../graphics/cl_dist_compare.pdf>]
+<../graphics/taper_coeff.pdf, id=618, 289.08pt x 216.81pt>
+File: ../graphics/taper_coeff.pdf Graphic file (type pdf)
+<use ../graphics/taper_coeff.pdf>
+Package pdftex.def Info: ../graphics/taper_coeff.pdf  used on input line 253.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/taper_design.pdf, id=619, 289.08pt x 216.81pt>
+File: ../graphics/taper_design.pdf Graphic file (type pdf)
+<use ../graphics/taper_design.pdf>
+Package pdftex.def Info: ../graphics/taper_design.pdf  used on input line 261.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [14 <../graphics/taper_coeff.pdf> <../graphics/taper_design.pdf>]
+
+LaTeX Warning: Empty bibliography on input line 277.
+
+[15] (./new_final_report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                new_final_report
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'new_final_report.run.xml'.
+\openout1 = `new_final_report.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 10276 strings out of 475075
+ 196879 string characters out of 5783002
+ 954834 words of memory out of 5000000
+ 31586 multiletter control sequences out of 15000+600000
+ 474200 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,8n,68p,1021b,1148s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.p
+fb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb><c:/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><c:/texlive/2022/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on new_final_report.pdf (15 pages, 381250 bytes).
+PDF statistics:
+ 740 PDF objects out of 1000 (max. 8388607)
+ 216 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+

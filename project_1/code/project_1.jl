@@ -25,24 +25,23 @@ function alter_thicknesscamber(request)
         lcs[i] = get_coefficients(alteredCambers[i], "lcs")
     end
     ac1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Camber", titlefontsize=10, label = ["" "" ""])
-    ac2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Camber", titlefontsize=10, label = ["" "" ""])
+    ac2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Camber", titlefontsize=10, label = ["4%" "6%" "8%"], legend=:bottomright)
 
     for i = 1:n_c
         cld[i] = get_coefficients(alteredThicknesses[i], "ld")
         lcs[i] = get_coefficients(alteredThicknesses[i], "lcs")
     end
     at1 = plot(alpha, cld[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell/c_d", title="Altered Thickness", titlefontsize=10, label = ["" "" ""])
-    at2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Thickness", titlefontsize=10, label = ["" "" ""])
-
-    st = plot(alpha .* NaN, cld[1:3] .* NaN, label=["10%" "20%" "30%"], showaxis=false)
-    sc = plot(alpha .* NaN, cld[1:3] .* NaN, label=["4%" "6%" "8%"], showaxis=false)
+    at2 = plot(alpha, lcs[1:3], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", title="Altered Thickness", titlefontsize=10, label = ["10%" "20%" "30%"], legend=:bottomright)
 
     if (request==="thickness")
-        plot(at1, at2, st)
+        plot(at1, at2)
+        savefig("altered-thickness.pdf")
     end
 
     if (request==="camber")
-        plot(ac1, ac2, sc)
+        plot(ac1, ac2)
+        savefig("altered-camber.pdf")
     end
 
 end
@@ -135,6 +134,7 @@ function alter_reynolds()
     m = plot(alpha, cm[1:5], xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_m", label=["" "" "" "" ""])
     s = plot(alpha .* NaN, cl[1:5] .* NaN, label=["1e5" "5e5" "1e6" "2e6" "3e6"], showaxis=false)
     plot(l, d, m, s)
+    savefig("altered-reynolds.pdf")
 end
 
 """
@@ -242,7 +242,7 @@ function airfoil_comparison()
     cd_exp = [0.016, 0.0424, 0.053, 0.069, 0.112, 0.378]
 
 
-    coefficients = autoSweep(1e5, "coefficients")
+    coefficients = auto_sweep(1e5, "coefficients")
     alpha = 0:1:15
     n_a = length(alpha)
     cl_x = coefficients[11:25, 1]
@@ -251,12 +251,11 @@ function airfoil_comparison()
     plot(alpha_exp, cl_exp, xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_\ell", label="")
     cl = plot!(alpha, cl_x, label="")
 
-    plot(alpha_exp, cd_exp, xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_d", label="")
-    cd = plot!(alpha, cd_x, label="")
+    plot(alpha_exp, cd_exp, xlabel=L"\alpha~\mathrm{(degrees)}", ylabel=L"c_d", label="experimental")
+    cd = plot!(alpha, cd_x, label="Xfoil")
 
-    plot(alpha_exp .* NaN, cl_exp .* NaN, label="experimental", showaxis=false)
-    s = plot!(alpha .* NaN, cl_x .* NaN, label="Xfoil")
+    
 
-    plot(cl, cd, s, layout=(2,2))
+    plot(cl, cd, layout=(1,2))
     savefig("airfoil-compare.pdf")
 end

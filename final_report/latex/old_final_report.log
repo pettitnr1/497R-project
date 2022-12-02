@@ -1,0 +1,533 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.8)  29 NOV 2022 12:47
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**old_final_report.tex
+(./old_final_report.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-08-30>
+(c:/texlive/2022/texmf-dist/tex/latex/paper/journal.cls
+Document Class: journal 2008/05/30 1.0l LaTeX document class (wm).
+(c:/texlive/2022/texmf-dist/tex/latex/paper/paper.cls
+Document Class: paper 2008/05/30 1.0l LaTeX document class (wm).
+\hours=\count185
+\minutes=\count186
+(c:/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\beforetitlespace=\skip47
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\exampleindent=\skip48
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen138
+))
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks17
+\float@box=\box51
+\@float@everytoks=\toks18
+\@floatcapt=\box52
+)
+(c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box53
+)
+(./old_final_report.aux)
+\openout1 = `old_final_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+(c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen141
+\scratchbox=\box54
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen142
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks20
+) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 12.
+
+Article: 
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 30.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+[1
+
+
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../graphics/aoa-coefficients.pdf, id=9, 289.08pt x 216.81pt>
+File: ../graphics/aoa-coefficients.pdf Graphic file (type pdf)
+<use ../graphics/aoa-coefficients.pdf>
+Package pdftex.def Info: ../graphics/aoa-coefficients.pdf  used on input line 3
+4.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+[2 <../graphics/aoa-coefficients.pdf>]
+<../graphics/airfoil-compare.pdf, id=49, 289.08pt x 216.81pt>
+File: ../graphics/airfoil-compare.pdf Graphic file (type pdf)
+<use ../graphics/airfoil-compare.pdf>
+Package pdftex.def Info: ../graphics/airfoil-compare.pdf  used on input line 46
+.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+<../graphics/altered-reynolds.pdf, id=50, 289.08pt x 216.81pt>
+File: ../graphics/altered-reynolds.pdf Graphic file (type pdf)
+<use ../graphics/altered-reynolds.pdf>
+Package pdftex.def Info: ../graphics/altered-reynolds.pdf  used on input line 5
+8.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[3 <../graphics/airfoil-compare.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+<../graphics/altered-thickness.pdf, id=92, 289.08pt x 216.81pt>
+File: ../graphics/altered-thickness.pdf Graphic file (type pdf)
+<use ../graphics/altered-thickness.pdf>
+Package pdftex.def Info: ../graphics/altered-thickness.pdf  used on input line 
+70.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[4 <../graphics/altered-reynolds.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+<../graphics/altered-camber.pdf, id=126, 289.08pt x 216.81pt>
+File: ../graphics/altered-camber.pdf Graphic file (type pdf)
+<use ../graphics/altered-camber.pdf>
+Package pdftex.def Info: ../graphics/altered-camber.pdf  used on input line 81.
+
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[5 <../graphics/altered-thickness.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+[6 <../graphics/altered-camber.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+<../graphics/efficiency.pdf, id=209, 289.08pt x 216.81pt>
+File: ../graphics/efficiency.pdf Graphic file (type pdf)
+<use ../graphics/efficiency.pdf>
+Package pdftex.def Info: ../graphics/efficiency.pdf  used on input line 119.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+[7 <../graphics/efficiency.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+<../graphics/vtail-stability.pdf, id=241, 289.08pt x 216.81pt>
+File: ../graphics/vtail-stability.pdf Graphic file (type pdf)
+<use ../graphics/vtail-stability.pdf>
+Package pdftex.def Info: ../graphics/vtail-stability.pdf  used on input line 14
+4.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+<../graphics/htail-stability.pdf, id=242, 289.08pt x 216.81pt>
+File: ../graphics/htail-stability.pdf Graphic file (type pdf)
+<use ../graphics/htail-stability.pdf>
+Package pdftex.def Info: ../graphics/htail-stability.pdf  used on input line 15
+1.
+(pdftex.def)             Requested size: 211.02664pt x 158.26997pt.
+[8 <../graphics/vtail-stability.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+<../graphics/aoa-lift.pdf, id=282, 289.08pt x 216.81pt>
+File: ../graphics/aoa-lift.pdf Graphic file (type pdf)
+<use ../graphics/aoa-lift.pdf>
+Package pdftex.def Info: ../graphics/aoa-lift.pdf  used on input line 164.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+[9 <../graphics/htail-stability.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+[10 <../graphics/aoa-lift.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+[11]
+<../graphics/ideal_design.pdf, id=367, 289.08pt x 216.81pt>
+File: ../graphics/ideal_design.pdf Graphic file (type pdf)
+<use ../graphics/ideal_design.pdf>
+Package pdftex.def Info: ../graphics/ideal_design.pdf  used on input line 210.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+[12 <../graphics/ideal_design.pdf>]
+<../graphics/chord_design.pdf, id=392, 289.08pt x 216.81pt>
+File: ../graphics/chord_design.pdf Graphic file (type pdf)
+<use ../graphics/chord_design.pdf>
+Package pdftex.def Info: ../graphics/chord_design.pdf  used on input line 222.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+
+LaTeX Warning: File `../graphics/chord_cl.pdf' not found on input line 232.
+
+
+! Package pdftex.def Error: File `../graphics/chord_cl.pdf' not found: using dr
+aft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.232 		\includegraphics{../graphics/chord_cl.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../graphics/chord_cd.pdf' not found on input line 237.
+
+
+! Package pdftex.def Error: File `../graphics/chord_cd.pdf' not found: using dr
+aft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.237 		\includegraphics{../graphics/chord_cd.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[13 <../graphics/chord_design.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+
+LaTeX Warning: File `../graphics/wingtail_cl.pdf' not found on input line 249.
+
+
+! Package pdftex.def Error: File `../graphics/wingtail_cl.pdf' not found: using
+ draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.249 ...ludegraphics{../graphics/wingtail_cl.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../graphics/wingtail_cd.pdf' not found on input line 254.
+
+
+! Package pdftex.def Error: File `../graphics/wingtail_cd.pdf' not found: using
+ draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ludegraphics{../graphics/wingtail_cd.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[14]
+<../graphics/length_design.pdf, id=421, 289.08pt x 216.81pt>
+File: ../graphics/length_design.pdf Graphic file (type pdf)
+<use ../graphics/length_design.pdf>
+Package pdftex.def Info: ../graphics/length_design.pdf  used on input line 262.
+
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+[15 <../graphics/length_design.pdf>]
+<../graphics/cl_dist.pdf, id=446, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist.pdf>
+Package pdftex.def Info: ../graphics/cl_dist.pdf  used on input line 278.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+<../graphics/cl_dist_compare.pdf, id=447, 289.08pt x 216.81pt>
+File: ../graphics/cl_dist_compare.pdf Graphic file (type pdf)
+<use ../graphics/cl_dist_compare.pdf>
+Package pdftex.def Info: ../graphics/cl_dist_compare.pdf  used on input line 28
+3.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [16 <../graphics/cl_dist.pdf>]
+
+LaTeX Warning: File `../graphics/taper_cl.pdf' not found on input line 291.
+
+
+! Package pdftex.def Error: File `../graphics/taper_cl.pdf' not found: using dr
+aft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 		\includegraphics{../graphics/taper_cl.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `../graphics/taper_cd.pdf' not found on input line 296.
+
+
+! Package pdftex.def Error: File `../graphics/taper_cd.pdf' not found: using dr
+aft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 		\includegraphics{../graphics/taper_cd.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[17 <../graphics/cl_dist_compare.pdf>]
+<../graphics/taper_design.pdf, id=551, 289.08pt x 216.81pt>
+File: ../graphics/taper_design.pdf Graphic file (type pdf)
+<use ../graphics/taper_design.pdf>
+Package pdftex.def Info: ../graphics/taper_design.pdf  used on input line 304.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [18 <../graphics/taper_design.pdf>]
+<../graphics/airfoil-diagram.jpg, id=575, 803.0pt x 340.27126pt>
+File: ../graphics/airfoil-diagram.jpg Graphic file (type jpg)
+<use ../graphics/airfoil-diagram.jpg>
+Package pdftex.def Info: ../graphics/airfoil-diagram.jpg  used on input line 33
+3.
+(pdftex.def)             Requested size: 321.1943pt x 136.10608pt.
+
+[19 <../graphics/airfoil-diagram.jpg>]
+<../graphics/lift-curve-slope.jpg, id=580, 746.01291pt x 559.50967pt>
+File: ../graphics/lift-curve-slope.jpg Graphic file (type jpg)
+<use ../graphics/lift-curve-slope.jpg>
+Package pdftex.def Info: ../graphics/lift-curve-slope.jpg  used on input line 3
+80.
+(pdftex.def)             Requested size: 298.39987pt x 223.7999pt.
+ [20]
+<../graphics/sweep.jpg, id=584, 602.25pt x 353.82187pt>
+File: ../graphics/sweep.jpg Graphic file (type jpg)
+<use ../graphics/sweep.jpg>
+Package pdftex.def Info: ../graphics/sweep.jpg  used on input line 389.
+(pdftex.def)             Requested size: 240.89572pt x 141.52623pt.
+ [21 <../graphics/lift-curve-slope.jpg> <../graphics/sweep.jpg>]
+<../graphics/downwash-wakevortex.png, id=588, 478.78876pt x 383.4325pt>
+File: ../graphics/downwash-wakevortex.png Graphic file (type png)
+<use ../graphics/downwash-wakevortex.png>
+Package pdftex.def Info: ../graphics/downwash-wakevortex.png  used on input lin
+e 406.
+(pdftex.def)             Requested size: 191.5121pt x 153.37029pt.
+ [22 <../graphics/downwash-wakevortex.png>]
+<../graphics/design_process.jpg, id=593, 117.43875pt x 216.81pt>
+File: ../graphics/design_process.jpg Graphic file (type jpg)
+<use ../graphics/design_process.jpg>
+Package pdftex.def Info: ../graphics/design_process.jpg  used on input line 443
+.
+(pdftex.def)             Requested size: 88.07883pt x 162.60709pt.
+<../graphics/optimization_process.jpg, id=594, 440.24475pt x 373.395pt>
+File: ../graphics/optimization_process.jpg Graphic file (type jpg)
+<use ../graphics/optimization_process.jpg>
+Package pdftex.def Info: ../graphics/optimization_process.jpg  used on input li
+ne 453.
+(pdftex.def)             Requested size: 220.12184pt x 186.69704pt.
+
+[23 <../graphics/design_process.jpg>] [24 <../graphics/optimization_process.jpg
+>] (./old_final_report.aux) ) 
+Here is how much of TeX's memory you used:
+ 1964 strings out of 475075
+ 37804 string characters out of 5783002
+ 373684 words of memory out of 5000000
+ 23344 multiletter control sequences out of 15000+600000
+ 474060 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,9n,62p,1603b,337s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmssi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on old_final_report.pdf (24 pages, 606402 bytes).
+PDF statistics:
+ 657 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+

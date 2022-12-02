@@ -80,7 +80,7 @@ No arguments
 # Returns
 No returns, but it does plot the stability derivatives against their corresponding tail volume ratios
 """
-function stability_derivatives()
+function stab_derivatives()
     v_ratios = range(0.001, 0.0156, 30)   # vertical tail volume ratios range from 0.001 to 0.0156
     h_ratios = range(0.001, 0.1458, 30)   # horizontal tail volume ratios range from 0.001 to 0.1458
     v_r = length(v_ratios)
@@ -104,16 +104,17 @@ function stability_derivatives()
     end
 
     # setup C_lb against vertical tail volume ratios plot
-    lb = plot(v_ratios, v_derivatives[:, 1], xlabel="V-tail Volume Ratios", ylabel=L"C_{\ell{b}}", label="")
+    lb = plot(v_ratios, v_derivatives[:, 1], xlabel="", ylabel=L"C_{\ell{b}}", label="")
     # setup C_nb against vertical tail volume ratios plot
     nb = plot(v_ratios, v_derivatives[:, 2], xlabel="V-tail Volume Ratios", ylabel=L"C_{nb}", label="", ylims=(-0.45, 0.1))
 
     # setup C_La against horizontal tail volume ratios plot
-    la = plot(h_ratios, h_derivatives[:, 1], xlabel="H-tail Volume Ratios", ylabel=L"C_{La}", label="", xlims=(0.04375, 0.1458), ylims=(4.806,4.81))
+    la = plot(h_ratios, h_derivatives[:, 1], xlabel="", ylabel=L"C_{La}", label="", xlims=(0.04375, 0.1458), ylims=(4.806,4.81))
     # setup C_ma against horizontal tail volume ratios plot
     ma = plot(h_ratios, h_derivatives[:, 2], xlabel="H-tail Volume Ratios", ylabel=L"C_{ma}", label="")
 
-    plot(lb, nb, la, ma, layout=(4,1)) # plot all 4 previously defined plots together
+    plot(lb, nb, layout=(2,1)) # plot all 4 previously defined plots together
+    savefig("vtail-stability.pdf")
 end
 
 """
