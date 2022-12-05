@@ -21,7 +21,7 @@
 	This section reviews research done on airfoils. There are 5 areas that are covered in this research. First, it explores the effect of airfoil angle of attack on lift, drag, and moment. Second, it compares data collected by Xfoil to experimental data. Third, it explores the effect of different Reynolds numbers on airfoil polar. Fourth, it explores the effect of airfoil thickness. And fifth, it explores the effect of airfoil camber.\\
 	
 	\subsection{Methods}
-	The airfoil research was done by writing a program in the Julia language that implemented the Xfoil.jl library \cite{McDonnell}. In order to explore the effect of angle of attack, Reynolds number, thickness, and camber on the airfoil polar, Xfoil's solve\_alpha() function was used, so that the coefficients of lift, drag, and moment could be used for comparison. For the Reynolds number, thickness, and camber comparisons, their coefficients vs. angles of attack plots were compared. This way, trends could be seen and they could be compared effectively.
+	The airfoil research was done by writing a program in the Julia language that used the Xfoil.jl library \cite{McDonnell}. In order to explore the effect of angle of attack, Reynolds number, thickness, and camber on the airfoil polar, Xfoil's solve\_alpha() function was used, so that the coefficients of lift, drag, and moment could be used for comparison. For the Reynolds number, thickness, and camber comparisons, their coefficients vs. angles of attack plots were compared. This way, trends could be seen and they could be compared effectively.
 	
 	\subsection{Results}
 	One of the most stressed parts of this research was seeing how different airfoil angles of attack affected the lift, drag, and moment on the airfoil. In order to see those relationships, only the coefficients of drag, lift, and moment needed to evaluated, rather than the moment and the forces of lift and drag. This is because those coefficients are dimensionless numbers. Figure \ref{fig:aoa-coefficients} shows the relationships between lift, drag, and moment and \(\alpha\) for a NACA 2412 airfoil.\\
@@ -264,15 +264,7 @@
 	\end{figure}
 
 	\section{Conclusion}
-	Here are some key findings from all of my research done on airframe design:
-	 \begin{itemize}
-	 	\item Higher Reynolds numbers cause the lift curves to become more steep and the drag and moment curves to become more leveled out for an airfoil.
-	 	\item As the thickness of the airfoil increases, the airfoil's ratio of lift to drag curve becomes more shallow. As the camber of the airfoil increases, the lift to drag ratio becomes higher and the whole curve is shifted upwards. 
-	 	\item The larger the tail of an airframe, the more stable it will be. However, bigger does not always mean better in this case.
-	 	\item The Vortex Lattice Method for evaluating airframes in only accurate for small angles of attack, but is very powerful when used.
-	 	\item The airframe that will generate the most lift will have a large wingspan and a large mean chord length. However, when designing an airframe, a lot more factors go into the design other than how much lift it produces.
-	 	\item The most efficient airframe is one that has a wing taper ratio of 1.0, as it produces a lift coefficient distribution that is elliptical.
-	 \end{itemize}
+	By designing an actual airframe using the skills and knowledge gained from the research done on airfoils and airframes, I learned valuable insights. One of the more important things I learned from optimizing the airframe was that when writing computer programs to solve optimization problems, it is important to make sure that the program accounts for realistic outputs. In the case of optimizing an airframe, I had to put constraints on the aspect ratio so that the mean aerodynamic chord length was a realistic value. If I hadn't done that, the program would have outputted an airframe with the max chord length possible, because mathematically, that is optimal. I also learned that there is a plethora of design variables that can be altered when designing an airframe, which makes it important to only alter a few at a time to be able to see their effects better. From the research on airfoils and airframes, I learned about what effects airfoil polar, how to use tools such as Xfoil.jl \cite{McDonnell} and VortexLattice.jl \cite{McDonnell-Ning} to evaluate airfoils and airframes, and how those tools compare to acctual experimental data.\\
  	
  	\printbibliography
 	
