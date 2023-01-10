@@ -1,0 +1,1129 @@
+%DIF 1-3c1-3
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL old_final_report.tex   Fri Dec  2 12:25:00 2022
+%DIF ADD new_final_report.tex   Thu Dec  8 12:26:27 2022
+%DIF < \documentclass{journal}
+%DIF < \usepackage{graphicx}	% package for using graphics
+%DIF < \usepackage{float}	% package for positioning figures
+%DIF -------
+\documentclass[journal]{new-aiaa} %DIF > 
+%\documentclass[journal]{new-aiaa} for journal papers %DIF > 
+\usepackage[utf8]{inputenc} %DIF > 
+%DIF -------
+
+%DIF 5a5-13
+\usepackage{graphicx} %DIF > 
+\usepackage{amsmath} %DIF > 
+\usepackage[version=4]{mhchem} %DIF > 
+\usepackage{siunitx} %DIF > 
+\usepackage{longtable,tabularx} %DIF > 
+\usepackage{authblk} %DIF > 
+\usepackage{float} %DIF > 
+\setlength\LTleft{0pt}  %DIF > 
+ %DIF > 
+%DIF -------
+\title{\DIFdelbegin \DIFdel{AIRFRAME DESIGN FINAL REPORT}\DIFdelend \DIFaddbegin \DIFadd{DESIGNING AN OPTIMIZED AIRFRAME}\DIFaddend }
+
+\author{Nathan Pettit\DIFaddbegin \footnote{\DIFadd{Brigham Young University mechanical engineering undergraduate student}}\DIFaddend }
+\affil{Brigham Young University, Provo, Utah, 84604} %DIF > 
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+	\maketitle
+	\DIFdelbegin \section{\DIFdel{Introduction}}
+	%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+\DIFdelend \DIFaddbegin 
+
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%DIF >                                                                     %
+	%DIF >                               ABSTRACT                              %
+	%DIF >                                                                     %
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{abstract}
+
+		%DIF > %% --- Before/Motivation (WHY): --- %%%
+
+		%DIF > % -- Context: Anyone Relates -- %%
+		%DIF >  Questions to answer:
+		%DIF >     Why is the need so pressing or important? 
+		%DIF >     What is the current state?
+
+		
+		
+		%DIF > % -- Need: Readers Relate -- %%
+		%DIF >  Questions to answer:
+		%DIF >     Why does anything need to be done? 
+		%DIF >     Why is it important to the reader?
+
+		
+		
+		%DIF > % -- Task: Author's Actions --%%
+		%DIF >  Questions to answer:
+		%DIF >     What did you do to address the need?
+		%DIF >     Why were you able to?
+
+		
+		
+		%DIF > % -- Object: -- %%
+		%DIF >  Questions to answer:
+		%DIF >     What does this paper present/cover? 
+		%DIF >     Why?
+
+		
+		
+		%DIF > %% --- After/Outcome (WHAT): --- %%%
+
+		%DIF > % -- Findings: -- %%
+		%DIF >  Questions to answer:
+		%DIF >     What did the work done yield/reveal?
+		%DIF >     What did you find from the task?
+		%DIF >     What are the results?
+
+		
+		
+		%DIF > % -- Conclusion: -- %%
+		%DIF >  Questions to answer:
+		%DIF >     What does it mean for the audience?
+
+		
+		
+		%DIF > % -- Perspectives: -- %%
+		%DIF >  Questions to answer:
+		%DIF >     What should be done next, future work, etc.?
+		\DIFaddend This report covers \DIFdelbegin \DIFdel{all the work and research done for the ME EN 497R Airframe Design track. It is a compilation of projects 1, 2 and 3 of this track. This final report is broken up into 3 parts: airfoil analysis, wing and tail analysis, and wing and tail design. }\DIFdelend \DIFaddbegin \DIFadd{research done on airfoils, airframes, and airframe design. This research was done so that I could learn more about how airplanes fly. To do this, I looked into how different flow conditions and physical attributes of airfoils and airframes affected their lift and drag. I then applied what I learned into designing my own airframe to solve a specific task. From my research, I discovered that as angle of attack increases, the lift of an airfoil and airframe increases. Also, drag vs. angle of attack has a parabolic curve. I also found that increased length from wing to tail of an airframe leads to greater stability. From designing my own airframe, I found that increased mean chord length leads to a greater lift coefficient, but that it does not necessarily mean a lower necessary takeoff velocity. Future work may include building a physical prototype of the airframe I designed, or optimizing my airframe design with a different objective function than the one I used.}\DIFaddend \\
+
+	\DIFdelbegin \section{\DIFdel{Airfoil Analysis}}
+	%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+\DIFdel{This section reviews research doneon airfoils. There are 5 areas that are }\DIFdelend \DIFaddbegin \end{abstract}
+
+	
+	
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%DIF >                                                                     %
+	%DIF >                             INTRODUCTION                            %
+	%DIF >                                                                     %
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{\DIFadd{Introduction}}
+	\label{sec:intro}
+
+	%DIF > % -- Paragraph 1:  Motivation -- %%
+	%DIF >  Questions to answer: 
+	%DIF >     Why is the need so pressing or important? 
+	%DIF >     What is the current state?
+
+	
+	%DIF > % -- Paragraph 2:  Context -- %%
+	%DIF >  Questions to answer: 
+	%DIF >     Why does anything need to be done? 
+	%DIF >     Who has done what?
+	%DIF >     Why is what has been done ``insufficient?''
+
+	
+	%DIF > % -- Paragraph 3:  Paper Outline -- %%
+
+	\DIFadd{With very little knowledge as to how airplanes fly, I found it beneficial to learn about the basics. I begun my research by looking into airfoils and seeing how there different characteristics affect flight. After sufficient research in this area, I moved on to evaluating airframes. Or in other words, I begun by looking at the 2-dimensional, and once I had a good understanding of that, I moved on to looking at the 3-dimensional. To further my research, I then applied what I learned about airfoils and airframes to designing my own airframe that would have a specific purpose.}\\
+
+	\DIFadd{This report covers that research done. When covering airfoils, this report discusses how the angle of attack affects airfoil polar, the effect of the Reynolds number, and the effect of the shape of the airfoil. After that look into the 2-dimensional space, the report then covers airframes in the 3-dimensional realm, specifically how aspect ratio and efficiency are related, how tail volume ratios affect stability derivatives, and how the vortex lattice method compares to Xfoil.}\\
+
+	\DIFadd{The last part }\DIFaddend covered in this \DIFdelbegin \DIFdel{research. One, it explores the effect of airfoil }\DIFdelend \DIFaddbegin \DIFadd{report is my designing of an airframe that is capable of lifting 0.5 kilograms. How that airframe was designed is discussed as well as how it was optimized. This structure (airfoils, airframes, and design) is followed in each of the 3 sections of this report: methods, results, and conclusions.}\\
+
+	
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%DIF >                                                                     %
+	%DIF >                               METHODS                               %
+	%DIF >                                                                     %
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{\DIFadd{Methods}}
+
+	\subsection{\DIFadd{Airfoil Analysis}}
+	\DIFadd{The airfoil research was done by writing a program in the Julia language that used the Xfoil.jl library \mbox{%DIFAUXCMD
+\cite{McDonnell}}\hskip0pt%DIFAUXCMD
+. Xfoil's solve\_alpha() function was used primarily, which computes the inviscid flow solution of the airfoil at the given }\DIFaddend angle of attack\DIFdelbegin \DIFdel{on }\DIFdelend \DIFaddbegin \DIFadd{. It gave the coefficients of }\DIFaddend lift, drag, and moment\DIFdelbegin \DIFdel{. Two, it compares data collected by Xfoil to experimental data. Three, it explores }\DIFdelend \DIFaddbegin \DIFadd{, so that they could be used for comparison. In order to see }\DIFaddend the effect of \DIFdelbegin \DIFdel{different Reynold's numbers on airfoil polar. Four, it explores the effect of different airfoil thicknesses. And five, it explores the effect of different airfoil cambers}\DIFdelend \DIFaddbegin \DIFadd{angle of attack on the airfoil polar, angles of attack ranging from -20 to 20 degrees were looped through and the coefficients of lift, drag, and moment were collected for each one using the solve\_alpha() function. The coefficients were then plotted against angle of attack}\DIFaddend . \\
+
+	\DIFdelbegin \DIFdel{The results of this research came from evaluating airfoils using the Xfoil library in Julia, as well as writing new functions to help in evaluating the airfoils. There were 4 functions }\DIFdelend \DIFaddbegin \DIFadd{In order to see the effect that the Reynolds number has, a very similar approach was taken. For Reynolds numbers of 100000, 500000, 1000000, 2000000, and 3000000, their coefficients of lift, drag, and moment were calculated for angles of attack ranging from -20 to 20 degrees using the solve\_alpha() function, so that each Reynolds number had a lift vs. angle of attack, drag vs. angle of attack, and moment vs. angle of attack plot. The lift, drag, and moment plots for each Reynolds number were then put on top of each other for comparison.}\\
+
+	\DIFadd{In order to see the effect that the shape of the airfoil has, 3 airfoils with varying thicknesses and 3 airfoils with varying cambers were evaluated. The 3 thicknesses that were used were 10\%, 20\%, and 30\%. The 3 cambers }\DIFaddend that were used \DIFdelbegin \DIFdel{:}\DIFdelend \DIFaddbegin \DIFadd{were 4\%, 6\%, and 8\%. For each airfoil, the lift and drag coefficients were found for angles of attack ranging from -20 to 20 degrees using the solve\_alpha() function. Using that, the lift over drag was calculated. Then, lift over drag vs. angle of attack and lift vs. angle of attack were plotted on top of each other for the airfoils with different thicknesses, and then with the airfoils with different cambers for comparison.}\DIFaddend \\
+
+	\DIFdelbegin %DIFDELCMD < \begin{enumerate}
+%DIFDELCMD < 		\item %%%
+\DIFdel{alter\_thicknesscamber() - this evaluated airfoils of varying thicknesses}\DIFdelend \DIFaddbegin \subsection{\DIFadd{Airframe Analysis}}
+	\DIFadd{Airframe research was done by writing a Julia program that used the VortexLattice.jl library \mbox{%DIFAUXCMD
+\cite{McDonnell-Ning}}\hskip0pt%DIFAUXCMD
+. From that library, the steady\_analysis(), body\_forces(), and stability\_derivatives() functions were primarily used. The steady\_analysis() performed a steady state analysis on the given airframe, body\_forces() calculated the near-field forces that acting on the given airframe, and stability\_derivatives() calculated the stability derivatives of the airframe under the given conditions.}\\
+
+	\DIFadd{In order to see what the relationship between aspect ratio (see equation \ref{eqn:aspect-ratio}) and efficiency was, the lift and drag coefficients were calculated for airframes with aspect ratios ranging from 3 to 15. This was done by using equation \ref{eqn:aspect-ratio} to find what the span(b) and the mean chord length(c) would be for the given aspect ratio and reference area of 30. Using those values, an airframe was constructed and the lift and drag coefficients were found using body\_forces(). Those coefficients were then used to calculate the inviscid span efficiency for each aspect ratio using equation \ref{eqn:efficiency}. Once all the span efficiencies were calculated for each aspect ratio, a plot of efficiency vs. aspect ratio was created to see their relationship.}\\
+
+	\begin{equation}
+		\DIFadd{AR = \frac{b}{c} = \frac{b^2}{S_{ref}}
+		\label{eqn:aspect-ratio}
+	}\end{equation}
+
+	\begin{equation}
+		\DIFadd{e_{inv} = \frac{C_L^2}{\pi{ARC_D}}
+		\label{eqn:efficiency}
+	}\end{equation}
+
+	\DIFadd{In order to see how tail volume ratios affect the stability derivatives of an airframe, the stability derivatives were calculated for vertical tail volume ratios (see equation \ref{eqn:vtail-ratio}) ranging from 0.001 to 0.0156 and horizontal tail volume ratios (see equation \ref{eqn:htail-ratio}) ranging from 0.001 to 0.1458. These bounds were chosen because all airframes that have tail volume ratios between them have realistic dimensions. For the vertical tail volume ratios, the stability derivatives of concern were \(C_{\ell{b}}\) }\DIFaddend and \DIFdelbegin \DIFdel{cambers }\DIFdelend \DIFaddbegin \DIFadd{\(C_{nb}\). \(C_{\ell{b}}\) is the stability derivative associated with roll stability and \(C_{nb}\) is the stability derivative associated with yaw stability. An airframe is stable if \(C_{\ell{b}}\) is less than 0 }\DIFaddend and \DIFdelbegin \DIFdel{plotted their lifts and drags together in order to compare them
+		}%DIFDELCMD < \item %%%
+\DIFdel{get\_coefficients() - this was a helper function that was used }\DIFdelend \DIFaddbegin \DIFadd{\(C_{nb}\) is greater than 0. For horizontal tail volume ratios, the stability derivatives of concern are \(C_{La}\) and \(C_{ma}\). An airframe is stable if \(C_{La}\) is greater than 0 and \(C_{ma}\) is less than 0.}\\
+
+	\begin{equation}
+		\DIFadd{V_v = \frac{l_vS_v}{Sb}
+		\label{eqn:vtail-ratio}
+	}\end{equation}
+
+	\begin{equation}
+		\DIFadd{V_h = \frac{l_tS_t}{SC_{ma}}
+		\label{eqn:htail-ratio}
+	}\end{equation}
+
+	\DIFadd{For each tail volume ratio, the length from wing to tail was calculated using either equation \ref{eqn:vtail-ratio} or equation \ref{eqn:htail-ratio}, depending on whether it was being calculated for a vertical or horizontal tail volume ratio. That length was then used to construct an airframe that had a horizontal tail area of 1.75, vertical tail area of 0.7, and had an aspect ratio of 7.5. An airframe with these dimensions was used because the proportions were realistic. Then, stability\_derivatives() was used }\DIFaddend to calculate the \DIFdelbegin \DIFdel{coefficients of lift, drag, and moment and return them to other functions that needed those calculations done
+		}\DIFdelend \DIFaddbegin \DIFadd{stabiliity derivatives. \(C_{\ell{b}}\) and \(C_{nb}\) were then plotted against the vertical tail volume ratios and \(C_{La}\) and \(C_{ma}\) were plotted against the horizontal tail volume ratios.}\\
+
+	\DIFadd{In order to see the relationship between angle of attack of an airframe and its lift, the lift coefficients were calculated for angles ranging from -20 to 20 degrees. This was done by constructing an airframe that had an aspect ratio of 7.5 (realistic design) and calculating its lift coefficient using body\_forces() for each angle of attack. The lift coefficients were then plotted against the angle of attack. The purpose of this was to see how the vortex lattice method compares to Xfoil.}\\
+
+	\subsection{\DIFadd{Airframe Design}}
+	\DIFadd{The results of this section came from evaluating potential airframe solutions using VortexLattice.jl \mbox{%DIFAUXCMD
+\cite{McDonnell-Ning}}\hskip0pt%DIFAUXCMD
+. In order to optimize the airframe, the process, discussed in the introduction to "Engineering Design Optimization" by Joaquim R.R.A. Martins and Andrew Ning, was followed. The objective function  that was minimized was the equation used to calculate the velocity needed to produce the necessary lift to carry 0.5 kilograms (see equation \ref{eqn:needed-velocity}).}\\
+
+	\begin{equation}
+		\DIFadd{V = \sqrt{\frac{L}{(0.5)(C_{\ell})(\rho)(S_{ref})}}
+		\label{eqn:needed-velocity}
+	}\end{equation}
+
+	\begin{itemize}
+		\DIFaddend \item \DIFdelbegin \DIFdel{alter\_reynolds() }\DIFdelend \DIFaddbegin \DIFadd{\(L\) }\DIFaddend - \DIFdelbegin \DIFdel{this evaluated an airfoil using varying Reynolds numbers and plotted their lift , drag, and moment in order to compare them
+		}\DIFdelend \DIFaddbegin \DIFadd{the lift needed to takeoff with given load, in this case 4.905 N
+		}\DIFaddend \item \DIFdelbegin \DIFdel{auto\_sweep() }\DIFdelend \DIFaddbegin \DIFadd{\(\rho\) }\DIFaddend - \DIFdelbegin \DIFdel{this calculated}\DIFdelend \DIFaddbegin \DIFadd{the density of the air (1.225 \(kg/m^3\))
+		}\item \DIFadd{\(S_{ref}\) - the reference area, in this case the wing area
+		}\item \DIFadd{\(C_{\ell}\) - the lift coefficient
+	}\end{itemize}
+
+	\DIFadd{The design variables that were altered in order to minimize that function was the mean aerodynamic chord length of the wing and the length from wing to tail on the airframe. The reason I chose these design variables was because I knew that the airframe that would generate the most lift would have the max wingspan possible (so in this case 1.5 m), }\DIFaddend and \DIFdelbegin \DIFdel{plotted an airfoil's lift, drag, and moment with varying airfoil angles of attack
+	}%DIFDELCMD < \end{enumerate}
+%DIFDELCMD < 	%%%
+\DIFdelend \DIFaddbegin \DIFadd{so altering the chord length would help me find the wing that needed the least speed to takeoff. I also chose the length from wing to tail as a design variable because I knew altering it would change how stable the airframe was.}\\
+	\DIFaddend 
+
+	\DIFaddbegin \DIFadd{As I worked with these design variables, it was discovered that the greater the length from wing to tail, the more stable the airframe. For this reason, I put an upper limit on that length to be 2.0 m, so that the found airframe would be realistic. I also put a constraint on the aspect ratio of the wing, which was that it had to be greater than 2.0. This was done so that the mean chord length of the wing would be realistic.}\\
+
+	\DIFadd{In order to find the optimal airframe design, I created nested for loops that calculated the necessary takeoff velocity for every possible combination of mean chord length and length from wing to tail. This was done by finding the lift coefficient for each design using the body\_forces() function from VortexLattice.jl \mbox{%DIFAUXCMD
+\cite{McDonnell-Ning}}\hskip0pt%DIFAUXCMD
+. The reference area was also calculated. Then, the takeoff velocity was found using equation \ref{eqn:needed-velocity}. For each design looped through, I also calculated its stability derivatives using stability\_derivatives(). With both the takeoff velocity and stability derivatives calculated, I kept the design that had the lowest takeoff velocity and was stable.}\\
+
+	\DIFadd{Once I had that design, I then calculated the lift distribution of the design for wing taper ratios ranging from 0.1 to 1.0. This was done using vortex lattice's get\_surface\_properties() function. The taper ratio used in the optimal design was the one that produced a lift distribution that was closest to the ideal lift distribution, which was an ellipse. The final optimal design had the smallest takeoff velocity, was stable, and efficient.}\\
+
+	
+	
+	
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%DIF >                                                                     %
+	%DIF >                               RESULTS                               %
+	%DIF >                                                                     %
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\section{\DIFadd{Results}}
+	\label{sec:results}
+
+	\DIFaddend \subsection{Airfoil \DIFdelbegin \DIFdel{Angle  of Attack}\DIFdelend \DIFaddbegin \DIFadd{Analysis}\DIFaddend }
+	\DIFaddbegin \label{sec:airfoil}
+
+	\DIFaddend One of the most stressed parts of this research was seeing how different airfoil angles of attack affected the lift, drag, and moment on the airfoil. In order to see those relationships, only the coefficients of drag, lift, and moment needed to \DIFaddbegin \DIFadd{be }\DIFaddend evaluated, rather than the moment and the forces of lift and drag. This is because \DIFdelbegin \DIFdel{in calculating lift, drag, and moment, the only parts that differ are the coefficients}\DIFdelend \DIFaddbegin \DIFadd{those coefficients are dimensionless numbers, and since they are dimensionless, it makes it possible to see those relationships without needing more data to describe the airfoil}\DIFaddend . Figure \ref{fig:aoa-coefficients} shows the relationships between lift, drag, \DIFdelbegin \DIFdel{and moment}\DIFdelend \DIFaddbegin \DIFadd{moment, }\DIFaddend and \(\alpha\) for a NACA 2412 airfoil.\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics{../graphics/aoa-coefficients.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows coefficients of lift, drag, and moment plotted against angle of attack for a NACA 2412 airfoil.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The coefficients of lift, drag, and moment plotted against angle of attack for a NACA 2412 airfoil.}}\DIFaddendFL }
+		\label{fig:aoa-coefficients}
+	\end{figure}
+
+	The coefficients of lift (\DIFdelbegin \DIFdel{\(c_\ell\)}\DIFdelend \DIFaddbegin \DIFadd{\(C_\ell\)}\DIFaddend ) and drag (\DIFdelbegin \DIFdel{\(c_d\)}\DIFdelend \DIFaddbegin \DIFadd{\(C_d\)}\DIFaddend ) both increase as angle of attack (\(\alpha\)) increases, because as the angle increases, the pressure differential between the top and bottom of the airfoil becomes larger. This also increases coefficient of moment (\DIFdelbegin \DIFdel{\(c_m\)}\DIFdelend \DIFaddbegin \DIFadd{\(C_m\)}\DIFaddend ). It is also important to note that figure \ref{fig:aoa-coefficients} establishes that lift is negative when \(\alpha\) is less than zero, which makes sense \DIFdelbegin \DIFdel{, and }\DIFdelend \DIFaddbegin \DIFadd{because the pressure differential goes from having greater pressure on the bottom (positive lift) to greater pressure on the top of the airfoil (negative lift). It can also be seen }\DIFaddend that the zero-lift angle of attack is somewhere between 0 and 0.5 degrees\DIFaddbegin \DIFadd{, which is where the lift changes from negative to positive}\DIFaddend . It appears that stall takes place at an angle of attack of about 10 degrees. This \DIFdelbegin \DIFdel{can be cleary }\DIFdelend \DIFaddbegin \DIFadd{happens when the angle of attack becomes too great and the flow becomes detached, so that the airfoil can no longer produce lift. It can be clearly }\DIFaddend seen on the lift and drag plots.\\
+
+	\DIFdelbegin \subsection{\DIFdel{Airfoil Polar Comparison}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+\DIFdel{The }\DIFdelend \DIFaddbegin \DIFadd{In order to see the accuracy of Xfoil, the }\DIFaddend results gained from Xfoil were plotted against experimental data from a study done on the NACA 2412 airfoil (see figure \ref{fig:airfoil-comparison}).\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics{../graphics/airfoil-compare.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure compares data collected experimentally to data collected from Xfoil.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The comparison of data collected experimentally to data collected from Xfoil.}}\DIFaddendFL }
+		\label{fig:airfoil-comparison}
+	\end{figure}
+
+	It is interesting to see that the experimental lift curve looks very similar to the one obtained from Xfoil, \DIFdelbegin \DIFdel{expect }\DIFdelend \DIFaddbegin \DIFadd{except }\DIFaddend shifted up. Also, the drag curves between experimental and Xfoil are very different. The reason for this is unknown, although it might be an error in Xfoil calculations.\\
+
+	\DIFdelbegin \subsection{\DIFdel{Effect of Reynold's Number}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+\DIFdel{The Reynold's number is an indicator of how viscous the fluid that an airfoil is traveling through is}\DIFdelend \DIFaddbegin \DIFadd{Next to be evaluated was how varying the Reynolds number affects the airfoil polar. The purpose of the Reynolds number is to compare inertial forces to viscous forces}\DIFaddend . A high \DIFdelbegin \DIFdel{Reynold's }\DIFdelend \DIFaddbegin \DIFadd{Reynolds }\DIFaddend number is an indicator that fluid flow will be turbulent, where as a low \DIFdelbegin \DIFdel{Reynold's }\DIFdelend \DIFaddbegin \DIFadd{Reynolds }\DIFaddend number is an indicator of laminar flow. In figure \ref{fig:altered-reynolds}, the relationships between \DIFdelbegin \DIFdel{Reynold's }\DIFdelend \DIFaddbegin \DIFadd{Reynolds }\DIFaddend number and the coefficients are shown.\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics{../graphics/altered-reynolds.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows plots of lift, drag, and moment for varying Reynold's numbers.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The lift, drag, and moments against angle of attack for varying Reynolds numbers.}}\DIFaddendFL }
+		\label{fig:altered-reynolds}
+	\end{figure}
+
+	As the \DIFdelbegin \DIFdel{Reynold's }\DIFdelend \DIFaddbegin \DIFadd{Reynolds }\DIFaddend number increases, \DIFdelbegin \DIFdel{the lift }\DIFdelend \DIFaddbegin \DIFadd{it seems that all the }\DIFaddend curves become more \DIFdelbegin \DIFdel{steep. However, it is the opposite with drag and moment. As the Reynold's }\DIFdelend \DIFaddbegin \DIFadd{smooth. Also, as the Reynolds }\DIFaddend number increases, the curves of drag and moment become more leveled out. These results make logical sense, because \DIFdelbegin \DIFdel{whether with turbulent or laminar flow , lift generally is not affected significantly across varying angles of attack}\DIFdelend \DIFaddbegin \DIFadd{changes in how turbulent the flow is doesn't affect the lift generated as much}\DIFaddend . On the other hand, higher \DIFdelbegin \DIFdel{Reynold's }\DIFdelend \DIFaddbegin \DIFadd{Reynolds }\DIFaddend numbers and therefore more turbulent flow decreases the drag and moment at more extreme angles of attack (see figure \ref{fig:altered-reynolds}). \DIFaddbegin \DIFadd{The reason for these effects is higher Reynolds numbers means that the fluid flow around the airfoil doesn't have as much of an effect on it. This is also why the curves seem to converge as the Reynolds number increases.}\DIFaddend \\
+
+	\DIFdelbegin \subsection{\DIFdel{Effect of Airfoil Thickness and Camber}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{As for physical attributes of the airfoil, its thickness and camber were changed to see their effect. }\DIFaddend The thickness of an airfoil is the greatest distance between the upper and the lower surfaces of an airfoil. In figure \ref{fig:altered-thickness}, the relationship between airfoil thickness and the coefficients of lift, drag, and moment can be seen.\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics{../graphics/altered-thickness.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows the plots of ratio of lift to drag coefficients and coefficient of lift.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The ratio of lift to drag coefficients and coefficient of lift against angle of attack.}}\DIFaddendFL }
+		\label{fig:altered-thickness}
+	\end{figure}
+
+	As the thickness of the airfoil increases, the ratio of lift to drag curve becomes more shallow. This is because increasing thickness leads to lift and drag becoming closer and closer to each other\DIFdelbegin \DIFdel{. It is interesting to see though that no matter the thickness, }\DIFdelend \DIFaddbegin \DIFadd{, either because lift is decreasing, drag is increasing, or a combination of the both. It can be seen in the lift vs. angle of attack plot of figure \ref{fig:altered-thickness} that increasing thickness leads to decreasing coefficients of lift for all angles of attack, thus explaining why the lift over drag curves become more leveled out for increased airfoil thickness. Additionally, figure \ref{fig:altered-thickness} displays that }\DIFaddend the zero lift angle of attack remains the same\DIFdelbegin \DIFdel{(see figure \ref{fig:altered-thickness})}\DIFdelend \DIFaddbegin \DIFadd{, but the angle of attack at which stall takes place is increased slightly as airfoil thickness increases}\DIFaddend .\\
+
+	The camber of an airfoil is the \DIFaddbegin \DIFadd{measure of the }\DIFaddend asymmetry between the two acting surfaces of an airfoil. An airfoil with zero camber is symmetric. In figure \ref{fig:altered-camber}, the effect of different cambers can be seen.\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics{../graphics/altered-camber.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows the plots of ratio of lift to drag coefficients and coefficient of lift.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The ratio of lift to drag coefficients and coefficient of lift against angle of attack.}}\DIFaddendFL }
+		\label{fig:altered-camber}
+	\end{figure}
+
+	As the camber of the airfoil increases, the lift to drag ratio \DIFdelbegin \DIFdel{becomes higher and the whole curve is shifted upwards. This also happened with the coefficient of lift. This also means that the zero lift }\DIFdelend \DIFaddbegin \DIFadd{is increased for all angles of attack (see figure \ref{fig:altered-camber}). The reason for this can be seen in the lift coefficient vs. }\DIFaddend angle of attack \DIFdelbegin \DIFdel{became greater }\DIFdelend \DIFaddbegin \DIFadd{plot (see figure \ref{fig:altered-camber}); }\DIFaddend with increasing camber \DIFdelbegin \DIFdel{.}%DIFDELCMD < \\
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\section{\DIFdel{Airframe Analysis}}
+	%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < 	%%%
+\DIFdel{This section covers research done on airframes using the VortexLattice.jl library, specifically how aspect ratio and efficiency are related, how tail volume ratios affect stability derivatives, and how }\DIFdelend \DIFaddbegin \DIFadd{comes increased coefficients of lift for every }\DIFaddend angle of attack\DIFdelbegin \DIFdel{affects the lift coefficient. }\DIFdelend \DIFaddbegin \DIFadd{. Increasing camber leads to an increase in generated lift because more asymmetric shapes lead to greater pressure differentials between the top and bottom surfaces of the airfoil.}\DIFaddend \\
+
+	\DIFdelbegin \DIFdel{The results of this research came from evaluating airframes using VortexLattice.jl, as well as writing new functions to help in evaluating the airframes. There were 4 functions that were  used:
+	}%DIFDELCMD < 
+
+%DIFDELCMD < 	\begin{enumerate}
+\begin{enumerate}%DIFAUXCMD
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{aoa\_effect() - this evaluated airframes and calculated their coefficient of lift for varying angles of attack 
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{wing\_efficiency() - this calculated the efficiency of airframes with varying aspect ratios; it did this by calculating the lift and drag coefficients for every aspect ratio
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{stability\_derivatives() - this calculated the stability derivatives for airframes with different horizontal and vertical tail ratios
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{vortex\_lattice() - this was the main function that performed all the necessary VortexLattice calculations for the other functions 
+	}
+\end{enumerate}%DIFAUXCMD
+%DIFDELCMD < \end{enumerate}
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdelend \subsection{\DIFdelbegin \DIFdel{Aspect Ratio vs. Efficiency}\DIFdelend \DIFaddbegin \DIFadd{Airframe Analysis}\DIFaddend }
+
+	In order to see the relationship between aspect ratio and the efficiency, the \DIFdelbegin \DIFdel{wing\_efficiency() function was used. When it was run, it calculated the }\DIFdelend inviscid span efficiency (see equation \ref{eqn:efficiency}) \DIFaddbegin \DIFadd{was calculated }\DIFaddend for airframes with aspect ratios (see equation \ref{eqn:aspect-ratio}) ranging from 3 to 15. \DIFdelbegin %DIFDELCMD < \\
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\begin{displaymath}
+		\DIFdel{e_{inv} = \frac{C_L^2}{\pi{ARC_D}}
+		%DIFDELCMD < \label{eqn:efficiency}%%%
+	}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\begin{displaymath}
+		\DIFdel{AR = \frac{b}{c} = \frac{b^2}{S_{ref}}
+		%DIFDELCMD < \label{eqn:aspect-ratio}%%%
+	}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdelend After the program calculated the efficiency, it produced a plot shown in figure \ref{fig:efficiency}.\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics{../graphics/efficiency.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This diagram shows the relationship between aspect ratio and inviscid span efficiency.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The relationship between aspect ratio and inviscid span efficiency.}}\DIFaddendFL }
+		\label{fig:efficiency}
+	\end{figure}
+
+	In reality, \DIFdelbegin \DIFdel{there is actually no physical relationship between an airframe's aspect ratio and its efficiency, but figure \ref{fig:efficiency} }\DIFdelend \DIFaddbegin \DIFadd{figure \ref{fig:efficiency} doesn't show a relationship that is actually interesting, but it }\DIFaddend does mathematically plot it correctly. \DIFdelbegin \DIFdel{However, that plot }\DIFdelend \DIFaddbegin \DIFadd{It }\DIFaddend is simply the definition of inviscid span efficiency.\\
+
+	\DIFdelbegin \subsection{\DIFdel{Tail Volume Ratios vs Stability Derivatives}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < 	%%%
+\DIFdelend Another characteristic of these airframes that was observed was their stability derivatives. Stability derivatives were calculated for airframes with different tail volume ratios, both vertical and horizontal. The definitions of those ratios are equations \ref{eqn:vtail-ratio} and \ref{eqn:htail-ratio}. \DIFdelbegin \DIFdel{The stability derivatives that are affected by a change in }\DIFdelend \DIFaddbegin \DIFadd{Airframes were evaluated with }\DIFaddend vertical tail volume \DIFdelbegin \DIFdel{ratio are \(C_{\ell{b}}\) and \(C_{nb}\).\(C_{\ell{b}}\) is the stability derivative associated with roll stability. \(C_{nb}\) is the stability derivative associated with yaw stability. An airframe is stable if \(C_{\ell{b}}\) is less than 0 and \(C_{nb}\) is greater than 0.}\DIFdelend \DIFaddbegin \DIFadd{ratios that varied from 0.001 to 0.0156 and horizontal tail volume ratios that varied from 0.001 to 0.1458.}\DIFaddend \\ 
+
+	\DIFdelbegin \begin{displaymath}
+		\DIFdel{V_v = \frac{l_vS_v}{Sb}
+		%DIFDELCMD < \label{eqn:vtail-ratio}%%%
+	}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\begin{displaymath}
+		\DIFdel{V_h = \frac{l_tS_t}{SC_{ma}}
+		%DIFDELCMD < \label{eqn:htail-ratio}%%%
+	}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdelend In figure \ref{fig:vtail-stability}, we can see that the airframe is stable for vertical tail volume ratios greater than 0.003, but it becomes unstable when the ratio is less than 0.003, at around 0.002. \DIFdelbegin \DIFdel{The stability derivatives that are affected by a change in horizontal tail volume ratio are \(C_{La}\) and \(C_{ma}\). An airframe is stable if \(C_{La}\) is greater than 0 and \(C_{ma}\) is less than 0. }\DIFdelend Figure \ref{fig:htail-stability} shows that the airframe is stable for horizontal tail volume ratios greater than 0.05, but becomes unstable when the ratio is less than 0.05, at around 0.025.\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.73]{../graphics/vtail-stability.pdf}
+		\caption{\emph{This diagram shows the relationship between vertical tail volume ratio, \(C_{\ell{b}}\), and \(C_{nb}\).}}
+		\label{fig:vtail-stability}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.73]{../graphics/htail-stability.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This diagram shows the relationship between horizontal tail volume ratio, \(C_{La}\), and \(C_{ma}\).}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The relationship between horizontal tail volume ratio, \(C_{La}\), and \(C_{ma}\).}}\DIFaddendFL }
+		\label{fig:htail-stability}
+	\end{figure}
+
+	\DIFdelbegin \DIFdel{These ratios are arbitrary and will be different among models, but they are still extremely important.}%DIFDELCMD < \\
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\subsection{\DIFdel{Angle of attack vs lift coefficient}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < 	%%%
+\DIFdel{In previous research about airfoils, I }\DIFdelend \DIFaddbegin \DIFadd{In section \ref{sec:airfoil}, it was }\DIFaddend found that as angle of attack increases, the lift coefficient also increases, up to a certain point. At that point, the lift coefficient sharply drops, and this is where stall takes place. In that \DIFdelbegin \DIFdel{previous research}\DIFdelend \DIFaddbegin \DIFadd{section}\DIFaddend , Xfoil.jl \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{McDonnell} }\hskip0pt%DIFAUXCMD
+}\DIFaddend was used to calculate the lift coefficient for varying angles of attack. A relationship between angle of attack and lift was also \DIFdelbegin \DIFdel{tried to be }\DIFdelend found here, but \DIFdelbegin \DIFdel{instead of using Xfoil.jl, }\DIFdelend VortexLattice.jl \DIFdelbegin \DIFdel{was used}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{McDonnell-Ning} }\hskip0pt%DIFAUXCMD
+was used instead}\DIFaddend . A plot was produced showing \DIFdelbegin \DIFdel{the relationship between angle of attack and lift }\DIFdelend \DIFaddbegin \DIFadd{that relationship }\DIFaddend (see figure \ref{fig:aoa-lift}).\\
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics{../graphics/aoa-lift.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This diagram shows the relationship between angle of attack and lift for an airframe.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The relationship between angle of attack and lift for an airframe.}}\DIFaddendFL }
+		\label{fig:aoa-lift}
+	\end{figure}
+
+	In comparison to the plot created using Xfoil.jl \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{McDonnell} }\hskip0pt%DIFAUXCMD
+}\DIFaddend (see figure \ref{fig:aoa-coefficients}), figure \ref{fig:aoa-lift} looks very similar between angles of attack of -10 and 10. However, past those angles of attack is where it differs. In the Xfoil plot, it shows very clearly where stall would take place, but in this VortexLattice plot, the plot continues linearly and never drops off, never indicating stall. This is why the Vortex Lattice method is not always \DIFdelbegin \DIFdel{a great choice for investigating airframes}\DIFdelend \DIFaddbegin \DIFadd{accurate}\DIFaddend . It is only accurate when the angle of attack is small, because it assumes that the flow is inviscid at all angles of attack. This is why in figure \ref{fig:aoa-lift} it looks very linear and \DIFdelbegin \DIFdel{doesn't }\DIFdelend \DIFaddbegin \DIFadd{does not }\DIFaddend indicate where stall would take place, where as the Xfoil plot does.\\
+
+	\DIFdelbegin \section{\DIFdel{Airframe Aerodynamic Design}}
+	%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \subsection{\DIFadd{Airframe Design}}
+	\DIFaddend 
+
+	\DIFdelbegin \DIFdel{This report covers the work done in learning how to optimize an airframe with specific parameters, using techniques and knowledge learned previously. The goal was to design an airframe that can lift 0.5 kilograms, has a wingspan no greater than 1.5 meters, and is stable.}%DIFDELCMD < \\
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdel{The results of this research came from evaluating potential airframe solutions using VortexLattice.jl, as well as writing new functions to help in optimizing the airframe design. There were 4 functions that were  used:}%DIFDELCMD < \\
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	\begin{enumerate}
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{optimize\_airframe() - this was the main function that }\DIFdelend \DIFaddbegin \DIFadd{After running the program that the }\DIFaddend optimized the airframe \DIFdelbegin \DIFdel{so that it met the specified requirements and was the most efficient; it employed the use of all the other functions in order to find the optimized airframe
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{aoa\_coefficients() - this calculated the lift and drag coefficients for a given airframe design for a range of angles of attack.
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{vortex\_lattice() - this was the function that performed all the necessary VortexLattice calculations for the other functions 
+	}%DIFDELCMD < \end{enumerate}
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdel{In order to optimize the airframe, the process, discussed in the introduction to "Engineering Design Optimization" by Joaquim R.R.A. Martins and Andrew Ning, was followed. The objective function  that was minimized was the equation used to calculate the velocity needed to produce the necessary lift to carry 0.5 kilograms (see equation \ref{eqn:needed-velocity}).}%DIFDELCMD < \\
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\begin{displaymath}
+		\DIFdel{V = \sqrt{\frac{L}{(0.5)(C_L)(\rho)(S_{ref})}}
+		%DIFDELCMD < \label{eqn:needed-velocity}%%%
+	}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	\begin{itemize}
+\begin{itemize}%DIFAUXCMD
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{\(L\) - the lift needed to takeoff with 0.5 kilograms, in this case 4.905 N
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{\(\rho\) - the density of the air (1.225 \(kg/m^3\))
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{\(S_{ref}\) - the reference area, in this case the wing area
+	}
+\end{itemize}%DIFAUXCMD
+%DIFDELCMD < \end{itemize}
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdel{The design variables that were altered in order to minimize that function was the mean aerodynamic chord length of the wing and the length from wing to tail on the airframe. The reason I chose these design variables was because I knew that the airframe that would generate the most lift would have the max wingspan possible (so in this case 1.5 m), and so altering the chord length would help me find the wing that needed the least speed to takeoff. I also chose the length from wing to tail as a design variable because I knew altering it would change how stable the airframe was . However, as I worked with these design variables, it was discovered that the greater the length from wing to tail, the more stable the airframe. For this reason, I put an upper limit on that length to be 2.0 m, so that the found airframe would be realistic. I also put a constraint on the aspect ratio of the wing, which was that it had to be greater than 2.0. The way that I found the optimal airframe was I changed those design variables together, so that it found the airframe that took off at the least velocity, but was the most stable. The efficiency of the airframe with different wing taper ratios was also evaluated by plotting the lift coefficient distribution against the optimal distribution, which was a ellipse. The ideal taper ratio was the one that produced a lift coefficient distribution closest to that elliptical distribution. This was done so that the final airframe design not only optimized my objective function, but was also the most efficient design.}%DIFDELCMD < \\
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdel{After running the optimize\_airframe () function, it found that the most optimized airframe }\DIFdelend \DIFaddbegin \DIFadd{design under the given constraints, it }\DIFaddend was \DIFaddbegin \DIFadd{found that the most optimized airframe was }\DIFaddend one that had the following characteristics (figure \ref{fig:ideal_design} shows what the design looks like):
+
+	\DIFdelbegin %DIFDELCMD < \begin{itemize}
+\begin{itemize}%DIFAUXCMD
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{span length = 1.5 meters
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{mean aerodynamic chord length = 0.7222 meters
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{length from wing to tail = 2.0 meters
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{taper = 1.0
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{lift coefficient = 0.04616576328871639
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{velocity needed to produce necessary lift = 12.653929077220258 m/s
+	}
+\end{itemize}%DIFAUXCMD
+%DIFDELCMD < \end{itemize}
+%DIFDELCMD < 	%%%
+\DIFdelend \DIFaddbegin \begin{figure}[H]
+		\centering
+		\caption{\emph{\DIFaddFL{The physical attributes of the optimized airframe design.}}}
+		\includegraphics{../graphics/ideal_attributes.jpg}
+		\label{fig:ideal_attr}
+	\end{figure}
+	\DIFaddend 
+
+	\begin{figure}[H]
+		\DIFaddbeginFL \centering
+		\DIFaddendFL \includegraphics{../graphics/ideal_design.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows the design of the optimized airframe.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The design of the optimized airframe.}}\DIFaddendFL }
+		\label{fig:ideal_design}
+	\end{figure}
+
+	The aforementioned necessary lift was 4.905 Newtons. This number was found by multiplying 0.5 kilograms by 9.81 \(m/s^2\), which is the acceleration due to gravity. It is also important to note that the \DIFdelbegin \DIFdel{optimize\_airframe() function accounts for stability and }\DIFdelend \DIFaddbegin \DIFadd{optimization program created for this }\DIFaddend makes sure that the \DIFdelbegin \DIFdel{airframe is the most stable, and so this airframe is the most stable one under the given constraints}\DIFdelend \DIFaddbegin \DIFadd{optimized airframe is also stable}\DIFaddend . In order to show that this airframe has been optimized, other airframes have been evaluated in order to show correctness.\\
+
+	\DIFdelbegin \subsection{\DIFdel{Altered Mean Chord Length}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < 	%%%
+\DIFdelend When evaluating an airframe that has a mean chord length that is less than \DIFdelbegin \DIFdel{0.7222 }\DIFdelend \DIFaddbegin \DIFadd{0.722 }\DIFaddend m (I used 0.6 m for comparison), it was found that the velocity needed to generate the necessary lift was \DIFdelbegin \DIFdel{13.049496968197154 }\DIFdelend \DIFaddbegin \DIFadd{13.049 }\DIFaddend m/s, which is greater than \DIFdelbegin \DIFdel{than }\DIFdelend the velocity needed for the optimized airframe. This shows that airframes with smaller mean chord lengths are not more optimized, as they need a greater velocity to lift the 0.5 kilograms.\\
+
+	\begin{figure}[H]
+		\DIFaddbeginFL \centering
+		\DIFaddendFL \includegraphics{../graphics/chord_design.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows the design of an airframe with a chord length of 0.6 m.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The design of an airframe with a chord length of 0.6 m.}}\DIFaddendFL }
+		\label{fig:chord_design}
+	\end{figure}
+
+	An airframe with a greater chord length was not evaluated for comparison, because of the constraint I put on the aspect ratio. 0.7222 m was the largest possible chord length that kept the aspect ratio of the wing greater than 2.0.\\
+
+	Plots showing the lift coefficient vs. angle of attack and drag coefficient vs. angle of attack for these 2 designs are given (see \DIFdelbegin \DIFdel{figures \ref{fig:chord_cl} and \ref{fig:chord_cd}). }\DIFdelend \DIFaddbegin \DIFadd{figure \ref{fig:chord_coeff}). They show that the 0.6 m mean chord length design has a lift vs. angle of attack curve that is steeper than the ideal design's. Because of this, it may seem that the alternate design would lead to a smaller takeoff velocity, since it has greater lift coefficients. However, the equation used to calculate takeoff velocity (equation  \ref{eqn:needed-velocity}) uses both the lift coefficient and the reference area. This explains why a larger lift coefficient does not necessarily mean that the takeoff velocity is less. The product of lift coefficient and reference area needs to maximized in order to minimize the takeoff velocity, which is what a mean chord length of 0.722 m does.
+	}\DIFaddend 
+
+	\begin{figure}[H]
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics{../graphics/chord_cl.pdf}
+%DIFDELCMD < 		%%%
+\DIFdelendFL \DIFaddbeginFL \centering
+		\includegraphics{../graphics/chord_coeff.pdf}
+		\DIFaddendFL \caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows the lift coefficients for varying angles of attack for the 2 designs evaluated using different mean chord lengths.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The lift and drag coefficients for varying angles of attack for the 2 designs evaluated using different mean chord lengths.}}\DIFaddendFL }
+		\DIFdelbeginFL %DIFDELCMD < \label{fig:chord_cl}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \label{fig:chord_coeff}
+	\DIFaddendFL \end{figure}
+	\DIFdelbegin %DIFDELCMD < \begin{figure}[H]
+%DIFDELCMD < 		\includegraphics{../graphics/chord_cd.pdf}
+%DIFDELCMD < 		%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the drag coefficients for varying angles of attack for the 2 designs evaluated using different mean chord lengths.}}%DIFAUXCMD
+}
+		%DIFAUXCMD
+%DIFDELCMD < \label{fig:chord_cd}
+%DIFDELCMD < 	\end{figure}
+%DIFDELCMD < 	%%%
+\DIFdelend 
+
+	\DIFdelbegin \subsection{\DIFdel{Altered Length from Wing to Tail}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < 	%%%
+\DIFdelend When evaluating an airframe that has a length from wing to tail that is less than 2.0 m (I used 1.0 m), it was found that the velocity needed to generate the necessary lift \DIFdelbegin \DIFdel{doesn't }\DIFdelend \DIFaddbegin \DIFadd{does not }\DIFaddend change. However, the airframe is less stable as the yaw stability derivative(\(C_{nb}\)) is less than the yaw stability derivative for the optimized airframe. Therefore, as the length from wing to tail is decreased, the airframe becomes less stable. \DIFaddbegin \DIFadd{While there are other designs that are still stable with a decreased length from wing to tail, the optimized design's is the upper limit on the constraint put on the length from wing to tail because the optimizing program goes through all the possible lengths, and 2.0 m is the last one it tries.}\DIFaddend \\
+
+	Figures showing the lift and drag coefficients vs. angle of attack for the 2 designs are given (see \DIFdelbegin \DIFdel{figures \ref{fig:wingtail_cl} and \ref{fig:wingtail_cd}). }%DIFDELCMD < 
+
+%DIFDELCMD < 	\begin{figure}[H]
+%DIFDELCMD < 		\includegraphics{../graphics/wingtail_cl.pdf}
+%DIFDELCMD < 		%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the lift coefficient vs. angle of attack for the 2 designs evaluated.}}%DIFAUXCMD
+}
+		%DIFAUXCMD
+%DIFDELCMD < \label{fig:wingtail_cl}
+%DIFDELCMD < 	\end{figure}
+%DIFDELCMD < 	\begin{figure}[H]
+%DIFDELCMD < 		\includegraphics{../graphics/wingtail_cd.pdf}
+%DIFDELCMD < 		%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the drag coefficient vs. angle of attack for the 2 designs evaluated.}}%DIFAUXCMD
+}
+		%DIFAUXCMD
+%DIFDELCMD < \label{fig:wingtail_cd}
+%DIFDELCMD < 	\end{figure}
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdel{Figure \ref{fig:length_design} shows the design of an airframe with a }\DIFdelend \DIFaddbegin \DIFadd{figure \ref{fig:wingtail_coeff}). They show that the }\DIFaddend length from wing to tail \DIFdelbegin \DIFdel{of 1.0 m.}\DIFdelend \DIFaddbegin \DIFadd{doesn't affect the lift or drag plots.}\\
+	\DIFaddend 
+
+	\begin{figure}[H]
+		\DIFaddbeginFL \centering
+		\includegraphics{../graphics/wingtail_coeff.pdf}
+		\caption{\emph{\DIFaddFL{The lift and drag coefficient vs. angle of attack for the 2 designs evaluated.}}}
+		\label{fig:wingtail_coeff}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\DIFaddendFL \includegraphics{../graphics/length_design.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows design of an airframe with a length from wing to tail of 1.0 m.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The design of an airframe with a length from wing to tail of 1.0 m.}}\DIFaddendFL }
+		\label{fig:length_design}
+	\end{figure}
+
+	\DIFdelbegin \subsection{\DIFdel{Altered Wing Taper}}
+	%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+\DIFdelend The wing taper ratio of an airframe is found using equation \ref{eqn:taper-ratio}.
+
+	\begin{equation}
+		Taper\ Ratio = \frac{tip\ chord\ length}{base\ chord\ length}
+		\label{eqn:taper-ratio}
+	\end{equation}
+
+	When evaluating an airframe that has a wing taper ratio that is less than 1.0 (I used 0.5), it was found that the velocity needed to calculate the necessary lift was \DIFdelbegin \DIFdel{13.215339717762241 }\DIFdelend \DIFaddbegin \DIFadd{13.215 }\DIFaddend m/s. While this is close to the velocity needed for the optimized airframe, it is still larger; therefore, it is not as optimal. This shows that as the wing taper ratio is decreased, the velocity needed to lift 0.5 kilograms increases, making it sub-optimal. You can also see that an airframe with a wing taper ratio of 1.0 has a lift coefficient distribution that is closer to the optimal elliptical distribution than the airframe with a wing taper ratio of 0.5 (see figures \ref{fig:cl_dist} and \ref{fig:cl_dist_compare}).\\
+
+	\begin{figure}[H]
+		\DIFaddbeginFL \centering
+		\DIFaddendFL \includegraphics{../graphics/cl_dist.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows the lift coefficient distribution for a taper ratio of 1.0 vs. the optimal elliptical distribution.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The lift coefficient distribution for a taper ratio of 1.0 vs. the optimal elliptical distribution.}}\DIFaddendFL }
+		\label{fig:cl_dist}
+	\end{figure}
+	\begin{figure}[H]
+		\DIFaddbeginFL \centering
+		\DIFaddendFL \includegraphics{../graphics/cl_dist_compare.pdf}
+		\caption{\DIFdelbeginFL \emph{\DIFdelFL{This figure shows the lift coefficient distribution for a taper ratio of 0.5 vs. the optimal elliptical distribution.}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The lift coefficient distribution for a taper ratio of 0.5 vs. the optimal elliptical distribution.}}\DIFaddendFL }
+		\label{fig:cl_dist_compare}
+	\end{figure}
+
+	Plots showing the lift coefficients and drag coefficients vs. angle of attack for these 2 designs are given (see \DIFdelbegin \DIFdel{figures \ref{fig:taper_cl} and \ref{fig:taper_cd}). }%DIFDELCMD < 
+
+%DIFDELCMD < 	\begin{figure}[H]
+%DIFDELCMD < 		\includegraphics{../graphics/taper_cl.pdf}
+%DIFDELCMD < 		%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the lift coefficients for varying angles of attack for the 2 designs evaluated using different wing tip tapers}}%DIFAUXCMD
+}
+		%DIFAUXCMD
+%DIFDELCMD < \label{fig:taper_cl}
+%DIFDELCMD < 	\end{figure}
+%DIFDELCMD < 	\begin{figure}[H]
+%DIFDELCMD < 		\includegraphics{../graphics/taper_cd.pdf}
+%DIFDELCMD < 		%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the drag coefficients for varying angles of attack for the 2 designs evaluated using different wing tip tapers}}%DIFAUXCMD
+}
+		%DIFAUXCMD
+%DIFDELCMD < \label{fig:taper_cd}
+%DIFDELCMD < 	\end{figure}
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\DIFdel{The design of }\DIFdelend \DIFaddbegin \DIFadd{figure \ref{fig:taper_coeff}). The lift vs. angle of attack plot shows that }\DIFaddend an airframe with a \DIFaddbegin \DIFadd{smaller }\DIFaddend wing taper ratio \DIFdelbegin \DIFdel{of 0.5 is shown in figure \ref{fig:taper_design}.
+	}\DIFdelend \DIFaddbegin \DIFadd{has smaller lift coefficients for every angle of attack. However, the reference area remains the same because the mean chord length stays the same. Because the takeoff velocity equation (equation \ref{eqn:needed-velocity}) has the lift coefficient and reference area in its denominator, when only the lift coefficient is decreased, the necessary takeoff velocity is increased. Therefore, designs with smaller wing taper ratios are not as optimal.}\\
+	\DIFaddend 
+
+	\begin{figure}[H]
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics{../graphics/taper_design.pdf}
+%DIFDELCMD < 		%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the design of an airframe with a wing taper ratio of 0.5.}}%DIFAUXCMD
+}
+		%DIFAUXCMD
+%DIFDELCMD < \label{fig:taper_design}
+%DIFDELCMD < 	\end{figure}
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\section{\DIFdel{Conclusion}}
+	%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+\DIFdel{Here are some key findings from all of my research done on airframe design:
+	}%DIFDELCMD < \begin{itemize}
+\begin{itemize}%DIFAUXCMD
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Higher Reynolds numbers cause the lift curves to become more steep and the drag and moment curves to become more leveled out for an airfoil.
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{As the thickness of the airfoil increases, the airfoil's ratio of lift to drag curve becomes more shallow. As the camber of the airfoil increases, the lift to drag ratio becomes higher and the whole curve is shifted upwards. 
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{The larger the tail of an airframe, the more stable it will be. However, bigger does not always mean better in this case.
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{The Vortex Lattice Method for evaluating airframes in only accurate for small angles of attack, but is very powerful when used.
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{The airframe that will generate the most lift will have a large wingspan and a large mean chord length. However, when designing an airframe, a lot more factors go into the design other than how much lift it produces.
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{The most efficient airframe is one that has a wing taper ratio of 1.0, as it produces a lift coefficient distribution that is elliptical. }
+\end{itemize}%DIFAUXCMD
+%DIFDELCMD < \end{itemize}
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	\newpage
+%DIFDELCMD < 	
+
+%DIFDELCMD < 	%%%
+\section{\DIFdel{Appendix}}
+	%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < 	\begin{itemize}
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Irrotational flow: a flow in which each element of the moving fluid undergoes no net rotation with respect to a chosen coordinate axes from one instant to other
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Inviscid: having no or negligible viscosity
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Chord: a straight line from the leading edge to the trailing edge (see figure \ref{fig:airfoil-diagram})
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Airfoil camber: the asymmetry between the two acting surfaces of an airfoil, with the top surface of a wing commonly being more convex. An airfoil that is not cambered is called a symmetric airfoil (see figure \ref{fig:airfoil-diagram})
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Airfoil thickness: the greatest distance between the upper and the lower surfaces of an airfoil (see figure \ref{fig:airfoil-diagram})
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		\begin{figure}[H]
+%DIFDELCMD < 			%%%
+\DIFdelendFL \centering
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[scale=0.4]{../graphics/airfoil-diagram.jpg}
+%DIFDELCMD < 			%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics{../graphics/taper_coeff.pdf}
+		\DIFaddendFL \caption{\DIFdelbeginFL \emph{\DIFdelFL{airfoil diagram showing angle of attack, airfoil camber, thickness, and chord}}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \emph{\DIFaddFL{The lift and drag coefficients for varying angles of attack for the 2 designs evaluated using different wing tip tapers}}\DIFaddendFL }
+		\DIFdelbeginFL %DIFDELCMD < \label{fig:airfoil-diagram}
+%DIFDELCMD < 		%%%
+\DIFdelendFL \DIFaddbeginFL \label{fig:taper_coeff}
+	\DIFaddendFL \end{figure}
+
+	\DIFdelbegin %DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Potential flow: an idealized model of fluid flow that occurs in the case of incompressible, inviscid, and irrotational flow
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Freestream: the air far upstream of an aerodynamic body, that is, before the body has a chance to deflect, slow down or compress the air
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Angle of attack: the angle at which the chord of an aircraft's wing meets the relative wind
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Drag coefficient: equal to the drag D divided by density r times half the velocity V squared times the reference area A. It expresses the ratio of the drag force to the force produced by the dynamic pressure times the area (see equation \ref{eqn:drag})
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		%%%
+\begin{displaymath}
+			\DIFdel{\centering
+			%DIFDELCMD < \label{eqn:drag}%%%
+			c_d = \frac{2D}{\rho{V^2}S}
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Lift coefficient: relates the lift generated by a lifting body to the fluid density around the body, the fluid velocity and an associated reference area (see equation \ref{eqn:lift})
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		%%%
+\begin{displaymath}
+			\DIFdel{\centering
+			%DIFDELCMD < \label{eqn:lift}%%%
+			c_\ell = \frac{2L}{\rho{V^2}S}
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Moment coefficient: pertains to the moment specifically due to the aerodynamics force (see equation \ref{eqn:moment})
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		%%%
+\begin{displaymath}
+			\DIFdel{\centering
+			%DIFDELCMD < \label{eqn:moment}%%%
+			c_m = \frac{2M}{\rho{V^2}S}
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Stall: a sudden reduction in the lift generated by an aerofoil when the critical angle of attack is reached or exceeded	
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Airfoil polar: represent the aerodynamic characteristics of an airfoil (figure \ref{fig:aoa-coefficients} is an example of an airfoil polar)
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Reynold's number: helps predict flow patterns in different fluid flow situations. At low Reynolds numbers, flows tend to be dominated by laminar (sheet-like) flow, while at high Reynolds numbers flows tend to be turbulent. Equation \ref{eqn:velocity} calculates Reynold's number using \(\rho\)(density), u(flow speed), L(characteristic linear dimension), and \(\mu\)(dynamic viscosity of fluid)
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		%%%
+\begin{displaymath}
+			\DIFdel{\centering
+			%DIFDELCMD < \label{eqn:velocity}%%%
+			R_e = \frac{\rho{uL}}{\mu}
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Mach number: ratio of the speed of a body to the speed of sound in the surrounding medium
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Lift curve slope: measure of how rapidly the wing generates lift with change in AOA (see figure \ref{fig:lift-curve-slope})
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		%%%
+\DIFdelend \begin{figure}[H]
+		\centering
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[scale=0.4]{../graphics/lift-curve-slope.jpg}
+%DIFDELCMD < 			%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This diagram shows the major characteristics of a lift curve}}%DIFAUXCMD
+}
+			%DIFAUXCMD
+%DIFDELCMD < \label{fig:lift-curve-slope}
+%DIFDELCMD < 		%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics{../graphics/taper_design.pdf}
+		\caption{\emph{\DIFaddFL{The design of an airframe with a wing taper ratio of 0.5.}}}
+		\label{fig:taper_design}
+	\DIFaddendFL \end{figure}
+
+	
+	
+	
+	
+	
+	\DIFdelbegin %DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Sweep: the angle at which the wing is translated backwards (or occasionally forwards) relative to the root chord of the wing (see figure \ref{fig:sweep})
+		}\DIFdelend %DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%DIF >                                                                     %
+	%DIF >                             CONCLUSION                              %
+	%DIF >                                                                     %
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\DIFdelbegin %DIFDELCMD < \begin{figure}[H]
+%DIFDELCMD < 			\centering
+%DIFDELCMD < 			\includegraphics[scale=0.4]{../graphics/sweep.jpg}
+%DIFDELCMD < 			%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This diagram shows what sweep is on an airframe.}}%DIFAUXCMD
+}
+			%DIFAUXCMD
+%DIFDELCMD < \label{fig:sweep}
+%DIFDELCMD < 		\end{figure}
+%DIFDELCMD < 		%%%
+\DIFdelend \DIFaddbegin \section{\DIFadd{Conclusions and Future Work}}
+	\label{sec:conclusions}
+	\DIFaddend 
+
+	\DIFdelbegin %DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Aspect Ratio: aspect ratio of a wing is the ratio of its span to its mean chord. It is equal to the square of the wingspan divided by the wing area. Thus, a long, narrow wing has a high aspect ratio, whereas a short, wide wing has a low aspect ratio (see equation \ref{eqn:aspect-ratio-wiki})
+		}\DIFdelend \DIFaddbegin \DIFadd{By designing an actual airframe using the skills and knowledge gained from the research done on airfoils and airframes, I learned valuable insights. One of the more important things I learned from optimizing the airframe was that when writing computer programs to solve optimization problems, it is important to make sure that the program accounts for realistic outputs. In the case of optimizing an airframe, I had to put constraints on the aspect ratio so that the mean aerodynamic chord length was a realistic value. If I hadn't done that, the program would have outputted an airframe with the max chord length possible, because mathematically, that is optimal. I also learned that there is a plethora of design variables that can be altered when designing an airframe, which makes it important to only alter a few at a time to be able to see their effects better. From the research on airfoils and airframes, I learned about what effects airfoil polar, how to use tools such as Xfoil.jl \mbox{%DIFAUXCMD
+\cite{McDonnell} }\hskip0pt%DIFAUXCMD
+and VortexLattice.jl \mbox{%DIFAUXCMD
+\cite{McDonnell-Ning} }\hskip0pt%DIFAUXCMD
+to evaluate airfoils and airframes, and how those tools compare to actual experimental data.}\\
+	\DIFaddend 
+
+	\DIFdelbegin \begin{displaymath}
+			\DIFdel{AR = \frac{b}{c} = \frac{b^2}{S_{ref}}
+			%DIFDELCMD < \label{eqn:aspect-ratio-wiki}%%%
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		%%%
+\DIFdelend \DIFaddbegin \DIFadd{From my research, I discovered that as angle of attack increases, the lift of an airfoil and airframe increases. Also, drag vs. angle of attack has a parabolic curve. I also found that increased length from wing to tail of an airframe leads to greater stability. From designing my own airframe, I found that increased mean chord length leads to a greater lift coefficient, but that it does not necessarily mean a lower necessary takeoff velocity. Future work may include building a physical prototype of the airframe I designed, or optimizing my airframe design with a different objective function than the one I used.}\\
+	\DIFaddend 
+
+	
+	
+	
+	
+	\DIFdelbegin %DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Wake Vortex/Tip Vortex: a lifting wing has higher pressure on the bottom surface as compared to the top, and so fluid will circulate around the tips (see figure \ref{fig:downwash-wakevortex})
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Downwash: can be viewed more fundamentally as a consequence of Newton’s third law.If a body is producing lift, colloquially we might say that means that the air is pushing the body up.Thus, by Newton’s third law, the body must be pushing the air downward.Thus, any three-dimensional lifting body will leave behind a wake of downward moving air (see figure \ref{fig:downwash-wakevortex})
+		}\DIFdelend %DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%DIF >                                                                     %
+	%DIF >                            BIBLIOGRAPHY                             %
+	%DIF >                                                                     %
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\DIFdelbegin %DIFDELCMD < \begin{figure}
+%DIFDELCMD < 			\centering
+%DIFDELCMD < 			\includegraphics[scale=0.4]{../graphics/downwash-wakevortex.png}
+%DIFDELCMD < 			%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This diagram shows how downwash and wake vortexes are formed.}}%DIFAUXCMD
+}
+			%DIFAUXCMD
+%DIFDELCMD < \label{fig:downwash-wakevortex}
+%DIFDELCMD < 		\end{figure}
+%DIFDELCMD < 		%%%
+\DIFdelend \DIFaddbegin \bibliography{references}{}
+	\bibliographystyle{aiaa}
+	\DIFaddend 
+
+	
+	
+	
+	
+	\DIFdelbegin %DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Induced Drag/Vortex Drag: major consequence of this downwash, is that energy is left behind in the wake. Or in other words, the wing produces drag
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Inviscid Span Efficiency:  the inviscid span efficiency could be considered a measure of how close the lift distribution is to elliptic. All planar distributions will have \(e_{inv} <= 1\). A nonplanar lift distribution (e.g., adding winglets) can increase the inviscid span efficiency above 1 (see equation \ref{eqn:efficiency-wiki})
+		}\DIFdelend %DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%DIF >                                                                     %
+	%DIF >                              APPEDICES                              %
+	%DIF >                                                                     %
+	%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\DIFdelbegin \begin{displaymath}
+			\DIFdel{e_{inv} = \frac{C_L^2}{\pi{ARC_D}}
+			%DIFDELCMD < \label{eqn:efficiency-wiki}%%%
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Vortex Filament: an arbitrary vortex line segment
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Vortex Lattice Method: an extension of thin airfoil theory into three dimensions
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Tail Volume Ratio: relates the shape of the tail to the wing }%DIFDELCMD < \subitem %%%
+\DIFdel{Vertical Tail Volume Ratio: 
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		%%%
+\begin{displaymath}
+			\DIFdel{V_v = \frac{l_vS_v}{Sb}
+			%DIFDELCMD < \label{eqn:vtail-ratio-wiki}%%%
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\subitem %%%
+\DIFdel{Horizontal Tail Volume Ratio:
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		%%%
+\begin{displaymath}
+			\DIFdel{V_h = \frac{l_tS_t}{SC_{ma}}
+			%DIFDELCMD < \label{eqn:htail-ratio-wiki}%%%
+		}\end{displaymath}%DIFAUXCMD
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Stability Derivatives: measures of how particular forces and moments on an aircraft change as other parameters related to stability change
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Engineering Design - an iterative process that engineers follow to develop a product that accomplishes a given task (see figure \ref{fig:design-process}). }%DIFDELCMD < 
+
+%DIFDELCMD < 		\begin{figure}[H]
+%DIFDELCMD < 			\centering
+%DIFDELCMD < 			\includegraphics[scale=0.75]{../graphics/design_process}
+%DIFDELCMD < 			%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the steps of the engineering design process.}}%DIFAUXCMD
+}
+			%DIFAUXCMD
+%DIFDELCMD < \label{fig:design-process}
+%DIFDELCMD < 		\end{figure}
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Design Optimization Process - s a tool that can replace an iterative design
+		process to accelerate the design cycle and obtain better results (see figure \ref{fig:optimization}).}%DIFDELCMD < 
+
+%DIFDELCMD < 		\begin{figure}[H]
+%DIFDELCMD < 			\centering
+%DIFDELCMD < 			\includegraphics[scale=0.5]{../graphics/optimization_process}
+%DIFDELCMD < 			%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\emph{\DIFdelFL{This figure shows the steps of the engineering design optimization process.}}%DIFAUXCMD
+}
+			%DIFAUXCMD
+%DIFDELCMD < \label{fig:optimization}
+%DIFDELCMD < 		\end{figure}
+%DIFDELCMD < 		
+
+%DIFDELCMD < 		\item %%%
+\item%DIFAUXCMD
+\DIFdel{Objective Function - the design optimization process requires the designer to translate their intent to a mathematical statement that can then be solved by an optimization algorithm
+		}%DIFDELCMD < \item %%%
+\item%DIFAUXCMD
+\DIFdel{Design Variables - the variables that describe the system, must not depend on each other or any other parameter
+		}%DIFDELCMD < 
+
+%DIFDELCMD < 	\end{itemize}
+%DIFDELCMD < 	%%%
+\DIFdelend \DIFaddbegin \appendix
+	\DIFaddend 
+
+	
+	
+\end{document}
